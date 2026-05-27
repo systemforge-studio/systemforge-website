@@ -1,73 +1,212 @@
-# React + TypeScript + Vite
+# SystemForge Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Build • Innovate • Scale
 
-Currently, two official plugins are available:
+SystemForge Studio (SFS) is a modern software engineering studio focused on building scalable web, mobile, backend, and cloud-ready systems using clean architecture and modern development practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio website represents the public engineering presence of SFS and showcases our services, technical capabilities, architecture experience, and software delivery approach.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# About
 
-## Expanding the ESLint configuration
+SystemForge Studio helps businesses transform ideas into scalable, secure, and production-ready software solutions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Our engineering approach focuses on:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Clean architecture
+- Maintainable systems
+- Scalable backend design
+- Secure APIs
+- Mobile and web platforms
+- Cloud-ready deployment
+- Modern engineering workflows
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+We specialize in full-stack engineering, backend systems, mobile development, system architecture, integrations, and modern deployment pipelines.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+# Technology Stack
+
+## Frontend & Mobile
+- React
+- React Native
+- Next.js
+- Expo
+- TypeScript
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS
+- Bootstrap
+
+## Backend & APIs
+- Node.js
+- Express.js
+- Python
+- FastAPI
+- Java
+- ASP.NET Core
+- REST APIs
+- WebSockets
+- Socket.IO
+- JWT Authentication
+- Prisma ORM
+
+## Databases & Systems
+- PostgreSQL
+- MongoDB
+- MySQL
+- SQLite
+- Redis
+- Firebase
+
+## Cloud & DevOps
+- Docker
+- Railway
+- Vercel
+- AWS
+- Azure
+- CI/CD
+- GitHub Actions
+
+## Engineering Practices
+- Microservices Architecture
+- API Gateway
+- OOP Design
+- MVC Architecture
+- RBAC Authorization
+- Secure Backend Engineering
+- Agile / Scrum
+- SDLC
+- QA Testing
+- System Integration
+
+---
+
+# Featured Projects
+
+## EquiTip Modernization
+Migration of a legacy low-code mobile platform into a scalable React Native and microservices architecture using PostgreSQL, API Gateway, JWT authentication, and secure backend services.
+
+## AI Fall Protection Platform
+Mobile safety platform with AI-assisted hazard detection, guided workflows, offline-first synchronization, and PDF export capabilities.
+
+## Custom Business Systems
+Development of scalable internal tools, dashboards, APIs, databases, and workflow automation systems for business operations.
+
+---
+
+# Features
+
+- Modern responsive UI
+- Professional dark engineering design
+- Architecture-focused branding
+- Team showcase section
+- Technology stack visualization
+- Project showcase
+- Services overview
+- Contact section
+- Clean component-based architecture
+- Fully responsive layout
+
+---
+
+# Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   └── ui/
+├── constants/
+├── data/
+├── types/
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Development Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository:
+
+```bash
+git clone https://github.com/systemforge-studio/systemforge-website.git
 ```
+
+Navigate into the project:
+
+```bash
+cd systemforge-website
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build production version:
+
+```bash
+npm run build
+```
+
+---
+
+# Design Goals
+
+This website was designed with the following engineering principles:
+
+- High cohesion
+- Low coupling
+- Maintainable architecture
+- Component reusability
+- Scalable project structure
+- Modern UI consistency
+- Professional branding
+- Clean code organization
+
+---
+
+# Future Improvements
+
+- Live project case studies
+- Architecture diagrams
+- Real client showcase
+- GitHub integration
+- Blog / engineering articles
+- CMS integration
+- Contact form backend
+- Team member profiles
+- Deployment automation
+- Analytics integration
+
+---
+
+# Contact
+
+### SystemForge Studio
+
+Email:  
+
+
+GitHub Organization:  
+https://github.com/systemforge-studio
+
+---
+
+# License
+
+This project is part of the public portfolio and branding presence of SystemForge Studio.
