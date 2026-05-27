@@ -32,14 +32,14 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-cyan-400/20 bg-slate-900/70 p-8 shadow-2xl shadow-cyan-950/40">
-          <div className="flex aspect-square items-center justify-center rounded-[1.5rem] border border-cyan-400/30 bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950">
-            <img
-              src={sfsLogo}
-              alt="SystemForge Studio"
-              className="w-full max-w-md object-contain drop-shadow-[0_0_40px_rgba(14,165,233,0.45)]"
-            />
-          </div>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
+
+          <img
+            src={sfsLogo}
+            alt="SystemForge Studio"
+            className="relative z-10 w-full max-w-lg object-contain drop-shadow-[0_0_55px_rgba(14,165,233,0.5)] animate-logo-enter"
+          />
         </div>
       </div>
     </section>
