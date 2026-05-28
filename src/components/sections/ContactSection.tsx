@@ -27,7 +27,7 @@ export function ContactSection() {
             <p className="mt-3 break-all text-lg font-semibold text-cyan-100">{contactEmail}</p>
             <a
               href={`mailto:${contactEmail}`}
-              className="mt-8 inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 sm:w-auto"
             >
               Request Consultation
               <ArrowUpRight className="h-4 w-4" />

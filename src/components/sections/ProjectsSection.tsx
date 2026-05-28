@@ -13,8 +13,10 @@ export function ProjectsSection() {
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {projects.map((project, index) => (
+            <div key={project.title} className="animate-fade-up" style={{ animationDelay: `${index * 70}ms` }}>
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>

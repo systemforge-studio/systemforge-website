@@ -13,10 +13,11 @@ export function TechStackSection() {
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {techCategories.map((category) => (
+          {techCategories.map((category, index) => (
             <article
               key={category.title}
-              className="rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-slate-950 p-6 shadow-[0_8px_32px_rgba(2,6,23,0.35)]"
+              className="animate-fade-up rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-slate-950 p-6 shadow-[0_8px_32px_rgba(2,6,23,0.35)]"
+              style={{ animationDelay: `${index * 70}ms` }}
             >
               <h3 className="text-xl font-semibold text-white">{category.title}</h3>
               <div className="mt-5 flex flex-wrap gap-3">

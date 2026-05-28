@@ -10,7 +10,13 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
     <article className="glow-hover rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 to-slate-950 p-7 shadow-[0_8px_40px_rgba(2,6,23,0.45)]">
       <div className="mb-5 flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-cyan-300/20 bg-cyan-300/10">
         {member.imageUrl ? (
-          <img src={member.imageUrl} alt={member.name} className="h-full w-full object-cover" />
+          <img
+            src={member.imageUrl}
+            alt={member.name}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
         ) : (
           <UserRound className="h-8 w-8 text-cyan-300" />
         )}

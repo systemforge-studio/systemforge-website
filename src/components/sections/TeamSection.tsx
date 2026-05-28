@@ -13,8 +13,10 @@ export function TeamSection() {
         />
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.name + member.role} member={member} />
+          {teamMembers.map((member, index) => (
+            <div key={member.name + member.role} className="animate-fade-up" style={{ animationDelay: `${index * 70}ms` }}>
+              <TeamMemberCard member={member} />
+            </div>
           ))}
         </div>
       </div>
