@@ -138,9 +138,11 @@ export const teamMembers: TeamMember[] = [
     skills: ["Backend", "Security", "Auth", "APIs"],
   },
   {
-    name: "Team Member",
-    role: "Cloud & DevOps Engineer",
-    summary: "Profile placeholder. Add cloud infrastructure, CI/CD, deployment automation, and reliability responsibilities later.",
-    skills: ["Cloud", "DevOps", "CI/CD", "Automation"],
+    name: "Jerry Xing",
+    imageUrl: "/team/jerry.png",
+    role: "Full-Stack Developer",
+    summary:
+      "Full-stack developer focused on backend implementation and API integration. Contributes to service development, database-related work, authentication flows, and project documentation.",
+    skills: ["Vue.js", "React", "Node.js", "C#", "Java", "Oracle", "MongoDB", "PostgreSQL", "Git Workflow"],
   },
 ];

@@ -9,43 +9,43 @@ const metrics = [
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden px-6 pb-24 pt-36 sm:pb-28 sm:pt-40">
+    <section id="home" className="relative overflow-hidden px-4 pb-14 pt-24 max-[430px]:pb-12 max-[430px]:pt-22 sm:px-6 sm:pb-24 sm:pt-36">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(34,211,238,0.25),transparent_42%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_20%,rgba(14,116,144,0.18),transparent_35%)]" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="animate-fade-up">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-300 sm:text-sm">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-7 max-[430px]:gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="animate-fade-up order-2 lg:order-1">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300 sm:mb-5 sm:text-sm sm:tracking-[0.35em]">
             {agencyTagline}
           </p>
 
-          <h1 className="text-balance text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="text-balance text-[2.15rem] font-semibold leading-[1.1] text-white max-[430px]:text-[2.05rem] sm:text-6xl lg:text-7xl">
             We build software platforms enterprises can trust to scale.
           </h1>
 
-          <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-slate-300 max-[430px]:text-[0.95rem] sm:mt-7 sm:text-lg sm:leading-8">
             {agencyName} partners with product and operations leaders to deliver secure, maintainable,
             and production-ready systems with clear architecture and measurable delivery outcomes.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-6 grid gap-2.5 sm:mt-10 sm:flex sm:flex-wrap sm:gap-4">
             <a
               href="#contact"
-              className="rounded-2xl bg-cyan-300 px-7 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 sm:w-auto sm:px-7"
             >
               Schedule Discovery
             </a>
             <a
               href="#projects"
-              className="rounded-2xl border border-white/20 bg-white/5 px-7 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto sm:px-7"
             >
               View Case Highlights
             </a>
           </div>
 
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
+          <div className="mt-5 grid gap-2.5 sm:mt-10 sm:grid-cols-3 sm:gap-3">
             {metrics.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 sm:p-4">
                 <p className="text-xs uppercase tracking-[0.22em] text-slate-400">{item.label}</p>
                 <p className="mt-2 text-sm font-semibold text-cyan-100">{item.value}</p>
               </div>
@@ -53,13 +53,12 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="absolute h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl sm:h-96 sm:w-96" />
-          <div className="absolute h-[27rem] w-[27rem] rounded-full border border-cyan-200/15" />
+        <div className="relative order-1 flex items-center justify-center py-2 lg:order-2 lg:-translate-y-10 lg:py-0">
+          <div className="absolute h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl max-[430px]:h-40 max-[430px]:w-40 sm:h-96 sm:w-96" />
           <img
             src={sfsLogo}
             alt="SystemForge Studio"
-            className="animate-logo-enter relative z-10 w-full max-w-md object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.35)]"
+            className="animate-logo-enter relative z-10 w-full max-w-[11.5rem] object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.35)] max-[430px]:max-w-[10.8rem] sm:max-w-md"
           />
         </div>
       </div>

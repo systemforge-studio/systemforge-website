@@ -95,6 +95,15 @@ a {
   animation: fadeUp 0.9s ease-out both;
 }
 
+@media (max-width: 430px) {
+  .team-summary {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

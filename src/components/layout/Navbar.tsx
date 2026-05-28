@@ -1,31 +1,70 @@
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import { navigationItems } from "../../data/siteContent";
 
 export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-2xl">
-      <nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6">
-        <a href="#home" className="text-base font-semibold tracking-[0.2em] text-slate-100 sm:text-lg">
-          <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
-        </a>
+      <nav className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+        <div className="flex h-16 items-center justify-between sm:h-20">
+          <a
+            href="#home"
+            onClick={() => setIsOpen(false)}
+            className="text-sm font-semibold tracking-[0.15em] text-slate-100 max-[430px]:tracking-[0.12em] sm:text-lg sm:tracking-[0.2em]"
+          >
+            <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
+          </a>
 
-        <div className="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
-          {navigationItems.map((item) => (
+          <div className="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+            {navigationItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="relative transition duration-300 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
-              key={item.href}
-              href={item.href}
-              className="relative transition duration-300 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full"
+              href="#contact"
+              className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100 transition duration-300 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950 sm:px-5 sm:text-sm"
             >
-              {item.label}
+              Book Call
             </a>
-          ))}
+
+            <button
+              type="button"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              onClick={() => setIsOpen((v) => !v)}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 lg:hidden"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
 
-        <a
-          href="#contact"
-          className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-5 py-2 text-sm font-semibold text-cyan-100 transition duration-300 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950"
-        >
-          Book Call
-        </a>
+        {isOpen && (
+          <div className="border-t border-white/10 py-3 lg:hidden">
+            <div className="flex flex-col gap-2">
+              {navigationItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-200 transition hover:bg-white/5"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );

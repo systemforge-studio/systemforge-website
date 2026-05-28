@@ -4,7 +4,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="px-6 py-24 sm:py-28">
+    <section id="projects" className="px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Experience"
@@ -12,7 +12,7 @@ export function ProjectsSection() {
           description="Examples of how we help organizations reduce technical risk, improve release velocity, and strengthen platform foundations."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div key={project.title} className="animate-fade-up" style={{ animationDelay: `${index * 70}ms` }}>
               <ProjectCard project={project} />
