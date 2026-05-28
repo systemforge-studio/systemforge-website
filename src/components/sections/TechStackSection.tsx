@@ -4,7 +4,7 @@ import { TechBadge } from "../ui/TechBadge";
 
 export function TechStackSection() {
   return (
-    <section id="stack" className="bg-slate-900/45 px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+    <section id="stack" className="bg-slate-900/45 px-4 py-16 sm:px-6 md:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Technology"
@@ -12,7 +12,7 @@ export function TechStackSection() {
           description="Our stack is selected to support secure operations, release stability, and long-term maintainability across evolving product roadmaps."
         />
 
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
           {techCategories.map((category, index) => (
             <article
               key={category.title}

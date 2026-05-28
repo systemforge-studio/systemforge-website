@@ -35,7 +35,7 @@ const architectureItems = [
 
 export function ArchitectureSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+    <section className="px-4 py-16 sm:px-6 md:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300 sm:text-sm sm:tracking-[0.3em]">Architecture</p>
@@ -48,7 +48,7 @@ export function ArchitectureSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
           {architectureItems.map((item, index) => {
             const Icon = item.icon;
 

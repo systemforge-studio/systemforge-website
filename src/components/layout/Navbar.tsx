@@ -17,7 +17,7 @@ export function Navbar() {
             <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
           </a>
 
-          <div className="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+          <div className="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex lg:gap-8">
             {navigationItems.map((item) => (
               <a
                 key={item.href}
@@ -42,7 +42,7 @@ export function Navbar() {
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((v) => !v)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 md:hidden"
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -50,7 +50,7 @@ export function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="border-t border-white/10 py-3 lg:hidden">
+          <div className="border-t border-white/10 py-3 md:hidden">
             <div className="flex flex-col gap-2">
               {navigationItems.map((item) => (
                 <a
