@@ -118,11 +118,12 @@ export const teamMembers: TeamMember[] = [
     skills: ["Founder", "Backend", "Architecture", "React Native", "Node.js", "PostgreSQL"],
   },
   {
-    name: "Team Member",
+    name: "Haven Zhang",
     imageUrl: "/team/haven.png",
-    role: "Frontend & Mobile Developer",
-    summary: "Profile placeholder. Add frontend/mobile responsibilities, skills, photo, and portfolio details later.",
-    skills: ["Frontend", "Mobile", "UI", "React", "React Native"],
+    role: "Full-Stack Developer",
+    summary:
+      "Enterprise software developer with 7 years of experience delivering solutions for NEC client projects and modern full-stack applications.",
+    skills: ["Full-Stack", "System Design", "Enterprise", ".NET", "React", "Node.js", "Oracle"],
   },
   {
     name: "Team Member",
@@ -135,5 +136,11 @@ export const teamMembers: TeamMember[] = [
     role: "Backend & Security Developer",
     summary: "Profile placeholder. Add backend, authentication, security, API, and documentation responsibilities later.",
     skills: ["Backend", "Security", "Auth", "APIs"],
+  },
+  {
+    name: "Team Member",
+    role: "Cloud & DevOps Engineer",
+    summary: "Profile placeholder. Add cloud infrastructure, CI/CD, deployment automation, and reliability responsibilities later.",
+    skills: ["Cloud", "DevOps", "CI/CD", "Automation"],
   },
 ];

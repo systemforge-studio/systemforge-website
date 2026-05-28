@@ -12,7 +12,7 @@ export function TeamSection() {
           description="We combine architecture leadership, implementation depth, and delivery discipline to support teams from planning through production."
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {teamMembers.map((member) => (
             <TeamMemberCard key={member.name + member.role} member={member} />
           ))}
