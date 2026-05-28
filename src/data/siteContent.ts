@@ -19,7 +19,7 @@ export const agencyName = "SystemForge Studio";
 export const agencyShortName = "SFS";
 export const agencyTagline = "Build • Innovate • Scale";
 export const agencyDescription =
-  "Modern software engineering studio focused on scalable web, mobile, backend, cloud, and architecture solutions.";
+  "Enterprise software engineering partner for scalable product platforms, secure backend systems, and cloud-ready architecture.";
 export const contactEmail = "haider.alsudani.dev@gmail.com";
 
 export const navigationItems: NavigationItem[] = [
@@ -33,32 +33,32 @@ export const navigationItems: NavigationItem[] = [
 export const services: Service[] = [
   {
     title: "Full-Stack Web Development",
-    description: "Modern web platforms with clean frontend, backend APIs, authentication, databases, and deployment-ready architecture.",
+    description: "Business-critical web platforms with robust frontend architecture, secure APIs, and production-ready delivery standards.",
     icon: Code2,
   },
   {
     title: "Mobile Application Development",
-    description: "Cross-platform mobile applications using React Native, Expo, secure API integration, and scalable app structure.",
+    description: "Cross-platform mobile products engineered for reliability, secure integration, and long-term maintainability at scale.",
     icon: Smartphone,
   },
   {
     title: "Backend & API Engineering",
-    description: "Secure backend systems, REST APIs, authorization, validation, microservices, and production-ready service design.",
+    description: "High-availability backend services and APIs with enforceable security, clear service contracts, and scalable architecture patterns.",
     icon: Server,
   },
   {
     title: "Database Design & Integration",
-    description: "PostgreSQL, MongoDB, Prisma, schema design, migrations, data modeling, and maintainable persistence layers.",
+    description: "Resilient data architecture with governed schema design, migration strategy, and maintainable persistence for growth-stage products.",
     icon: Database,
   },
   {
     title: "Authentication & Security",
-    description: "JWT, RBAC, secure middleware, validation, rate limiting, API protection, and security-focused engineering practices.",
+    description: "Security-first implementation with identity controls, RBAC, API hardening, and defensive backend engineering practices.",
     icon: ShieldCheck,
   },
   {
     title: "Cloud & Deployment",
-    description: "Docker, Railway, Vercel, GitHub workflows, CI/CD readiness, and cloud-friendly deployment practices.",
+    description: "Cloud deployment pipelines with CI/CD governance, release reliability, and infrastructure workflows built for operational confidence.",
     icon: Cloud,
   },
 ];
@@ -93,17 +93,17 @@ export const techCategories: TechCategory[] = [
 export const projects: Project[] = [
   {
     title: "EquiTip Modernization",
-    description: "Modernized a legacy mobile platform from low-code tools into React Native, PostgreSQL, API Gateway, and microservices architecture.",
+    description: "Re-architected a legacy mobile system into a scalable platform with modern services, stronger data integrity, and faster release capability.",
     tags: ["React Native", "Node.js", "PostgreSQL", "Microservices", "API Gateway"],
   },
   {
     title: "AI Fall Protection Platform",
-    description: "Built a mobile safety platform with AI-assisted hazard detection, guided workflows, offline-first behavior, and PDF export.",
+    description: "Delivered a field-ready safety platform with AI-assisted workflows, offline resilience, and standardized reporting for operational teams.",
     tags: ["React Native", "AI Integration", "MongoDB", "Offline Sync", "PDF Export"],
   },
   {
     title: "Custom Business Systems",
-    description: "Designed scalable internal tools, dashboards, APIs, databases, and workflow automation for business operations.",
+    description: "Designed internal product systems that improved process control, reporting visibility, and cross-team operational efficiency.",
     tags: ["Full-Stack", "APIs", "Cloud", "Automation"],
   },
 ];
@@ -114,11 +114,12 @@ export const teamMembers: TeamMember[] = [
     imageUrl: "/team/haider.png",
     role: "Founder | Full-Stack Developer | Backend Architecture",
     summary:
-      "Founder of SystemForge Studio. Leads backend architecture, API design, database structure, system integration, technical planning, and client-facing delivery.",
+      "Founder of SystemForge Studio. Leads solution architecture, backend strategy, delivery planning, and stakeholder communication for end-to-end execution.",
     skills: ["Founder", "Backend", "Architecture", "React Native", "Node.js", "PostgreSQL"],
   },
   {
     name: "Team Member",
+    imageUrl: "/team/haven.png",
     role: "Frontend & Mobile Developer",
     summary: "Profile placeholder. Add frontend/mobile responsibilities, skills, photo, and portfolio details later.",
     skills: ["Frontend", "Mobile", "UI", "React", "React Native"],
