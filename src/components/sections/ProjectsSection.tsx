@@ -4,7 +4,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="px-4 py-16 sm:px-6 md:py-20 lg:py-28">
+    <section id="projects" className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Experience"

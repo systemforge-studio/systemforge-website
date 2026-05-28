@@ -35,11 +35,11 @@ const architectureItems = [
 
 export function ArchitectureSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 md:py-20 lg:py-28">
+    <section className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300 sm:text-sm sm:tracking-[0.3em]">Architecture</p>
-          <h2 className="mt-3 text-balance text-2xl font-semibold text-white sm:mt-4 sm:text-5xl">
+          <h2 className="section-title mt-3 text-balance text-2xl font-semibold text-white sm:mt-4 sm:text-5xl">
             Enterprise architecture built for uptime and growth
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-300 sm:mt-5 sm:text-lg sm:leading-8">
@@ -67,6 +67,7 @@ export function ArchitectureSection() {
             );
           })}
         </div>
+
       </div>
     </section>
   );

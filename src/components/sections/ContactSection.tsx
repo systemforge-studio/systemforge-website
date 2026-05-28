@@ -3,7 +3,7 @@ import { agencyName, contactEmail } from "../../data/siteContent";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="px-4 py-16 sm:px-6 md:py-20 lg:py-28">
+    <section id="contact" className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-5xl overflow-hidden rounded-[2.2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-900/20 via-slate-900 to-slate-950 p-6 shadow-[0_20px_100px_rgba(14,116,144,0.28)] sm:p-10 lg:p-12">
         <div className="grid items-center gap-8 sm:gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>

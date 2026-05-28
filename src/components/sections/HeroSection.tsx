@@ -19,7 +19,7 @@ export function HeroSection() {
             {agencyTagline}
           </p>
 
-          <h1 className="max-w-[13ch] text-balance text-[2.15rem] font-semibold leading-[1.1] text-white max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl">
+          <h1 className="max-w-[13ch] text-balance text-[length:var(--text-display)] font-semibold leading-[1.1] text-white max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl">
             We build software platforms enterprises can trust to scale.
           </h1>
 
@@ -53,7 +53,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative order-1 flex items-center justify-center py-2 md:order-2 md:justify-end md:py-0 lg:-translate-y-10">
+        <div className="relative order-1 flex items-center justify-center py-2 md:order-2 md:justify-end md:py-0 lg:-translate-y-20">
           <div className="absolute h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl max-[430px]:h-40 max-[430px]:w-40 md:h-72 md:w-72 lg:h-96 lg:w-96" />
           <img
             src={sfsLogo}
