@@ -13,10 +13,10 @@ export default function App() {
     <main className="min-h-screen bg-slate-950 text-white">
       <Navbar />
       <HeroSection />
+      <ProjectsSection />
       <ServicesSection />
       <TechStackSection />
       <ArchitectureSection />
-      <ProjectsSection />
       <TeamSection />
       <ContactSection />
       <Footer />

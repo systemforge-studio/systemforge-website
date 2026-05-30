@@ -7,7 +7,7 @@ export function ProjectsSection() {
     <section id="projects" className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Experience"
+          eyebrow="Projects"
           title="Proven delivery across modernization and platform engineering"
           description="Examples of how we help organizations reduce technical risk, improve release velocity, and strengthen platform foundations."
         />

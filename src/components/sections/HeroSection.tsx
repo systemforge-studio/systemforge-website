@@ -1,12 +1,6 @@
 import { agencyName, agencyTagline } from "../../data/siteContent";
 import sfsLogo from "../../assets/sfs-logo.png";
 
-const metrics = [
-  { label: "Delivery Model", value: "Predictable Milestones" },
-  { label: "Operational Focus", value: "Security + Reliability" },
-  { label: "Scale Strategy", value: "Cloud-Native Architecture" },
-];
-
 export function HeroSection() {
   return (
     <section id="home" className="relative overflow-hidden px-4 pb-14 pt-24 max-[430px]:pb-12 max-[430px]:pt-22 sm:px-6 md:pb-20 md:pt-32 lg:pb-24 lg:pt-36">
@@ -31,29 +25,21 @@ export function HeroSection() {
           <div className="mt-6 grid gap-2.5 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
             <a
               href="#contact"
-              className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 sm:w-auto sm:px-7"
+              className="hero-cta hero-cta-primary inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 sm:w-auto sm:px-7"
             >
               Schedule Discovery
             </a>
             <a
               href="#projects"
-              className="inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto sm:px-7"
+              className="hero-cta hero-cta-secondary inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 sm:w-auto sm:px-7"
             >
               View Case Highlights
             </a>
           </div>
 
-          <div className="mt-5 grid gap-2.5 sm:mt-7 sm:grid-cols-3 sm:gap-3 lg:mt-10">
-            {metrics.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3.5 sm:p-4">
-                <p className="text-xs uppercase tracking-[0.22em] text-slate-400">{item.label}</p>
-                <p className="mt-2 text-sm font-semibold text-cyan-100">{item.value}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
-        <div className="relative order-1 flex items-center justify-center py-2 md:order-2 md:justify-end md:py-0 lg:-translate-y-20">
+        <div className="relative order-1 flex items-center justify-center py-2 md:order-2 md:justify-end md:py-0 lg:-translate-y-5">
           <div className="absolute h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl max-[430px]:h-40 max-[430px]:w-40 md:h-72 md:w-72 lg:h-96 lg:w-96" />
           <img
             src={sfsLogo}

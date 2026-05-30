@@ -7,7 +7,7 @@ export function Navbar() {
   const [activeHref, setActiveHref] = useState("#home");
 
   useEffect(() => {
-    const sectionIds = ["home", "services", "stack", "projects", "team", "contact"];
+    const sectionIds = ["home", "projects", "services", "stack", "architecture", "team", "contact"];
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));

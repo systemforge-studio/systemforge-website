@@ -107,6 +107,171 @@ a {
   padding-bottom: 0.06em;
 }
 
+.tech-logo-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease;
+}
+
+.tech-logo-card::before {
+  content: "";
+  position: absolute;
+  inset: -120% -35%;
+  z-index: 0;
+  background: conic-gradient(
+    from 200deg,
+    transparent 0deg,
+    rgba(56, 189, 248, 0.18) 38deg,
+    rgba(59, 130, 246, 0.16) 74deg,
+    rgba(14, 165, 233, 0.18) 112deg,
+    transparent 150deg
+  );
+  opacity: 0;
+  transform: translateX(-24%) rotate(8deg);
+  transition: opacity 0.35s ease, transform 0.55s ease;
+  pointer-events: none;
+}
+
+.tech-logo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 12%, rgba(34, 211, 238, 0.16), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.tech-logo-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-logo-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-logo-label {
+  font-size: clamp(1.14rem, 1.03vw, 1.32rem);
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.18;
+  color: #e9f1ff;
+  text-wrap: balance;
+  text-shadow: 0 1px 12px rgba(15, 23, 42, 0.44);
+  transition: color 0.28s ease, transform 0.28s ease, text-shadow 0.28s ease;
+}
+
+.tech-logo-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(125, 211, 252, 0.62);
+  box-shadow:
+    0 18px 42px rgba(8, 47, 73, 0.46),
+    0 0 0 1px rgba(56, 189, 248, 0.24),
+    0 0 32px rgba(34, 211, 238, 0.16);
+  background-color: rgba(15, 23, 42, 0.9);
+}
+
+.tech-logo-card:hover::before {
+  opacity: 1;
+  transform: translateX(20%) rotate(14deg);
+}
+
+.tech-logo-card:hover::after {
+  opacity: 1;
+}
+
+.tech-logo-card:hover .tech-logo-icon {
+  transform: scale(1.16) rotate(-4deg);
+  filter:
+    drop-shadow(0 0 14px rgba(56, 189, 248, 0.35))
+    drop-shadow(0 0 22px rgba(59, 130, 246, 0.24));
+}
+
+.tech-logo-card:hover .tech-logo-label {
+  color: #f0f9ff;
+  transform: translateY(-1px) scale(1.01);
+  text-shadow:
+    0 0 18px rgba(103, 232, 249, 0.28),
+    0 0 34px rgba(56, 189, 248, 0.2);
+}
+
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background-color 0.28s ease,
+    color 0.28s ease;
+}
+
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -45%;
+  width: 52%;
+  height: 320%;
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(18deg);
+  opacity: 0;
+  transition: left 0.55s ease, opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+}
+
+.hero-cta:hover::before {
+  left: 118%;
+  opacity: 1;
+}
+
+.hero-cta-primary:hover {
+  background-color: #a5f3fc;
+  box-shadow:
+    0 12px 30px rgba(34, 211, 238, 0.34),
+    0 0 0 1px rgba(103, 232, 249, 0.22);
+}
+
+.hero-cta-secondary:hover {
+  border-color: rgba(125, 211, 252, 0.62);
+  background-color: rgba(14, 27, 52, 0.9);
+  box-shadow:
+    0 12px 28px rgba(8, 47, 73, 0.34),
+    0 0 0 1px rgba(56, 189, 248, 0.18);
+}
+
+.service-premium-card {
+  transition:
+    transform 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.service-premium-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 55px rgba(2, 8, 32, 0.62),
+    0 0 0 1px rgba(125, 211, 252, 0.24),
+    0 0 40px rgba(59, 130, 246, 0.2);
+}
+
 @media (max-width: 430px) {
   .team-summary {
     display: -webkit-box;

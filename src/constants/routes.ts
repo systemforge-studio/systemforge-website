@@ -1,8 +1,9 @@
 export const ROUTES = {
   HOME: "#home",
+  PROJECTS: "#projects",
   SERVICES: "#services",
   STACK: "#stack",
-  PROJECTS: "#projects",
+  ARCHITECTURE: "#architecture",
   TEAM: "#team",
   CONTACT: "#contact",
 } as const;
