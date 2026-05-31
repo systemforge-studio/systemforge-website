@@ -4,17 +4,19 @@ import { TeamMemberCard } from "../ui/TeamMemberCard";
 
 export function TeamSection() {
   return (
-    <section id="team" className="bg-slate-900/50 px-6 py-24">
+    <section id="team" className="bg-slate-900/45 px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Team"
-          title="A focused software delivery team"
-          description="Our team brings together backend architecture, mobile development, frontend implementation, testing, security, and integration experience."
+          title="Cross-functional experts aligned to business outcomes"
+          description="We combine architecture leadership, implementation depth, and delivery discipline to support teams from planning through production."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {teamMembers.map((member) => (
-            <TeamMemberCard key={member.name + member.role} member={member} />
+        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {teamMembers.map((member, index) => (
+            <div key={member.name + member.role} className="animate-fade-up" style={{ animationDelay: `${index * 70}ms` }}>
+              <TeamMemberCard member={member} />
+            </div>
           ))}
         </div>
       </div>

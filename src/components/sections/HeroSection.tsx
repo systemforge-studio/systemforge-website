@@ -3,42 +3,48 @@ import sfsLogo from "../../assets/sfs-logo.png";
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden px-6 pb-28 pt-40">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0ea5e955,transparent_35%)]" />
-      <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+    <section id="home" className="relative overflow-hidden px-4 pb-14 pt-24 max-[430px]:pb-12 max-[430px]:pt-22 sm:px-6 md:pb-20 md:pt-32 lg:pb-24 lg:pt-36">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(34,211,238,0.25),transparent_42%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_20%,rgba(14,116,144,0.18),transparent_35%)]" />
 
-      <div className="relative mx-auto grid max-w-[1400px] items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-7 max-[430px]:gap-6 md:grid-cols-[1.02fr_0.98fr] md:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="animate-fade-up order-2 md:order-1">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300 sm:mb-5 sm:text-sm sm:tracking-[0.35em]">
             {agencyTagline}
           </p>
 
-          <h1 className="text-5xl font-bold leading-tight text-white md:text-7xl">
-            Engineering modern software solutions.
+          <h1 className="max-w-[13ch] text-balance text-[length:var(--text-display)] font-semibold leading-[1.1] text-white max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl">
+            We build software platforms enterprises can trust to scale.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            {agencyName} builds scalable web, mobile, backend, and cloud-ready systems
-            for businesses that need reliable software delivery.
+          <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-slate-300 max-[430px]:text-[0.95rem] md:mt-5 md:text-base md:leading-7 lg:mt-7 lg:text-lg lg:leading-8">
+            {agencyName} partners with product and operations leaders to deliver secure, maintainable,
+            and production-ready systems with clear architecture and measurable delivery outcomes.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#contact" className="rounded-2xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 hover:bg-cyan-300">
-              Start a Project
+          <div className="mt-6 grid gap-2.5 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
+            <a
+              href="#contact"
+              className="hero-cta hero-cta-primary inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 sm:w-auto sm:px-7"
+            >
+              Schedule Discovery
             </a>
-            <a href="#projects" className="rounded-2xl border border-white/20 px-6 py-3 font-semibold text-white hover:bg-white/10">
-              View Work
+            <a
+              href="#projects"
+              className="hero-cta hero-cta-secondary inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 sm:w-auto sm:px-7"
+            >
+              View Case Highlights
             </a>
           </div>
+
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="absolute h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
-
+        <div className="relative order-1 flex items-center justify-center py-2 md:order-2 md:justify-end md:py-0 lg:-translate-y-5">
+          <div className="absolute h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl max-[430px]:h-40 max-[430px]:w-40 md:h-72 md:w-72 lg:h-96 lg:w-96" />
           <img
             src={sfsLogo}
             alt="SystemForge Studio"
-            className="relative z-10 w-full max-w-lg object-contain drop-shadow-[0_0_55px_rgba(14,165,233,0.5)] animate-logo-enter"
+            className="animate-logo-enter relative z-10 w-full max-w-[11.5rem] object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.35)] max-[430px]:max-w-[10.8rem] md:max-w-[15rem] lg:max-w-md"
           />
         </div>
       </div>
