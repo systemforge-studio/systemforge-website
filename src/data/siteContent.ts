@@ -1,7 +1,6 @@
 import {
   Code2,
   Smartphone,
-  Server,
   Database,
   ShieldCheck,
   Cloud,

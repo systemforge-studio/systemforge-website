@@ -7,10 +7,13 @@ import { ServicesSection } from "./components/sections/ServicesSection";
 import { TeamSection } from "./components/sections/TeamSection";
 import { TechStackSection } from "./components/sections/TechStackSection";
 import { ArchitectureSection } from "./components/sections/ArchitectureSection";
+import { useLanguage } from "./i18n/LanguageProvider";
 
 export default function App() {
+  const { content } = useLanguage();
+
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-slate-950 text-white" dir={content.direction}>
       <Navbar />
       <HeroSection />
       <ProjectsSection />
