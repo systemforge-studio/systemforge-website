@@ -1,5 +1,5 @@
 import { ArrowUpRight, Mail } from "lucide-react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function ContactSection() {
   const { content } = useLanguage();

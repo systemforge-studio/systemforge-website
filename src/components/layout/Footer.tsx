@@ -1,4 +1,4 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function Footer() {
   const { content } = useLanguage();
