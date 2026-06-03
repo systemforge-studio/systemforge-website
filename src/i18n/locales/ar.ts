@@ -1,7 +1,7 @@
-import type { SiteContent } from "../i18n.types";
+import type { LocaleContent } from "../i18n.types";
 import { ROUTES } from "../../shared/constants/routes";
 
-export const arContent: SiteContent = {
+export const arContent: LocaleContent = {
   language: "ar",
   direction: "rtl",
   htmlLang: "ar",

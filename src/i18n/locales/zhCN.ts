@@ -1,7 +1,7 @@
-import type { SiteContent } from "../i18n.types";
+import type { LocaleContent } from "../i18n.types";
 import { ROUTES } from "../../shared/constants/routes";
 
-export const zhCnContent: SiteContent = {
+export const zhCnContent: LocaleContent = {
   language: "zh-cn",
   direction: "ltr",
   htmlLang: "zh-CN",
