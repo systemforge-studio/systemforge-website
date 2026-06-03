@@ -1,6 +1,6 @@
 # SystemForge Studio
 
-[English](../../README.md) | العربية | [کوردی](README.ckb.md) | [简体中文](README.zh-CN.md) | [臺灣正體](README.zh-TW.md)
+[English](../../README.md) | <strong>العربية</strong>&lrm; | <a href="README.ckb.md">کوردی</a>&lrm; | [简体中文](README.zh-CN.md) | [臺灣正體](README.zh-TW.md)
 
 <p align="center">
   <a href="https://systemforge-studio.github.io/systemforge-website/">
