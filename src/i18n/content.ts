@@ -1,11 +1,13 @@
 import { enContent } from "./locales/en";
 import { arContent } from "./locales/ar";
-import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from "./i18n.constants";
+import { zhCnContent } from "./locales/zhCN";
+import { SUPPORTED_LANGUAGES } from "./i18n.constants";
 import type { LanguageCode, SiteContent } from "./i18n.types";
 
-const CONTENT_BY_LANGUAGE: Record<LanguageCode, SiteContent> = {
+const CONTENT_BY_LANGUAGE: Partial<Record<LanguageCode, SiteContent>> = {
   en: enContent,
   ar: arContent,
+  "zh-cn": zhCnContent,
 };
 
 export function isSupportedLanguage(value: string): value is LanguageCode {
@@ -13,5 +15,5 @@ export function isSupportedLanguage(value: string): value is LanguageCode {
 }
 
 export function getSiteContent(language: LanguageCode): SiteContent {
-  return CONTENT_BY_LANGUAGE[language] ?? CONTENT_BY_LANGUAGE[DEFAULT_LANGUAGE];
+  return CONTENT_BY_LANGUAGE[language] ?? enContent;
 }
