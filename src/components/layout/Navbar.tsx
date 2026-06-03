@@ -1,16 +1,28 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { navigationItems } from "../../data/siteContent";
+import { useLanguage } from "../../i18n/LanguageProvider";
+import { LanguageSwitcher } from "../i18n/LanguageSwitcher";
+
+const SECTION_IDS = [
+  "home",
+  "projects",
+  "services",
+  "stack",
+  "architecture",
+  "team",
+  "contact",
+] as const;
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeHref, setActiveHref] = useState("#home");
+  const { content } = useLanguage();
+  const navigationItems = content.nav.items;
 
   useEffect(() => {
-    const sectionIds = ["home", "projects", "services", "stack", "architecture", "team", "contact"];
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => Boolean(el));
+    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
+      (el): el is HTMLElement => Boolean(el)
+    );
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,13 +39,17 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  function closeMenu() {
+    setIsOpen(false);
+  }
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-2xl">
       <nav className="mx-auto w-full max-w-7xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between sm:h-20">
           <a
             href="#home"
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
             className="text-sm font-semibold tracking-[0.15em] text-slate-100 max-[430px]:tracking-[0.12em] sm:text-lg sm:tracking-[0.2em]"
           >
             <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
@@ -53,14 +69,17 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+
+            <LanguageSwitcher />
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="#contact"
+              onClick={closeMenu}
               className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100 transition duration-300 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950 sm:px-5 sm:text-sm"
             >
-              Book Call
+              {content.nav.callToAction}
             </a>
 
             <button
@@ -82,14 +101,20 @@ export function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                   className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
-                    activeHref === item.href ? "bg-cyan-300/10 text-cyan-100" : "text-slate-200 hover:bg-white/5"
+                    activeHref === item.href
+                      ? "bg-cyan-300/10 text-cyan-100"
+                      : "text-slate-200 hover:bg-white/5"
                   }`}
                 >
                   {item.label}
                 </a>
               ))}
+
+              <div className="px-3 pt-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}
