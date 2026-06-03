@@ -1,4 +1,4 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { ProjectCard } from "../ui/ProjectCard";
 import { SectionHeader } from "../ui/SectionHeader";
 

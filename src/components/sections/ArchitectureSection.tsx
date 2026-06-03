@@ -6,7 +6,7 @@ import {
   Shield,
   Workflow,
 } from "lucide-react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import type {
   ArchitectureIconKey,
   LocalizedArchitectureItem,

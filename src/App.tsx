@@ -7,7 +7,7 @@ import { ServicesSection } from "./components/sections/ServicesSection";
 import { TeamSection } from "./components/sections/TeamSection";
 import { TechStackSection } from "./components/sections/TechStackSection";
 import { ArchitectureSection } from "./components/sections/ArchitectureSection";
-import { useLanguage } from "./i18n/LanguageProvider";
+import { useLanguage } from "./i18n/useLanguage";
 
 export default function App() {
   const { content } = useLanguage();

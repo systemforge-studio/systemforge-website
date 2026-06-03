@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { LanguageSwitcher } from "../i18n/LanguageSwitcher";
 
 const SECTION_IDS = [

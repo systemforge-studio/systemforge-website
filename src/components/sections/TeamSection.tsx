@@ -1,4 +1,4 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { SectionHeader } from "../ui/SectionHeader";
 import { TeamMemberCard } from "../ui/TeamMemberCard";
 
