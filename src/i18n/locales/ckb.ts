@@ -1,5 +1,6 @@
 import type { LocaleContent } from "../i18n.types";
 import { ROUTES } from "../../shared/constants/routes";
+import { publicAsset } from "../../shared/utils/assets";
 
 export const ckbContent: LocaleContent = {
   language: "ckb",
@@ -59,7 +60,7 @@ export const ckbContent: LocaleContent = {
           "Microservices",
           "API Gateway",
         ],
-        imageUrl: "/project/EquiTip.png",
+        imageUrl: publicAsset("/project/EquiTip.png"),
       },
       {
         title: "پلاتفۆڕمی سەلامەتی دژی کەوتن بە AI",
@@ -72,7 +73,7 @@ export const ckbContent: LocaleContent = {
           "Offline Sync",
           "PDF Export",
         ],
-        imageUrl: "/project/fpp.png",
+        imageUrl: publicAsset("/project/fpp.png"),
       },
       {
         title: "ڕێنیشاندەری کۆمەڵگای PathPal",
@@ -86,7 +87,7 @@ export const ckbContent: LocaleContent = {
           "MongoDB",
           "Cloudinary",
         ],
-        imageUrl: "/project/pathPal.png",
+        imageUrl: publicAsset("/project/pathPal.png"),
       },
     ],
   },
@@ -109,42 +110,42 @@ export const ckbContent: LocaleContent = {
           "گەیاندنی ئامادە بۆ بەرهەمهێنان",
         ],
         cta: "لە بیرۆکەوە تا بەرهەمهێنان",
-        imageUrl: "/services/full-stack.png",
+        imageUrl: publicAsset("/services/full-stack.png"),
       },
       {
         title: "گەشەپێدانی ئەپلیکەیشنی مۆبایل",
         description:
           "ئەپلیکەیشنی مۆبایل بۆ چەند پلاتفۆڕم، بە کارایی جێگیر، ئەزموونی بەکارهێنەری ڕەوان و قابلی چاکردنەوەی درێژخایەن.",
         iconKey: "smartphone",
-        imageUrl: "/services/mobile-application.png",
+        imageUrl: publicAsset("/services/mobile-application.png"),
       },
       {
         title: "ئەندازیاری پشتەوە و API",
         description:
           "پشتەوە و API ی پارێزراو و قابلی گەشە کە بۆ متمانەپێکراوی، کارایی و یەکخستن دیزاین دەکرێن.",
         iconKey: "code",
-        imageUrl: "/services/backend-api.png",
+        imageUrl: publicAsset("/services/backend-api.png"),
       },
       {
         title: "دیزاین و یەکخستنی داتابەیس",
         description:
           "ئەندازیاری داتای خۆڕاگر، دیزاینی سکیمای زیرەک، کۆچکردن و پرسیاری کارای بەرز.",
         iconKey: "database",
-        imageUrl: "/services/database.png",
+        imageUrl: publicAsset("/services/database.png"),
       },
       {
         title: "ناسنامە و پاراستن",
         description:
           "جێبەجێکردنی سەرەتا-پاراستن بە RBAC، بەهێزکردنی API، کۆنترۆڵی ناسنامە و باشترین ڕاهێنانە ئەندازیارییەکان.",
         iconKey: "shield",
-        imageUrl: "/services/authentication.png",
+        imageUrl: publicAsset("/services/authentication.png"),
       },
       {
         title: "هەور و بڵاوکردنەوە",
         description:
           "ڕێڕەوی CI/CD، ئۆتۆماتکردنی ژێرخان و چاودێریکردن بۆ بڵاوکردنەوەی متمانەپێکراو و خێرا.",
         iconKey: "cloud",
-        imageUrl: "/services/cloud.png",
+        imageUrl: publicAsset("/services/cloud.png"),
       },
     ],
   },
@@ -292,7 +293,7 @@ export const ckbContent: LocaleContent = {
     members: [
       {
         name: "Haider Al-Sudani",
-        imageUrl: "/team/haider.png",
+        imageUrl: publicAsset("/team/haider.png"),
         role: "دامەزرێنەر | Full-Stack Developer | ئەندازیاری پشتەوە",
         summary:
           "دامەزرێنەری SystemForge Studio. سەرکردایەتی ئەندازیاری چارەسەر، ستراتیژی پشتەوە، پلانی گەیاندن و پەیوەندی لەگەڵ هاوبەشانی کار دەکات.",
@@ -307,7 +308,7 @@ export const ckbContent: LocaleContent = {
       },
       {
         name: "Haven Zhang",
-        imageUrl: "/team/haven.png",
+        imageUrl: publicAsset("/team/haven.png"),
         role: "Full-Stack Developer | ئەپلیکەیشنی کۆمپانیا",
         summary:
           "گەشەپێدەری نەرمەکاڵای کۆمپانیا بە ٧ ساڵ ئەزموون لە گەیاندنی چارەسەر بۆ پڕۆژەکانی NEC و ئەپلیکەیشنی full-stack ی نوێ.",
@@ -322,7 +323,7 @@ export const ckbContent: LocaleContent = {
       },
       {
         name: "Jimmy Kong",
-        imageUrl: "/team/jimmy.png",
+        imageUrl: publicAsset("/team/jimmy.png"),
         role: "گەشەپێدەری مۆبایل",
         summary:
           "گەشەپێدەری سەربەخۆی ئەپلیکەیشنی Rentamin. AWS Certified Solutions Architect، بە زانیاری بەهێز لە ژینگەی هەور و بەکارهێنانی AI بۆ زیادکردنی بەرهەمداری گەشەپێدان.",
@@ -338,7 +339,7 @@ export const ckbContent: LocaleContent = {
       },
       {
         name: "Lin Pan",
-        imageUrl: "/team/lin.jpg",
+        imageUrl: publicAsset("/team/lin.jpg"),
         role: "Full-Stack Developer | پسپۆڕی سیستەمی بازرگانی",
         summary:
           "گەشەپێدەری full-stack بە ئەزموونی دروستکردنی وێب، مۆبایل و سیستەمی پشتەوە. ڕاوێژکاری کۆمپانیا و ئەندازیاری نەرمەکاڵا تێکەڵ دەکات بۆ گەیاندنی چارەسەری بازرگانی قابلی گەشە.",
@@ -356,7 +357,7 @@ export const ckbContent: LocaleContent = {
       },
       {
         name: "Jerry Xing",
-        imageUrl: "/team/jerry.png",
+        imageUrl: publicAsset("/team/jerry.png"),
         role: "Full-Stack Developer",
         summary:
           "گەشەپێدەری full-stack کە سەرنج دەداتە سەر جێبەجێکردنی پشتەوە و یەکخستنی API. بەشداری لە گەشەپێدانی خزمەتگوزاری، کاری پەیوەندیدار بە داتابەیس، ڕێڕەوی ناساندن و بەڵگەنامەی پڕۆژە دەکات.",

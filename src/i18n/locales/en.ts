@@ -1,5 +1,6 @@
 import type {SiteContent} from "../i18n.types";
 import {ROUTES} from "../../shared/constants/routes";
+import {publicAsset} from "../../shared/utils/assets";
 
 export const enContent: SiteContent = {
   language: "en",
@@ -59,7 +60,7 @@ export const enContent: SiteContent = {
           "Microservices",
           "API Gateway",
         ],
-        imageUrl: "/project/EquiTip.png",
+        imageUrl: publicAsset("/project/EquiTip.png"),
       },
       {
         title: "AI Fall Protection Platform",
@@ -72,7 +73,7 @@ export const enContent: SiteContent = {
           "Offline Sync",
           "PDF Export",
         ],
-        imageUrl: "/project/fpp.png",
+        imageUrl: publicAsset("/project/fpp.png"),
       },
       {
         title: "PathPal Community Navigation",
@@ -86,7 +87,7 @@ export const enContent: SiteContent = {
           "MongoDB",
           "Cloudinary",
         ],
-        imageUrl: "/project/pathPal.png",
+        imageUrl: publicAsset("/project/pathPal.png"),
       },
     ],
   },
@@ -109,42 +110,42 @@ export const enContent: SiteContent = {
           "Production-Ready Delivery",
         ],
         cta: "From idea to production",
-        imageUrl: "/services/full-stack.png",
+        imageUrl: publicAsset("/services/full-stack.png"),
       },
       {
         title: "Mobile Application Development",
         description:
           "Cross-platform mobile apps with reliable performance, seamless UX, and long-term maintainability.",
         iconKey: "smartphone",
-        imageUrl: "/services/mobile-application.png",
+        imageUrl: publicAsset("/services/mobile-application.png"),
       },
       {
         title: "Backend & API Engineering",
         description:
           "Secure, scalable backends and APIs designed for reliability, performance, and integration.",
         iconKey: "code",
-        imageUrl: "/services/backend-api.png",
+        imageUrl: publicAsset("/services/backend-api.png"),
       },
       {
         title: "Database Design & Integration",
         description:
           "Resilient data architecture with smart schema design, migrations, and high-performance queries.",
         iconKey: "database",
-        imageUrl: "/services/database.png",
+        imageUrl: publicAsset("/services/database.png"),
       },
       {
         title: "Authentication & Security",
         description:
           "Security-first implementation with RBAC, API hardening, identity controls, and best practices.",
         iconKey: "shield",
-        imageUrl: "/services/authentication.png",
+        imageUrl: publicAsset("/services/authentication.png"),
       },
       {
         title: "Cloud & Deployment",
         description:
           "CI/CD pipelines, infrastructure automation, and observability for reliable and fast deployments.",
         iconKey: "cloud",
-        imageUrl: "/services/cloud.png",
+        imageUrl: publicAsset("/services/cloud.png"),
       },
     ],
   },
@@ -292,7 +293,7 @@ export const enContent: SiteContent = {
     members: [
       {
         name: "Haider Al-Sudani",
-        imageUrl: "/team/haider.png",
+        imageUrl: publicAsset("/team/haider.png"),
         role: "Founder | Full-Stack Developer | Backend Architecture",
         summary:
           "Founder of SystemForge Studio. Leads solution architecture, backend strategy, delivery planning, and stakeholder communication for end-to-end execution.",
@@ -307,7 +308,7 @@ export const enContent: SiteContent = {
       },
       {
         name: "Haven Zhang",
-        imageUrl: "/team/haven.png",
+        imageUrl: publicAsset("/team/haven.png"),
         role: "Full-Stack Developer | Enterprise Applications",
         summary:
           "Enterprise software developer with 7 years of experience delivering solutions for NEC client projects and modern full-stack applications.",
@@ -322,7 +323,7 @@ export const enContent: SiteContent = {
       },
       {
         name: "Jimmy Kong",
-        imageUrl: "/team/jimmy.png",
+        imageUrl: publicAsset("/team/jimmy.png"),
         role: "Mobile Developer",
         summary:
           "Independent developer of mobile app Rentamin. AWS Certified Solutions Architect with strong knowledge of the cloud ecosystem. Actively uses AI to improve development productivity.",
@@ -338,7 +339,7 @@ export const enContent: SiteContent = {
       },
       {
         name: "Lin Pan",
-        imageUrl: "/team/lin.jpg",
+        imageUrl: publicAsset("/team/lin.jpg"),
         role: "Full-Stack Developer | Business Systems Specialist",
         summary:
           "Full-stack developer experienced in building web, mobile, and backend systems. Combines enterprise consulting and software engineering to deliver scalable business solutions.",
@@ -356,7 +357,7 @@ export const enContent: SiteContent = {
       },
       {
         name: "Jerry Xing",
-        imageUrl: "/team/jerry.png",
+        imageUrl: publicAsset("/team/jerry.png"),
         role: "Full-Stack Developer",
         summary:
           "Full-stack developer focused on backend implementation and API integration. Contributes to service development, database-related work, authentication flows, and project documentation.",
