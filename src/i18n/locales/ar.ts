@@ -34,9 +34,9 @@ export const arContent: SiteContent = {
 
   hero: {
     eyebrow: "🇨🇦 خبرة برمجية كندية تخدم الشرق الأوسط",
-    title: "نبني منصات برمجية آمنة وقابلة للتوسع تثق بها الشركات.",
+    title: "نبني منصات برمجية آمنة وقابلة للتوسع",
     description:
-      "تساعد SystemForge Studio أصحاب الأعمال والفرق التشغيلية على تحويل الأفكار إلى أنظمة إنتاجية واضحة البنية، آمنة، وقابلة للنمو، مع دعم بالإنجليزية والعربية والكردية.",
+      "تساعد SystemForge Studio أصحاب الأعمال والفرق التشغيلية على تحويل الأفكار إلى أنظمة إنتاجية واضحة البنية وآمنة وقابلة للنمو تثق بها الشركات، مع دعم بالإنجليزية والعربية والكردية.",
     primaryCta: "راسلنا عبر واتساب",
     secondaryCta: "شاهد نماذج العمل",
     logoAlt: "SystemForge Studio",
@@ -119,28 +119,28 @@ export const arContent: SiteContent = {
         imageUrl: "/services/mobile-application.png",
       },
       {
-        title: "هندسة الخلفية وواجهات API",
+        title: "هندسة وواجهات API",
         description:
           "أنظمة خلفية وواجهات API آمنة وقابلة للتوسع ومصممة للتكامل والاعتمادية.",
         iconKey: "code",
         imageUrl: "/services/backend-api.png",
       },
       {
-        title: "تصميم قواعد البيانات والتكامل",
+        title: "تصميم قواعد البيانات\n(Database Design)",
         description:
           "بنية بيانات قوية مع تصميم جداول واضح، ترحيلات منظمة، واستعلامات عالية الأداء.",
         iconKey: "database",
         imageUrl: "/services/database.png",
       },
       {
-        title: "المصادقة والأمان",
+        title: "المصادقة والأمان\n(Authentication & Security)",
         description:
           "تنفيذ يركز على الأمان باستخدام الصلاحيات، تقوية API، وضوابط الهوية وأفضل الممارسات.",
         iconKey: "shield",
         imageUrl: "/services/authentication.png",
       },
       {
-        title: "السحابة والنشر",
+        title: "السحابة والنشر\n(Cloud & Deployment)",
         description:
           "مسارات CI/CD، أتمتة البنية، ومراقبة تساعد على نشر موثوق وسريع.",
         iconKey: "cloud",
@@ -240,7 +240,7 @@ export const arContent: SiteContent = {
     appliedInLabel: "مطبّق في",
     items: [
       {
-        title: "الخدمات المصغّرة",
+        title: "الخدمات المصغّرة (Microservices)",
         description:
           "حدود خدمات واضحة حسب المجال تسمح بالتوسع والتغيير المستقل.",
         iconKey: "microservices",

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +12,45 @@
   --text-h2: clamp(1.65rem, 3.2vw, 3rem);
   --text-body: clamp(1rem, 1.15vw, 1.125rem);
   --space-section: clamp(4rem, 8vw, 7rem);
+}
+
+html[lang="ar"] {
+  font-family: "Alexandria", "Segoe UI", sans-serif;
+  --text-display: clamp(1.65rem, 3.1vw, 3.05rem);
+  --text-h2: clamp(1.35rem, 2.3vw, 2.15rem);
+  --text-body: clamp(0.9rem, 0.98vw, 1rem);
+}
+
+html[lang="ar"] body {
+  font-family: "Alexandria", "Segoe UI", sans-serif;
+  font-size: 0.94rem;
+}
+
+html[lang="ar"] h1 {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+}
+
+html[lang="ar"] p {
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+html[lang="ar"] .tech-logo-label {
+  font-size: clamp(0.95rem, 0.9vw, 1.08rem);
+  font-weight: 500;
+}
+
+html[lang="ar"] .section-title {
+  font-weight: 500;
 }
 
 html {
@@ -123,14 +162,12 @@ a {
   position: absolute;
   inset: -120% -35%;
   z-index: 0;
-  background: conic-gradient(
-    from 200deg,
-    transparent 0deg,
-    rgba(56, 189, 248, 0.18) 38deg,
-    rgba(59, 130, 246, 0.16) 74deg,
-    rgba(14, 165, 233, 0.18) 112deg,
-    transparent 150deg
-  );
+  background: conic-gradient(from 200deg,
+      transparent 0deg,
+      rgba(56, 189, 248, 0.18) 38deg,
+      rgba(59, 130, 246, 0.16) 74deg,
+      rgba(14, 165, 233, 0.18) 112deg,
+      transparent 150deg);
   opacity: 0;
   transform: translateX(-24%) rotate(8deg);
   transition: opacity 0.35s ease, transform 0.55s ease;
@@ -148,7 +185,7 @@ a {
   pointer-events: none;
 }
 
-.tech-logo-card > * {
+.tech-logo-card>* {
   position: relative;
   z-index: 1;
 }
@@ -190,8 +227,7 @@ a {
 .tech-logo-card:hover .tech-logo-icon {
   transform: scale(1.16) rotate(-4deg);
   filter:
-    drop-shadow(0 0 14px rgba(56, 189, 248, 0.35))
-    drop-shadow(0 0 22px rgba(59, 130, 246, 0.24));
+    drop-shadow(0 0 14px rgba(56, 189, 248, 0.35)) drop-shadow(0 0 22px rgba(59, 130, 246, 0.24));
 }
 
 .tech-logo-card:hover .tech-logo-label {
@@ -221,12 +257,10 @@ a {
   left: -45%;
   width: 52%;
   height: 320%;
-  background: linear-gradient(
-    110deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.45) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(110deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0) 100%);
   transform: rotate(18deg);
   opacity: 0;
   transition: left 0.55s ease, opacity 0.35s ease;
@@ -299,6 +333,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

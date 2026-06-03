@@ -47,6 +47,7 @@ export function ServicesSection() {
 
   const section = content.servicesSection;
   const [primary, ...others] = section.items;
+  const isArabic = content.direction === "rtl";
 
   if (!primary) {
     return null;
@@ -70,17 +71,21 @@ export function ServicesSection() {
             <div className="absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
 
             {primary.imageUrl ? (
-              <img
-                src={primary.imageUrl}
-                alt={primary.title}
-                className="pointer-events-none absolute bottom-[-1.2rem] right-[-0.8rem] z-[1] h-[52%] w-[56%] object-contain opacity-84 sm:bottom-[-1rem] sm:right-[-0.6rem] sm:h-[58%] sm:w-[58%]"
-                style={{
-                  WebkitMaskImage:
-                    "linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.96) 45%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0.08) 92%, rgba(0,0,0,0) 100%)",
-                  maskImage:
-                    "linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.96) 45%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0.08) 92%, rgba(0,0,0,0) 100%)",
-                }}
-              />
+              <>
+                <img
+                  src={primary.imageUrl}
+                  alt={primary.title}
+                  className="pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.72] sm:bottom-[0.5rem] sm:h-[33%]"
+                  style={{
+                    WebkitMaskImage:
+                      "radial-gradient(92% 82% at 58% 68%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 42%, rgba(0,0,0,0.38) 70%, rgba(0,0,0,0.08) 88%, rgba(0,0,0,0) 100%)",
+                    maskImage:
+                      "radial-gradient(92% 82% at 58% 68%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 42%, rgba(0,0,0,0.38) 70%, rgba(0,0,0,0.08) 88%, rgba(0,0,0,0) 100%)",
+                  }}
+                />
+
+                <div className="absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent" />
+              </>
             ) : null}
 
             <div className="relative z-10 max-w-[27rem]">
@@ -90,11 +95,21 @@ export function ServicesSection() {
                 <ServiceIcon service={primary} className="h-6 w-6 stroke-[2.35]" />
               </div>
 
-              <h3 className="text-3xl font-semibold leading-tight text-white sm:text-5xl sm:leading-[1.06]">
+              <h3
+                className={`whitespace-pre-line text-white ${isArabic
+                  ? "text-2xl font-medium leading-[1.25] sm:text-3xl"
+                  : "text-3xl font-semibold leading-tight sm:text-5xl sm:leading-[1.06]"
+                  }`}
+              >
                 {primary.title}
               </h3>
 
-              <p className="mt-4 text-base leading-8 text-slate-200 sm:text-[1.35rem] sm:leading-9">
+              <p
+                className={`mt-4 text-slate-200 ${isArabic
+                  ? "text-sm font-normal leading-7 sm:text-base sm:leading-8"
+                  : "text-base leading-8 sm:text-[1.35rem] sm:leading-9"
+                  }`}
+              >
                 {primary.description}
               </p>
 
@@ -127,11 +142,10 @@ export function ServicesSection() {
           {others.slice(0, 2).map((service, index) => (
             <article
               key={service.title}
-              className={`service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3 ${
-                index === 0
-                  ? "border-emerald-300/35 bg-gradient-to-br from-emerald-900/15 via-slate-950 to-cyan-950/70"
-                  : "border-violet-300/35 bg-gradient-to-br from-violet-900/20 via-slate-950 to-indigo-950/75"
-              }`}
+              className={`service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3 ${index === 0
+                ? "border-emerald-300/35 bg-gradient-to-br from-emerald-900/15 via-slate-950 to-cyan-950/70"
+                : "border-violet-300/35 bg-gradient-to-br from-violet-900/20 via-slate-950 to-indigo-950/75"
+                }`}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.16),transparent_52%)]" />
 
@@ -160,18 +174,27 @@ export function ServicesSection() {
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${
-                    ICON_BADGE_STYLES[index + 1]
-                  }`}
+                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${ICON_BADGE_STYLES[index + 1]
+                    }`}
                 >
                   <ServiceIcon service={service} className="h-6 w-6 stroke-[2.35]" />
                 </div>
 
-                <h3 className="text-2xl font-semibold leading-tight text-white sm:text-4xl">
+                <h3
+                  className={`whitespace-pre-line text-white ${isArabic
+                    ? "text-xl font-medium leading-[1.25] sm:text-2xl"
+                    : "text-2xl font-semibold leading-tight sm:text-4xl"
+                    }`}
+                >
                   {service.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                <p
+                  className={`mt-3 text-slate-200 ${isArabic
+                    ? "text-sm font-normal leading-7 sm:text-[0.95rem] sm:leading-8"
+                    : "text-sm leading-7 sm:text-lg sm:leading-8"
+                    }`}
+                >
                   {service.description}
                 </p>
               </div>
@@ -181,13 +204,12 @@ export function ServicesSection() {
           {others.slice(2).map((service, index) => (
             <article
               key={service.title}
-              className={`service-premium-card group relative min-h-[25rem] overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:min-h-[26rem] sm:p-7 lg:col-span-4 ${
-                index === 0
-                  ? "border-orange-300/35 bg-gradient-to-br from-orange-900/20 via-slate-950 to-slate-900"
-                  : index === 1
-                    ? "border-cyan-300/35 bg-gradient-to-br from-cyan-900/20 via-slate-950 to-slate-900"
-                    : "border-blue-300/35 bg-gradient-to-br from-blue-900/25 via-slate-950 to-indigo-950/80"
-              }`}
+              className={`service-premium-card group relative min-h-[25rem] overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:min-h-[26rem] sm:p-7 lg:col-span-4 ${index === 0
+                ? "border-orange-300/35 bg-gradient-to-br from-orange-900/20 via-slate-950 to-slate-900"
+                : index === 1
+                  ? "border-cyan-300/35 bg-gradient-to-br from-cyan-900/20 via-slate-950 to-slate-900"
+                  : "border-blue-300/35 bg-gradient-to-br from-blue-900/25 via-slate-950 to-indigo-950/80"
+                }`}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_88%,rgba(56,189,248,0.14),transparent_48%)]" />
 
@@ -207,18 +229,27 @@ export function ServicesSection() {
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${
-                    ICON_BADGE_STYLES[index + 3]
-                  }`}
+                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${ICON_BADGE_STYLES[index + 3]
+                    }`}
                 >
                   <ServiceIcon service={service} className="h-6 w-6 stroke-[2.35]" />
                 </div>
 
-                <h3 className="text-2xl font-semibold leading-tight text-white sm:text-4xl">
+                <h3
+                  className={`whitespace-pre-line text-white ${isArabic
+                    ? "text-xl font-medium leading-[1.25] sm:text-2xl"
+                    : "text-2xl font-semibold leading-tight sm:text-4xl"
+                    }`}
+                >
                   {service.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                <p
+                  className={`mt-3 text-slate-200 ${isArabic
+                    ? "text-sm font-normal leading-7 sm:text-[0.95rem] sm:leading-8"
+                    : "text-sm leading-7 sm:text-lg sm:leading-8"
+                    }`}
+                >
                   {service.description}
                 </p>
               </div>

@@ -4,6 +4,7 @@ import { useLanguage } from "../../i18n/LanguageProvider";
 export function HeroSection() {
   const { content } = useLanguage();
   const hero = content.hero;
+  const isArabic = content.direction === "rtl";
 
   return (
     <section
@@ -19,11 +20,23 @@ export function HeroSection() {
             {content.agency.tagline}
           </p>
 
-          <h1 className="max-w-[13ch] text-balance text-[length:var(--text-display)] font-semibold leading-[1.1] text-white max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl">
+          <h1
+            className={`text-balance text-white ${
+              isArabic
+                ? "max-w-[13ch] text-[2.35rem] font-medium leading-[1.2] max-[430px]:text-[1.9rem] md:text-[2.85rem] lg:text-[3.35rem]"
+                : "max-w-[13ch] text-[length:var(--text-display)] font-semibold leading-[1.1] max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl"
+            }`}
+          >
             {hero.title}
           </h1>
 
-          <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-slate-300 max-[430px]:text-[0.95rem] md:mt-5 md:text-base md:leading-7 lg:mt-7 lg:text-lg lg:leading-8">
+          <p
+            className={`mt-4 max-w-2xl text-slate-300 max-[430px]:text-[0.95rem] md:mt-5 lg:mt-7 ${
+              isArabic
+                ? "text-[0.95rem] font-normal leading-8 md:text-base lg:text-[1.05rem] lg:leading-9"
+                : "text-[0.98rem] leading-7 md:text-base md:leading-7 lg:text-lg lg:leading-8"
+            }`}
+          >
             {hero.description}
           </p>
 
