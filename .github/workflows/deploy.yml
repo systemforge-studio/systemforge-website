@@ -2,10 +2,9 @@ name: Deploy Vite site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    tags: ["**"]
   pull_request:
     branches: ["dev", "main"]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ github.event_name == 'pull_request' || (github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && github.event.deleted == false) }}
     runs-on: ubuntu-latest
 
     steps:
@@ -39,13 +39,13 @@ jobs:
           VITE_BASE_PATH: /systemforge-website/
 
       - name: Upload Pages artifact
-        if: github.event_name != 'pull_request'
+        if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && github.event.deleted == false }}
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') && github.event.deleted == false }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
