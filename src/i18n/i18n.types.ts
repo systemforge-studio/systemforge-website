@@ -1,4 +1,4 @@
-export type LanguageCode = "en" | "ar" | "zh-cn" | "zh-tw";
+export type LanguageCode = "en" | "ar" | "ckb" | "zh-cn" | "zh-tw";
 export type TextDirection = "ltr" | "rtl";
 
 export type DeepPartial<T> = T extends readonly (infer Item)[]
