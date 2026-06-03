@@ -1,5 +1,6 @@
 import type {LocaleContent} from "../i18n.types";
 import {ROUTES} from "../../shared/constants/routes";
+import {publicAsset} from "../../shared/utils/assets";
 
 export const arContent: LocaleContent = {
   language: "ar",
@@ -59,7 +60,7 @@ export const arContent: LocaleContent = {
           "Microservices",
           "API Gateway",
         ],
-        imageUrl: "/project/EquiTip.png",
+        imageUrl: publicAsset("/project/EquiTip.png"),
       },
       {
         title: "منصة السلامة المدعومة بالذكاء الاصطناعي",
@@ -72,7 +73,7 @@ export const arContent: LocaleContent = {
           "Offline Sync",
           "PDF Export",
         ],
-        imageUrl: "/project/fpp.png",
+        imageUrl: publicAsset("/project/fpp.png"),
       },
       {
         title: "منصة PathPal للملاحة المجتمعية",
@@ -86,7 +87,7 @@ export const arContent: LocaleContent = {
           "MongoDB",
           "Cloudinary",
         ],
-        imageUrl: "/project/pathPal.png",
+        imageUrl: publicAsset("/project/pathPal.png"),
       },
     ],
   },
@@ -109,42 +110,42 @@ export const arContent: LocaleContent = {
           "تسليم جاهز للإنتاج",
         ],
         cta: "من الفكرة إلى الإنتاج",
-        imageUrl: "/services/full-stack.png",
+        imageUrl: publicAsset("/services/full-stack.png"),
       },
       {
         title: "تطوير تطبيقات الموبايل",
         description:
           "تطبيقات متعددة المنصات بأداء موثوق وتجربة استخدام واضحة وقابلة للصيانة.",
         iconKey: "smartphone",
-        imageUrl: "/services/mobile-application.png",
+        imageUrl: publicAsset("/services/mobile-application.png"),
       },
       {
         title: "هندسة الخلفية وواجهات API",
         description:
           "أنظمة خلفية وواجهات API آمنة وقابلة للتوسع ومصممة للتكامل والاعتمادية.",
         iconKey: "code",
-        imageUrl: "/services/backend-api.png",
+        imageUrl: publicAsset("/services/backend-api.png"),
       },
       {
         title: "تصميم قواعد البيانات والتكامل",
         description:
           "بنية بيانات قوية مع تصميم جداول واضح، ترحيلات منظمة، واستعلامات عالية الأداء.",
         iconKey: "database",
-        imageUrl: "/services/database.png",
+        imageUrl: publicAsset("/services/database.png"),
       },
       {
         title: "المصادقة والأمان",
         description:
           "تنفيذ يركز على الأمان باستخدام الصلاحيات، تقوية API، وضوابط الهوية وأفضل الممارسات.",
         iconKey: "shield",
-        imageUrl: "/services/authentication.png",
+        imageUrl: publicAsset("/services/authentication.png"),
       },
       {
         title: "السحابة والنشر",
         description:
           "مسارات CI/CD، أتمتة البنية، ومراقبة تساعد على نشر موثوق وسريع.",
         iconKey: "cloud",
-        imageUrl: "/services/cloud.png",
+        imageUrl: publicAsset("/services/cloud.png"),
       },
     ],
   },
@@ -292,7 +293,7 @@ export const arContent: LocaleContent = {
     members: [
       {
         name: "Haider Al-Sudani",
-        imageUrl: "/team/haider.png",
+        imageUrl: publicAsset("/team/haider.png"),
         role: "المؤسس | مطور Full-Stack | هندسة الخلفية",
         summary:
           "مؤسس SystemForge Studio. يقود بنية الحلول، استراتيجية الخلفية، تخطيط التسليم، والتواصل مع أصحاب المصلحة.",
@@ -307,7 +308,7 @@ export const arContent: LocaleContent = {
       },
       {
         name: "Haven Zhang",
-        imageUrl: "/team/haven.png",
+        imageUrl: publicAsset("/team/haven.png"),
         role: "مطورة Full-Stack | تطبيقات مؤسسية",
         summary:
           "مطورة برمجيات مؤسسية بخبرة 7 سنوات في مشاريع NEC وتطبيقات Full-Stack حديثة.",
@@ -322,7 +323,7 @@ export const arContent: LocaleContent = {
       },
       {
         name: "Jimmy Kong",
-        imageUrl: "/team/jimmy.png",
+        imageUrl: publicAsset("/team/jimmy.png"),
         role: "مطور موبايل",
         summary:
           "مطور مستقل لتطبيق Rentamin وحاصل على AWS Certified Solutions Architect مع معرفة قوية بمنظومة السحابة.",
@@ -338,7 +339,7 @@ export const arContent: LocaleContent = {
       },
       {
         name: "Lin Pan",
-        imageUrl: "/team/lin.jpg",
+        imageUrl: publicAsset("/team/lin.jpg"),
         role: "مطورة Full-Stack | أنظمة أعمال",
         summary:
           "مطورة Full-Stack تبني أنظمة ويب وموبايل وخلفية، وتجمع بين الاستشارات المؤسسية والهندسة البرمجية.",
@@ -356,7 +357,7 @@ export const arContent: LocaleContent = {
       },
       {
         name: "Jerry Xing",
-        imageUrl: "/team/jerry.png",
+        imageUrl: publicAsset("/team/jerry.png"),
         role: "مطور Full-Stack",
         summary:
           "مطور Full-Stack يركز على تنفيذ الخلفية وتكامل API، قواعد البيانات، المصادقة، والتوثيق.",

@@ -1,5 +1,6 @@
 import type {LocaleContent} from "../i18n.types";
 import {ROUTES} from "../../shared/constants/routes";
+import {publicAsset} from "../../shared/utils/assets";
 
 export const zhTwContent: LocaleContent = {
   language: "zh-tw",
@@ -59,7 +60,7 @@ export const zhTwContent: LocaleContent = {
           "Microservices",
           "API Gateway",
         ],
-        imageUrl: "/project/EquiTip.png",
+        imageUrl: publicAsset("/project/EquiTip.png"),
       },
       {
         title: "AI 防墜落安全平台",
@@ -72,7 +73,7 @@ export const zhTwContent: LocaleContent = {
           "Offline Sync",
           "PDF Export",
         ],
-        imageUrl: "/project/fpp.png",
+        imageUrl: publicAsset("/project/fpp.png"),
       },
       {
         title: "PathPal 社區導航",
@@ -86,7 +87,7 @@ export const zhTwContent: LocaleContent = {
           "MongoDB",
           "Cloudinary",
         ],
-        imageUrl: "/project/pathPal.png",
+        imageUrl: publicAsset("/project/pathPal.png"),
       },
     ],
   },
@@ -109,42 +110,42 @@ export const zhTwContent: LocaleContent = {
           "正式上線交付",
         ],
         cta: "從想法到上線",
-        imageUrl: "/services/full-stack.png",
+        imageUrl: publicAsset("/services/full-stack.png"),
       },
       {
         title: "行動應用開發",
         description:
           "構建跨平台行動應用，提供穩定效能、順暢體驗和長期可維護性。",
         iconKey: "smartphone",
-        imageUrl: "/services/mobile-application.png",
+        imageUrl: publicAsset("/services/mobile-application.png"),
       },
       {
         title: "後端與 API 工程",
         description:
           "設計安全、可擴展的後端和 API，兼顧可靠性、效能與系統整合。",
         iconKey: "code",
-        imageUrl: "/services/backend-api.png",
+        imageUrl: publicAsset("/services/backend-api.png"),
       },
       {
         title: "資料庫設計與整合",
         description:
           "透過合理的資料架構、遷移方案和高效能查詢，打造具備韌性的資料系統。",
         iconKey: "database",
-        imageUrl: "/services/database.png",
+        imageUrl: publicAsset("/services/database.png"),
       },
       {
         title: "身分驗證與資安",
         description:
           "以資安優先的方式實作 RBAC、API 強化、身分控管和工程最佳實務。",
         iconKey: "shield",
-        imageUrl: "/services/authentication.png",
+        imageUrl: publicAsset("/services/authentication.png"),
       },
       {
         title: "雲端服務與部署",
         description:
           "提供 CI/CD 流程、基礎設施自動化和可觀測性能力，支援可靠、快速的部署。",
         iconKey: "cloud",
-        imageUrl: "/services/cloud.png",
+        imageUrl: publicAsset("/services/cloud.png"),
       },
     ],
   },
@@ -292,7 +293,7 @@ export const zhTwContent: LocaleContent = {
     members: [
       {
         name: "Haider Al-Sudani",
-        imageUrl: "/team/haider.png",
+        imageUrl: publicAsset("/team/haider.png"),
         role: "創辦人 | 全端開發者 | 後端架構",
         summary:
           "SystemForge Studio 創辦人。負責解決方案架構、後端策略、交付規劃和端到端執行中的利害關係人溝通。",
@@ -307,7 +308,7 @@ export const zhTwContent: LocaleContent = {
       },
       {
         name: "Haven Zhang",
-        imageUrl: "/team/haven.png",
+        imageUrl: publicAsset("/team/haven.png"),
         role: "全端開發者 | 企業應用",
         summary:
           "擁有 7 年企業軟體開發經驗，曾為 NEC 客戶專案和現代全端應用交付解決方案。",
@@ -322,7 +323,7 @@ export const zhTwContent: LocaleContent = {
       },
       {
         name: "Jimmy Kong",
-        imageUrl: "/team/jimmy.png",
+        imageUrl: publicAsset("/team/jimmy.png"),
         role: "行動端開發者",
         summary:
           "行動應用 Rentamin 的獨立開發者。AWS 認證解決方案架構師，熟悉雲端生態，並積極使用 AI 提升開發效率。",
@@ -338,7 +339,7 @@ export const zhTwContent: LocaleContent = {
       },
       {
         name: "Lin Pan",
-        imageUrl: "/team/lin.jpg",
+        imageUrl: publicAsset("/team/lin.jpg"),
         role: "全端開發者 | 業務系統專家",
         summary:
           "全端開發者，擅長構建 Web、行動端和後端系統。結合企業諮詢和軟體工程經驗，交付可擴展的業務解決方案。",
@@ -356,7 +357,7 @@ export const zhTwContent: LocaleContent = {
       },
       {
         name: "Jerry Xing",
-        imageUrl: "/team/jerry.png",
+        imageUrl: publicAsset("/team/jerry.png"),
         role: "全端開發者",
         summary:
           "全端開發者，專注於後端實作和 API 整合，參與服務開發、資料庫相關工作、驗證流程和專案文件。",

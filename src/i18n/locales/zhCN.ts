@@ -1,5 +1,6 @@
 import type {LocaleContent} from "../i18n.types";
 import {ROUTES} from "../../shared/constants/routes";
+import {publicAsset} from "../../shared/utils/assets";
 
 export const zhCnContent: LocaleContent = {
   language: "zh-cn",
@@ -59,7 +60,7 @@ export const zhCnContent: LocaleContent = {
           "Microservices",
           "API Gateway",
         ],
-        imageUrl: "/project/EquiTip.png",
+        imageUrl: publicAsset("/project/EquiTip.png"),
       },
       {
         title: "AI 防坠落安全平台",
@@ -72,7 +73,7 @@ export const zhCnContent: LocaleContent = {
           "Offline Sync",
           "PDF Export",
         ],
-        imageUrl: "/project/fpp.png",
+        imageUrl: publicAsset("/project/fpp.png"),
       },
       {
         title: "PathPal 社区导航",
@@ -86,7 +87,7 @@ export const zhCnContent: LocaleContent = {
           "MongoDB",
           "Cloudinary",
         ],
-        imageUrl: "/project/pathPal.png",
+        imageUrl: publicAsset("/project/pathPal.png"),
       },
     ],
   },
@@ -109,42 +110,42 @@ export const zhCnContent: LocaleContent = {
           "生产级交付",
         ],
         cta: "从想法到上线",
-        imageUrl: "/services/full-stack.png",
+        imageUrl: publicAsset("/services/full-stack.png"),
       },
       {
         title: "移动应用开发",
         description:
           "构建跨平台移动应用，提供稳定性能、顺畅体验和长期可维护性。",
         iconKey: "smartphone",
-        imageUrl: "/services/mobile-application.png",
+        imageUrl: publicAsset("/services/mobile-application.png"),
       },
       {
         title: "后端与 API 工程",
         description:
           "设计安全、可扩展的后端和 API，兼顾可靠性、性能与系统集成。",
         iconKey: "code",
-        imageUrl: "/services/backend-api.png",
+        imageUrl: publicAsset("/services/backend-api.png"),
       },
       {
         title: "数据库设计与集成",
         description:
           "通过合理的数据架构、迁移方案和高性能查询，打造具备韧性的数据系统。",
         iconKey: "database",
-        imageUrl: "/services/database.png",
+        imageUrl: publicAsset("/services/database.png"),
       },
       {
         title: "认证与安全",
         description:
           "以安全优先的方式实现 RBAC、API 加固、身份控制和工程最佳实践。",
         iconKey: "shield",
-        imageUrl: "/services/authentication.png",
+        imageUrl: publicAsset("/services/authentication.png"),
       },
       {
         title: "云服务与部署",
         description:
           "提供 CI/CD 流程、基础设施自动化和可观测性能力，实现可靠、快速的部署。",
         iconKey: "cloud",
-        imageUrl: "/services/cloud.png",
+        imageUrl: publicAsset("/services/cloud.png"),
       },
     ],
   },
@@ -292,7 +293,7 @@ export const zhCnContent: LocaleContent = {
     members: [
       {
         name: "Haider Al-Sudani",
-        imageUrl: "/team/haider.png",
+        imageUrl: publicAsset("/team/haider.png"),
         role: "创始人 | 全栈开发者 | 后端架构",
         summary:
           "SystemForge Studio 创始人。负责解决方案架构、后端策略、交付规划和端到端执行中的利益相关方沟通。",
@@ -307,7 +308,7 @@ export const zhCnContent: LocaleContent = {
       },
       {
         name: "Haven Zhang",
-        imageUrl: "/team/haven.png",
+        imageUrl: publicAsset("/team/haven.png"),
         role: "全栈开发者 | 企业应用",
         summary:
           "拥有 7 年企业软件开发经验，曾为 NEC 客户项目和现代全栈应用交付解决方案。",
@@ -322,7 +323,7 @@ export const zhCnContent: LocaleContent = {
       },
       {
         name: "Jimmy Kong",
-        imageUrl: "/team/jimmy.png",
+        imageUrl: publicAsset("/team/jimmy.png"),
         role: "移动端开发者",
         summary:
           "移动应用 Rentamin 的独立开发者。AWS 认证解决方案架构师，熟悉云生态，并积极使用 AI 提升开发效率。",
@@ -338,7 +339,7 @@ export const zhCnContent: LocaleContent = {
       },
       {
         name: "Lin Pan",
-        imageUrl: "/team/lin.jpg",
+        imageUrl: publicAsset("/team/lin.jpg"),
         role: "全栈开发者 | 业务系统专家",
         summary:
           "全栈开发者，擅长构建 Web、移动端和后端系统。结合企业咨询和软件工程经验，交付可扩展的业务解决方案。",
@@ -356,7 +357,7 @@ export const zhCnContent: LocaleContent = {
       },
       {
         name: "Jerry Xing",
-        imageUrl: "/team/jerry.png",
+        imageUrl: publicAsset("/team/jerry.png"),
         role: "全栈开发者",
         summary:
           "全栈开发者，专注于后端实现和 API 集成，参与服务开发、数据库相关工作、认证流程和项目文档。",
