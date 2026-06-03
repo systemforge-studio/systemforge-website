@@ -8,7 +8,7 @@ import {
   Shield,
   Smartphone,
 } from "lucide-react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import type { LocalizedService } from "../../i18n/i18n.types";
 import { SectionHeader } from "../ui/SectionHeader";
 

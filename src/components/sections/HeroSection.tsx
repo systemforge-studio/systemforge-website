@@ -1,5 +1,5 @@
 import sfsLogo from "../../assets/sfs-logo.png";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function HeroSection() {
   const { content } = useLanguage();
