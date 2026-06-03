@@ -1,4 +1,5 @@
-import type { LucideIcon } from "lucide-react";
+import type {LucideIcon} from "lucide-react";
+import type {ComponentType} from "react";
 
 export type NavigationItem = {
   label: string;
@@ -31,7 +32,7 @@ export type TeamMember = {
 
 export type TechItem = {
   label: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
   color: string;
 };
 
