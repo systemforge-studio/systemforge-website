@@ -1,5 +1,5 @@
-import type { SiteContent } from "../i18n.types";
-import { ROUTES } from "../../shared/constants/routes";
+import type {SiteContent} from "../i18n.types";
+import {ROUTES} from "../../shared/constants/routes";
 
 export const enContent: SiteContent = {
   language: "en",
@@ -19,12 +19,12 @@ export const enContent: SiteContent = {
   nav: {
     callToAction: "Book Call",
     items: [
-      { label: "Projects", href: ROUTES.PROJECTS },
-      { label: "Services", href: ROUTES.SERVICES },
-      { label: "Technology", href: ROUTES.STACK },
-      { label: "Principles", href: ROUTES.ARCHITECTURE },
-      { label: "Team", href: ROUTES.TEAM },
-      { label: "Contact", href: ROUTES.CONTACT },
+      {label: "Projects", href: ROUTES.PROJECTS},
+      {label: "Services", href: ROUTES.SERVICES},
+      {label: "Technology", href: ROUTES.STACK},
+      {label: "Principles", href: ROUTES.ARCHITECTURE},
+      {label: "Team", href: ROUTES.TEAM},
+      {label: "Contact", href: ROUTES.CONTACT},
     ],
   },
 
@@ -163,19 +163,19 @@ export const enContent: SiteContent = {
         description: "Building fast, responsive and accessible interfaces.",
         iconKey: "frontend",
         items: [
-          { label: "React", iconKey: "react", color: "text-cyan-400" },
+          {label: "React", iconKey: "react", color: "text-cyan-400"},
           {
             label: "React Native",
             iconKey: "reactNative",
             color: "text-sky-400",
           },
-          { label: "Next.js", iconKey: "next", color: "text-slate-100" },
+          {label: "Next.js", iconKey: "next", color: "text-slate-100"},
           {
             label: "TypeScript",
             iconKey: "typescript",
             color: "text-blue-500",
           },
-          { label: "Vue.js", iconKey: "vue", color: "text-emerald-400" },
+          {label: "Vue.js", iconKey: "vue", color: "text-emerald-400"},
         ],
       },
       {
@@ -184,11 +184,11 @@ export const enContent: SiteContent = {
         description: "Robust server-side logic and APIs.",
         iconKey: "backend",
         items: [
-          { label: "Node.js", iconKey: "node", color: "text-green-500" },
-          { label: "Express", iconKey: "express", color: "text-slate-100" },
-          { label: ".NET", iconKey: "dotnet", color: "text-violet-500" },
-          { label: "Python", iconKey: "python", color: "text-blue-400" },
-          { label: "Go", iconKey: "go", color: "text-cyan-300" },
+          {label: "Node.js", iconKey: "node", color: "text-green-500"},
+          {label: "Express", iconKey: "express", color: "text-slate-100"},
+          {label: ".NET", iconKey: "dotnet", color: "text-violet-500"},
+          {label: "Python", iconKey: "python", color: "text-blue-400"},
+          {label: "Go", iconKey: "go", color: "text-cyan-300"},
         ],
       },
       {
@@ -202,9 +202,9 @@ export const enContent: SiteContent = {
             iconKey: "postgresql",
             color: "text-blue-500",
           },
-          { label: "MongoDB", iconKey: "mongodb", color: "text-green-500" },
-          { label: "Redis", iconKey: "redis", color: "text-red-500" },
-          { label: "Oracle", iconKey: "oracle", color: "text-red-500" },
+          {label: "MongoDB", iconKey: "mongodb", color: "text-green-500"},
+          {label: "Redis", iconKey: "redis", color: "text-red-500"},
+          {label: "Oracle", iconKey: "oracle", color: "text-red-500"},
           {
             label: "SQL Server",
             iconKey: "sqlServer",
@@ -218,10 +218,10 @@ export const enContent: SiteContent = {
         description: "Infrastructure, deployment and automation.",
         iconKey: "cloud",
         items: [
-          { label: "Docker", iconKey: "docker", color: "text-blue-500" },
-          { label: "AWS", iconKey: "aws", color: "text-orange-400" },
-          { label: "Azure", iconKey: "azure", color: "text-blue-500" },
-          { label: "Railway", iconKey: "railway", color: "text-purple-400" },
+          {label: "Docker", iconKey: "docker", color: "text-blue-500"},
+          {label: "AWS", iconKey: "aws", color: "text-orange-400"},
+          {label: "Azure", iconKey: "azure", color: "text-blue-500"},
+          {label: "Railway", iconKey: "railway", color: "text-purple-400"},
           {
             label: "GitHub Actions",
             iconKey: "githubActions",

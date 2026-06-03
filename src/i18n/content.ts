@@ -1,6 +1,7 @@
 import { enContent } from "./locales/en";
 import { arContent } from "./locales/ar";
 import { zhCnContent } from "./locales/zhCN";
+import { zhTwContent } from "./locales/zhTW";
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from "./i18n.constants";
 import type { LanguageCode, LocaleContent, SiteContent } from "./i18n.types";
 
@@ -8,6 +9,7 @@ const CONTENT_BY_LANGUAGE: Partial<Record<LanguageCode, LocaleContent>> = {
   en: enContent,
   ar: arContent,
   "zh-cn": zhCnContent,
+  "zh-tw": zhTwContent,
 };
 
 function isObjectRecord(value: unknown): value is Record<string, unknown> {

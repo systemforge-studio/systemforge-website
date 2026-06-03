@@ -1,5 +1,5 @@
-import type { LocaleContent } from "../i18n.types";
-import { ROUTES } from "../../shared/constants/routes";
+import type {LocaleContent} from "../i18n.types";
+import {ROUTES} from "../../shared/constants/routes";
 
 export const zhCnContent: LocaleContent = {
   language: "zh-cn",
@@ -19,12 +19,12 @@ export const zhCnContent: LocaleContent = {
   nav: {
     callToAction: "预约沟通",
     items: [
-      { label: "项目", href: ROUTES.PROJECTS },
-      { label: "服务", href: ROUTES.SERVICES },
-      { label: "技术", href: ROUTES.STACK },
-      { label: "原则", href: ROUTES.ARCHITECTURE },
-      { label: "团队", href: ROUTES.TEAM },
-      { label: "联系", href: ROUTES.CONTACT },
+      {label: "项目", href: ROUTES.PROJECTS},
+      {label: "服务", href: ROUTES.SERVICES},
+      {label: "技术", href: ROUTES.STACK},
+      {label: "原则", href: ROUTES.ARCHITECTURE},
+      {label: "团队", href: ROUTES.TEAM},
+      {label: "联系", href: ROUTES.CONTACT},
     ],
   },
 
@@ -163,19 +163,19 @@ export const zhCnContent: LocaleContent = {
         description: "构建快速、响应式且易访问的用户界面。",
         iconKey: "frontend",
         items: [
-          { label: "React", iconKey: "react", color: "text-cyan-400" },
+          {label: "React", iconKey: "react", color: "text-cyan-400"},
           {
             label: "React Native",
             iconKey: "reactNative",
             color: "text-sky-400",
           },
-          { label: "Next.js", iconKey: "next", color: "text-slate-100" },
+          {label: "Next.js", iconKey: "next", color: "text-slate-100"},
           {
             label: "TypeScript",
             iconKey: "typescript",
             color: "text-blue-500",
           },
-          { label: "Vue.js", iconKey: "vue", color: "text-emerald-400" },
+          {label: "Vue.js", iconKey: "vue", color: "text-emerald-400"},
         ],
       },
       {
@@ -184,11 +184,11 @@ export const zhCnContent: LocaleContent = {
         description: "构建稳健的服务端逻辑和 API。",
         iconKey: "backend",
         items: [
-          { label: "Node.js", iconKey: "node", color: "text-green-500" },
-          { label: "Express", iconKey: "express", color: "text-slate-100" },
-          { label: ".NET", iconKey: "dotnet", color: "text-violet-500" },
-          { label: "Python", iconKey: "python", color: "text-blue-400" },
-          { label: "Go", iconKey: "go", color: "text-cyan-300" },
+          {label: "Node.js", iconKey: "node", color: "text-green-500"},
+          {label: "Express", iconKey: "express", color: "text-slate-100"},
+          {label: ".NET", iconKey: "dotnet", color: "text-violet-500"},
+          {label: "Python", iconKey: "python", color: "text-blue-400"},
+          {label: "Go", iconKey: "go", color: "text-cyan-300"},
         ],
       },
       {
@@ -202,9 +202,9 @@ export const zhCnContent: LocaleContent = {
             iconKey: "postgresql",
             color: "text-blue-500",
           },
-          { label: "MongoDB", iconKey: "mongodb", color: "text-green-500" },
-          { label: "Redis", iconKey: "redis", color: "text-red-500" },
-          { label: "Oracle", iconKey: "oracle", color: "text-red-500" },
+          {label: "MongoDB", iconKey: "mongodb", color: "text-green-500"},
+          {label: "Redis", iconKey: "redis", color: "text-red-500"},
+          {label: "Oracle", iconKey: "oracle", color: "text-red-500"},
           {
             label: "SQL Server",
             iconKey: "sqlServer",
@@ -218,10 +218,10 @@ export const zhCnContent: LocaleContent = {
         description: "基础设施、部署和自动化能力。",
         iconKey: "cloud",
         items: [
-          { label: "Docker", iconKey: "docker", color: "text-blue-500" },
-          { label: "AWS", iconKey: "aws", color: "text-orange-400" },
-          { label: "Azure", iconKey: "azure", color: "text-blue-500" },
-          { label: "Railway", iconKey: "railway", color: "text-purple-400" },
+          {label: "Docker", iconKey: "docker", color: "text-blue-500"},
+          {label: "AWS", iconKey: "aws", color: "text-orange-400"},
+          {label: "Azure", iconKey: "azure", color: "text-blue-500"},
+          {label: "Railway", iconKey: "railway", color: "text-purple-400"},
           {
             label: "GitHub Actions",
             iconKey: "githubActions",
