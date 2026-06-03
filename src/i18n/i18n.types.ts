@@ -1,5 +1,11 @@
-export type LanguageCode = "en" | "ar";
+export type LanguageCode = "en" | "ar" | "zh-cn" | "zh-tw";
 export type TextDirection = "ltr" | "rtl";
+
+export type DeepPartial<T> = T extends readonly (infer Item)[]
+  ? DeepPartial<Item>[]
+  : T extends object
+    ? { [Key in keyof T]?: DeepPartial<T[Key]> }
+    : T;
 
 export type LocalizedNavigationItem = {
   label: string;
@@ -180,3 +186,6 @@ export type SiteContent = {
     copyrightPrefix: string;
   };
 };
+
+export type LocaleContent = DeepPartial<SiteContent> &
+  Pick<SiteContent, "language" | "direction" | "htmlLang">;

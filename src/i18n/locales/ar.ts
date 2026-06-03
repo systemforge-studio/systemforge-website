@@ -1,7 +1,7 @@
-import type { SiteContent } from "../i18n.types";
-import { ROUTES } from "../../shared/constants/routes";
+import type {LocaleContent} from "../i18n.types";
+import {ROUTES} from "../../shared/constants/routes";
 
-export const arContent: SiteContent = {
+export const arContent: LocaleContent = {
   language: "ar",
   direction: "rtl",
   htmlLang: "ar",
@@ -19,12 +19,12 @@ export const arContent: SiteContent = {
   nav: {
     callToAction: "تواصل معنا",
     items: [
-      { label: "المشاريع", href: ROUTES.PROJECTS },
-      { label: "الخدمات", href: ROUTES.SERVICES },
-      { label: "التقنيات", href: ROUTES.STACK },
-      { label: "المبادئ", href: ROUTES.ARCHITECTURE },
-      { label: "الفريق", href: ROUTES.TEAM },
-      { label: "التواصل", href: ROUTES.CONTACT },
+      {label: "المشاريع", href: ROUTES.PROJECTS},
+      {label: "الخدمات", href: ROUTES.SERVICES},
+      {label: "التقنيات", href: ROUTES.STACK},
+      {label: "المبادئ", href: ROUTES.ARCHITECTURE},
+      {label: "الفريق", href: ROUTES.TEAM},
+      {label: "التواصل", href: ROUTES.CONTACT},
     ],
   },
 
@@ -163,19 +163,19 @@ export const arContent: SiteContent = {
         description: "بناء واجهات سريعة، متجاوبة، وسهلة الاستخدام.",
         iconKey: "frontend",
         items: [
-          { label: "React", iconKey: "react", color: "text-cyan-400" },
+          {label: "React", iconKey: "react", color: "text-cyan-400"},
           {
             label: "React Native",
             iconKey: "reactNative",
             color: "text-sky-400",
           },
-          { label: "Next.js", iconKey: "next", color: "text-slate-100" },
+          {label: "Next.js", iconKey: "next", color: "text-slate-100"},
           {
             label: "TypeScript",
             iconKey: "typescript",
             color: "text-blue-500",
           },
-          { label: "Vue.js", iconKey: "vue", color: "text-emerald-400" },
+          {label: "Vue.js", iconKey: "vue", color: "text-emerald-400"},
         ],
       },
       {
@@ -184,11 +184,11 @@ export const arContent: SiteContent = {
         description: "منطق خادمي قوي وواجهات API موثوقة.",
         iconKey: "backend",
         items: [
-          { label: "Node.js", iconKey: "node", color: "text-green-500" },
-          { label: "Express", iconKey: "express", color: "text-slate-100" },
-          { label: ".NET", iconKey: "dotnet", color: "text-violet-500" },
-          { label: "Python", iconKey: "python", color: "text-blue-400" },
-          { label: "Go", iconKey: "go", color: "text-cyan-300" },
+          {label: "Node.js", iconKey: "node", color: "text-green-500"},
+          {label: "Express", iconKey: "express", color: "text-slate-100"},
+          {label: ".NET", iconKey: "dotnet", color: "text-violet-500"},
+          {label: "Python", iconKey: "python", color: "text-blue-400"},
+          {label: "Go", iconKey: "go", color: "text-cyan-300"},
         ],
       },
       {
@@ -202,9 +202,9 @@ export const arContent: SiteContent = {
             iconKey: "postgresql",
             color: "text-blue-500",
           },
-          { label: "MongoDB", iconKey: "mongodb", color: "text-green-500" },
-          { label: "Redis", iconKey: "redis", color: "text-red-500" },
-          { label: "Oracle", iconKey: "oracle", color: "text-red-500" },
+          {label: "MongoDB", iconKey: "mongodb", color: "text-green-500"},
+          {label: "Redis", iconKey: "redis", color: "text-red-500"},
+          {label: "Oracle", iconKey: "oracle", color: "text-red-500"},
           {
             label: "SQL Server",
             iconKey: "sqlServer",
@@ -218,10 +218,10 @@ export const arContent: SiteContent = {
         description: "بنية تحتية، نشر، وأتمتة للتشغيل الاحترافي.",
         iconKey: "cloud",
         items: [
-          { label: "Docker", iconKey: "docker", color: "text-blue-500" },
-          { label: "AWS", iconKey: "aws", color: "text-orange-400" },
-          { label: "Azure", iconKey: "azure", color: "text-blue-500" },
-          { label: "Railway", iconKey: "railway", color: "text-purple-400" },
+          {label: "Docker", iconKey: "docker", color: "text-blue-500"},
+          {label: "AWS", iconKey: "aws", color: "text-orange-400"},
+          {label: "Azure", iconKey: "azure", color: "text-blue-500"},
+          {label: "Railway", iconKey: "railway", color: "text-purple-400"},
           {
             label: "GitHub Actions",
             iconKey: "githubActions",

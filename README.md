@@ -2,9 +2,11 @@
 
 ## Build • Innovate • Scale
 
-SystemForge Studio (SFS) is a modern software engineering studio focused on building scalable web, mobile, backend, and cloud-ready systems using clean architecture and modern development practices.
+SystemForge Studio (SFS) is a modern software engineering studio focused on building scalable web, mobile, backend, and
+cloud-ready systems using clean architecture and modern development practices.
 
-This portfolio website represents the public engineering presence of SFS and showcases our services, technical capabilities, architecture experience, and software delivery approach.
+This portfolio website represents the public engineering presence of SFS and showcases our services, technical
+capabilities, architecture experience, and software delivery approach.
 
 ---
 
@@ -22,13 +24,15 @@ Our engineering approach focuses on:
 - Cloud-ready deployment
 - Modern engineering workflows
 
-We specialize in full-stack engineering, backend systems, mobile development, system architecture, integrations, and modern deployment pipelines.
+We specialize in full-stack engineering, backend systems, mobile development, system architecture, integrations, and
+modern deployment pipelines.
 
 ---
 
 # Technology Stack
 
 ## Frontend & Mobile
+
 - React
 - React Native
 - Next.js
@@ -41,6 +45,7 @@ We specialize in full-stack engineering, backend systems, mobile development, sy
 - Bootstrap
 
 ## Backend & APIs
+
 - Node.js
 - Express.js
 - Python
@@ -54,6 +59,7 @@ We specialize in full-stack engineering, backend systems, mobile development, sy
 - Prisma ORM
 
 ## Databases & Systems
+
 - PostgreSQL
 - MongoDB
 - MySQL
@@ -62,6 +68,7 @@ We specialize in full-stack engineering, backend systems, mobile development, sy
 - Firebase
 
 ## Cloud & DevOps
+
 - Docker
 - Railway
 - Vercel
@@ -71,6 +78,7 @@ We specialize in full-stack engineering, backend systems, mobile development, sy
 - GitHub Actions
 
 ## Engineering Practices
+
 - Microservices Architecture
 - API Gateway
 - OOP Design
@@ -87,13 +95,19 @@ We specialize in full-stack engineering, backend systems, mobile development, sy
 # Featured Projects
 
 ## EquiTip Modernization
-Migration of a legacy low-code mobile platform into a scalable React Native and microservices architecture using PostgreSQL, API Gateway, JWT authentication, and secure backend services.
+
+Migration of a legacy low-code mobile platform into a scalable React Native and microservices architecture using
+PostgreSQL, API Gateway, JWT authentication, and secure backend services.
 
 ## AI Fall Protection Platform
-Mobile safety platform with AI-assisted hazard detection, guided workflows, offline-first synchronization, and PDF export capabilities.
+
+Mobile safety platform with AI-assisted hazard detection, guided workflows, offline-first synchronization, and PDF
+export capabilities.
 
 ## Custom Business Systems
-Development of scalable internal tools, dashboards, APIs, databases, and workflow automation systems for business operations.
+
+Development of scalable internal tools, dashboards, APIs, databases, and workflow automation systems for business
+operations.
 
 ---
 
@@ -199,8 +213,7 @@ This website was designed with the following engineering principles:
 
 ### SystemForge Studio
 
-Email:  
-
+Email:
 
 GitHub Organization:  
 https://github.com/systemforge-studio
