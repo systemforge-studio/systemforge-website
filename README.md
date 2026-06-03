@@ -1,5 +1,11 @@
 # SystemForge Studio
 
+<p align="center">
+  <a href="https://systemforge-studio.github.io/systemforge-website/">
+    <img src="docs/assets/sfs-logo-large.png" alt="SystemForge Studio" width="300">
+  </a>
+</p>
+
 ## Build • Innovate • Scale
 
 SystemForge Studio (SFS) is a modern software engineering studio focused on building scalable web, mobile, backend, and
