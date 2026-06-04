@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../../i18n/useLanguage";
 import { LanguageSwitcher } from "../i18n/LanguageSwitcher";
 import { ROUTES, SECTION_IDS } from "../../shared/constants/routes";
+import { NAV_SCROLL_OBSERVER_OPTIONS } from "../../shared/constants/layout";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export function Navbar() {
           }
         });
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: 0.05 }
+      NAV_SCROLL_OBSERVER_OPTIONS
     );
 
     sections.forEach((section) => observer.observe(section));

@@ -1,5 +1,8 @@
 import { ArrowUpRight, Mail } from "lucide-react";
 import { useLanguage } from "../../i18n/useLanguage";
+import { SECTION_ID } from "../../shared/constants/routes";
+import { getExternalLinkProps } from "../../shared/utils/links";
+import { SECTION_CLASSES } from "../../shared/constants/layout";
 
 export function ContactSection() {
   const { content } = useLanguage();
@@ -15,10 +18,7 @@ export function ContactSection() {
   }
 
   return (
-    <section
-      id="contact"
-      className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
-    >
+    <section id={SECTION_ID.CONTACT} className={SECTION_CLASSES.default}>
       <div className="mx-auto max-w-5xl overflow-hidden rounded-[2.2rem] border border-cyan-300/20 bg-gradient-to-br from-cyan-900/20 via-slate-900 to-slate-950 p-6 shadow-[0_20px_100px_rgba(14,116,144,0.28)] sm:p-10 lg:p-12">
         <div className="grid items-center gap-8 sm:gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
@@ -47,16 +47,7 @@ export function ContactSection() {
 
             <a
               href={primaryChannel.href}
-              target={
-                primaryChannel.href.startsWith("http")
-                  ? "_blank"
-                  : undefined
-              }
-              rel={
-                primaryChannel.href.startsWith("http")
-                  ? "noopener noreferrer"
-                  : undefined
-              }
+              {...getExternalLinkProps(primaryChannel.href)}
               className="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 sm:mt-8"
             >
               {contact.primaryButtonLabel}
@@ -71,16 +62,7 @@ export function ContactSection() {
                     <a
                       key={channel.label}
                       href={channel.href}
-                      target={
-                        channel.href.startsWith("http")
-                          ? "_blank"
-                          : undefined
-                      }
-                      rel={
-                        channel.href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
+                      {...getExternalLinkProps(channel.href)}
                       className="block text-sm text-slate-300 transition hover:text-cyan-200"
                     >
                       {channel.label}: {channel.value}

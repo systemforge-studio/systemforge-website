@@ -16,6 +16,7 @@ export type ServiceIconKey =
 
 export type LocalizedService = {
   title: string;
+  subtitle?: string;
   description: string;
   iconKey: ServiceIconKey;
   highlights?: string[];
@@ -48,6 +49,7 @@ export type ArchitectureIconKey =
 
 export type LocalizedArchitectureItem = {
   title: string;
+  subtitle?: string;
   description: string;
   iconKey: ArchitectureIconKey;
   appliedIn: string;
@@ -80,7 +82,6 @@ export type TechItemIconKey =
 export type LocalizedTechItem = {
   label: string;
   iconKey: TechItemIconKey;
-  color: string;
 };
 
 export type LocalizedTechCategory = {
@@ -143,6 +144,7 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     description: string;
+    imageAltSuffix: string;
     items: LocalizedProject[];
   };
 

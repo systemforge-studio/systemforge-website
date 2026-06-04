@@ -1,4 +1,5 @@
 import { useLanguage } from "../../i18n/useLanguage";
+import { getExternalLinkProps } from "../../shared/utils/links";
 
 export function Footer() {
   const { content } = useLanguage();
@@ -27,8 +28,7 @@ export function Footer() {
               key={link.label}
               className="transition hover:text-cyan-200"
               href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+              {...getExternalLinkProps(link.href)}
             >
               {link.label}
             </a>

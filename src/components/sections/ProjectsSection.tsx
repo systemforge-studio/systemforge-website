@@ -2,6 +2,8 @@ import { useLanguage } from "../../i18n/useLanguage";
 import { ProjectCard } from "../ui/ProjectCard";
 import { SectionHeader } from "../ui/SectionHeader";
 import { getStaggerDelayClass } from "../../shared/constants/animation";
+import { SECTION_ID } from "../../shared/constants/routes";
+import { SECTION_CLASSES } from "../../shared/constants/layout";
 
 export function ProjectsSection() {
   const { content } = useLanguage();
@@ -11,8 +13,8 @@ export function ProjectsSection() {
 
   return (
     <section
-      id="projects"
-      className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
+      id={SECTION_ID.PROJECTS}
+      className={SECTION_CLASSES.default}
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeader
@@ -27,7 +29,10 @@ export function ProjectsSection() {
               key={project.title}
               className={`animate-fade-up ${getStaggerDelayClass(index)}`}
             >
-              <ProjectCard project={project} />
+              <ProjectCard
+                project={project}
+                imageAltSuffix={section.imageAltSuffix}
+              />
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { TechItemIconKey } from "../i18n/i18n.types";
 
 export type NavigationItem = {
   label: string;
@@ -29,13 +30,12 @@ export type TeamMember = {
   imageUrl?: string;
 };
 
-export type TechItem = {
+export type TechStackItem = {
   label: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
+  iconKey: TechItemIconKey;
 };
 
 export type TechCategory = {
   title: string;
-  items: TechItem[];
+  items: TechStackItem[];
 };

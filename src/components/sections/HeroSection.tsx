@@ -1,6 +1,6 @@
 import sfsLogo from "../../assets/sfs-logo.png";
 import { useLanguage } from "../../i18n/useLanguage";
-import { ROUTES } from "../../shared/constants/routes";
+import { ROUTES, SECTION_ID } from "../../shared/constants/routes";
 
 export function HeroSection() {
   const { content } = useLanguage();
@@ -9,7 +9,7 @@ export function HeroSection() {
 
   return (
     <section
-      id="home"
+      id={SECTION_ID.HOME}
       className="relative overflow-hidden px-4 pb-14 pt-24 max-[430px]:pb-12 max-[430px]:pt-22 sm:px-6 md:pb-20 md:pt-32 lg:pb-24 lg:pt-36"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_10%,rgba(34,211,238,0.25),transparent_42%)]" />

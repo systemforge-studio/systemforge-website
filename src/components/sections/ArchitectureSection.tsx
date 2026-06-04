@@ -12,6 +12,8 @@ import type {
   LocalizedArchitectureItem,
 } from "../../i18n/i18n.types";
 import { getStaggerDelayClass } from "../../shared/constants/animation";
+import { SECTION_ID } from "../../shared/constants/routes";
+import { SECTION_CLASSES } from "../../shared/constants/layout";
 
 const ICON_BY_KEY: Record<ArchitectureIconKey, typeof Blocks> = {
   microservices: Blocks,
@@ -34,10 +36,7 @@ export function ArchitectureSection() {
   const section = content.architectureSection;
 
   return (
-    <section
-      id="architecture"
-      className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
-    >
+    <section id={SECTION_ID.ARCHITECTURE} className={SECTION_CLASSES.default}>
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300 sm:text-sm sm:tracking-[0.3em]">

@@ -8,10 +8,19 @@ import {
   Shield,
   Smartphone,
 } from "lucide-react";
-import { useLanguage } from "../../i18n/useLanguage";
 import type { LocalizedService } from "../../i18n/i18n.types";
+import { useLanguage } from "../../i18n/useLanguage";
+import { SECTION_CLASSES } from "../../shared/constants/layout";
+import { ROUTES, SECTION_ID } from "../../shared/constants/routes";
 import { SectionHeader } from "../ui/SectionHeader";
-import { ROUTES } from "../../shared/constants/routes";
+import {
+  SERVICE_CARD_STYLES,
+  SERVICE_DESCRIPTION_CLASSES,
+  SERVICE_ICON_BADGE_STYLES,
+  SERVICE_LAYOUT_CLASSES,
+  SERVICE_SUBTITLE_CLASSES,
+  SERVICE_TITLE_CLASSES,
+} from "./servicesSection.styles";
 
 const ICON_BY_KEY: Record<LocalizedService["iconKey"], typeof Rocket> = {
   rocket: Rocket,
@@ -21,15 +30,6 @@ const ICON_BY_KEY: Record<LocalizedService["iconKey"], typeof Rocket> = {
   shield: Shield,
   cloud: Cloud,
 };
-
-const ICON_BADGE_STYLES = [
-  "border-blue-300/70 bg-gradient-to-br from-blue-400/30 via-blue-500/24 to-indigo-500/26 shadow-[0_0_0_1px_rgba(96,165,250,0.42),0_0_30px_rgba(59,130,246,0.38),inset_0_1px_10px_rgba(165,243,252,0.2)] text-cyan-50",
-  "border-emerald-300/55 bg-emerald-400/22 shadow-[0_0_0_1px_rgba(45,212,191,0.28),0_0_26px_rgba(45,212,191,0.28)] text-cyan-50",
-  "border-violet-300/70 bg-gradient-to-br from-violet-400/34 via-violet-500/28 to-indigo-500/28 shadow-[0_0_0_1px_rgba(167,139,250,0.42),0_0_30px_rgba(139,92,246,0.4),inset_0_1px_10px_rgba(196,181,253,0.2)] text-violet-50",
-  "border-orange-300/55 bg-orange-500/22 shadow-[0_0_0_1px_rgba(251,146,60,0.28),0_0_26px_rgba(251,146,60,0.24)] text-orange-50",
-  "border-cyan-300/55 bg-cyan-400/22 shadow-[0_0_0_1px_rgba(34,211,238,0.28),0_0_28px_rgba(34,211,238,0.24)] text-cyan-50",
-  "border-blue-300/55 bg-blue-500/24 shadow-[0_0_0_1px_rgba(96,165,250,0.28),0_0_28px_rgba(96,165,250,0.28)] text-blue-50",
-] as const;
 
 function ServiceIcon({
   service,
@@ -43,22 +43,40 @@ function ServiceIcon({
   return <Icon className={className} />;
 }
 
+function ServiceTitle({
+  service,
+  direction,
+  variant,
+}: {
+  service: LocalizedService;
+  direction: "ltr" | "rtl";
+  variant: "primary" | "secondary";
+}) {
+  return (
+    <h3 className={`text-white ${SERVICE_TITLE_CLASSES[variant][direction]}`}>
+      {service.title}
+      {service.subtitle ? (
+        <span className={SERVICE_SUBTITLE_CLASSES[variant]}>
+          {service.subtitle}
+        </span>
+      ) : null}
+    </h3>
+  );
+}
+
 export function ServicesSection() {
   const { content } = useLanguage();
 
   const section = content.servicesSection;
   const [primary, ...others] = section.items;
-  const isArabic = content.direction === "rtl";
+  const direction = content.direction;
 
   if (!primary) {
     return null;
   }
 
   return (
-    <section
-      id="services"
-      className="px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
-    >
+    <section id={SECTION_ID.SERVICES} className={SECTION_CLASSES.default}>
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow={section.eyebrow}
@@ -67,7 +85,7 @@ export function ServicesSection() {
         />
 
         <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12">
-          <article className="service-premium-card group relative overflow-hidden rounded-3xl border border-cyan-300/35 bg-gradient-to-br from-blue-900/45 via-slate-950 to-blue-950/75 p-6 shadow-[0_18px_50px_rgba(6,14,45,0.55)] sm:p-8 lg:col-span-6">
+          <article className={SERVICE_LAYOUT_CLASSES.primaryArticle}>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_26%,rgba(59,130,246,0.25),transparent_48%)]" />
             <div className="absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
 
@@ -76,7 +94,7 @@ export function ServicesSection() {
                 <img
                   src={primary.imageUrl}
                   alt={primary.title}
-                  className="service-primary-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.72] sm:bottom-[0.5rem] sm:h-[33%]"
+                  className={SERVICE_LAYOUT_CLASSES.primaryImage}
                 />
 
                 <div className="absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent" />
@@ -85,25 +103,22 @@ export function ServicesSection() {
 
             <div className="relative z-10 max-w-[27rem]">
               <div
-                className={`mb-6 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${ICON_BADGE_STYLES[0]}`}
+                className={`mb-6 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[0]}`}
               >
-                <ServiceIcon service={primary} className="h-6 w-6 stroke-[2.35]" />
+                <ServiceIcon
+                  service={primary}
+                  className="h-6 w-6 stroke-[2.35]"
+                />
               </div>
 
-              <h3
-                className={`whitespace-pre-line text-white ${isArabic
-                  ? "text-2xl font-medium leading-[1.25] sm:text-3xl"
-                  : "text-3xl font-semibold leading-tight sm:text-5xl sm:leading-[1.06]"
-                  }`}
-              >
-                {primary.title}
-              </h3>
+              <ServiceTitle
+                service={primary}
+                direction={direction}
+                variant="primary"
+              />
 
               <p
-                className={`mt-4 text-slate-200 ${isArabic
-                  ? "text-sm font-normal leading-7 sm:text-base sm:leading-8"
-                  : "text-base leading-8 sm:text-[1.35rem] sm:leading-9"
-                  }`}
+                className={`mt-4 text-slate-200 ${SERVICE_DESCRIPTION_CLASSES.primary[direction]}`}
               >
                 {primary.description}
               </p>
@@ -137,25 +152,22 @@ export function ServicesSection() {
           {others.slice(0, 2).map((service, index) => (
             <article
               key={service.title}
-              className={`service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3 ${index === 0
-                ? "border-emerald-300/35 bg-gradient-to-br from-emerald-900/15 via-slate-950 to-cyan-950/70"
-                : "border-violet-300/35 bg-gradient-to-br from-violet-900/20 via-slate-950 to-indigo-950/75"
-                }`}
+              className={`${SERVICE_LAYOUT_CLASSES.topArticle} ${SERVICE_CARD_STYLES[index]}`}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.16),transparent_52%)]" />
 
               {service.imageUrl ? (
-                <div className="pointer-events-none absolute bottom-[-0.32rem] left-1/2 z-[1] h-[35%] w-[74%] -translate-x-1/2 sm:h-[37%]">
+                <div className={SERVICE_LAYOUT_CLASSES.centerImageWrapper}>
                   <img
                     src={service.imageUrl}
                     alt=""
                     aria-hidden="true"
-                    className="absolute inset-[-10%] h-[120%] w-[120%] max-w-none object-contain opacity-[0.38] blur-2xl"
+                    className={SERVICE_LAYOUT_CLASSES.centerImageGlow}
                   />
                   <img
                     src={service.imageUrl}
                     alt={service.title}
-                    className="service-center-image-mask relative h-full w-full object-contain opacity-[0.93]"
+                    className={SERVICE_LAYOUT_CLASSES.centerImage}
                   />
                   <div className="absolute inset-[-14%] bg-[radial-gradient(96%_96%_at_50%_50%,rgba(56,189,248,0.15)_0%,rgba(14,116,144,0.12)_34%,rgba(8,47,73,0.10)_62%,rgba(2,6,23,0)_86%)] blur-xl" />
                 </div>
@@ -163,26 +175,24 @@ export function ServicesSection() {
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${ICON_BADGE_STYLES[index + 1]
-                    }`}
+                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${
+                    SERVICE_ICON_BADGE_STYLES[index + 1]
+                  }`}
                 >
-                  <ServiceIcon service={service} className="h-6 w-6 stroke-[2.35]" />
+                  <ServiceIcon
+                    service={service}
+                    className="h-6 w-6 stroke-[2.35]"
+                  />
                 </div>
 
-                <h3
-                  className={`whitespace-pre-line text-white ${isArabic
-                    ? "text-xl font-medium leading-[1.25] sm:text-2xl"
-                    : "text-2xl font-semibold leading-tight sm:text-4xl"
-                    }`}
-                >
-                  {service.title}
-                </h3>
+                <ServiceTitle
+                  service={service}
+                  direction={direction}
+                  variant="secondary"
+                />
 
                 <p
-                  className={`mt-3 text-slate-200 ${isArabic
-                    ? "text-sm font-normal leading-7 sm:text-[0.95rem] sm:leading-8"
-                    : "text-sm leading-7 sm:text-lg sm:leading-8"
-                    }`}
+                  className={`mt-3 text-slate-200 ${SERVICE_DESCRIPTION_CLASSES.secondary[direction]}`}
                 >
                   {service.description}
                 </p>
@@ -193,12 +203,9 @@ export function ServicesSection() {
           {others.slice(2).map((service, index) => (
             <article
               key={service.title}
-              className={`service-premium-card group relative min-h-[25rem] overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:min-h-[26rem] sm:p-7 lg:col-span-4 ${index === 0
-                ? "border-orange-300/35 bg-gradient-to-br from-orange-900/20 via-slate-950 to-slate-900"
-                : index === 1
-                  ? "border-cyan-300/35 bg-gradient-to-br from-cyan-900/20 via-slate-950 to-slate-900"
-                  : "border-blue-300/35 bg-gradient-to-br from-blue-900/25 via-slate-950 to-indigo-950/80"
-                }`}
+              className={`${SERVICE_LAYOUT_CLASSES.bottomArticle} ${
+                SERVICE_CARD_STYLES[index + 2]
+              }`}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_88%,rgba(56,189,248,0.14),transparent_48%)]" />
 
@@ -206,32 +213,30 @@ export function ServicesSection() {
                 <img
                   src={service.imageUrl}
                   alt={service.title}
-                  className="service-bottom-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.78] sm:bottom-[0.5rem] sm:h-[33%]"
+                  className={SERVICE_LAYOUT_CLASSES.bottomImage}
                 />
               ) : null}
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px] ${ICON_BADGE_STYLES[index + 3]
-                    }`}
+                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${
+                    SERVICE_ICON_BADGE_STYLES[index + 3]
+                  }`}
                 >
-                  <ServiceIcon service={service} className="h-6 w-6 stroke-[2.35]" />
+                  <ServiceIcon
+                    service={service}
+                    className="h-6 w-6 stroke-[2.35]"
+                  />
                 </div>
 
-                <h3
-                  className={`whitespace-pre-line text-white ${isArabic
-                    ? "text-xl font-medium leading-[1.25] sm:text-2xl"
-                    : "text-2xl font-semibold leading-tight sm:text-4xl"
-                    }`}
-                >
-                  {service.title}
-                </h3>
+                <ServiceTitle
+                  service={service}
+                  direction={direction}
+                  variant="secondary"
+                />
 
                 <p
-                  className={`mt-3 text-slate-200 ${isArabic
-                    ? "text-sm font-normal leading-7 sm:text-[0.95rem] sm:leading-8"
-                    : "text-sm leading-7 sm:text-lg sm:leading-8"
-                    }`}
+                  className={`mt-3 text-slate-200 ${SERVICE_DESCRIPTION_CLASSES.secondary[direction]}`}
                 >
                   {service.description}
                 </p>

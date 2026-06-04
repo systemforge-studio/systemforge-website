@@ -23,6 +23,8 @@ import { useLanguage } from "../../i18n/useLanguage";import type {
   LocalizedTechItem,
 } from "../../i18n/i18n.types";
 import { SectionHeader } from "../ui/SectionHeader";
+import { TECH_ICON_COLORS } from "./techStack.styles";
+import { SECTION_ID } from "../../shared/constants/routes";
 
 const CATEGORY_ICON_BY_KEY: Record<
   LocalizedTechCategory["iconKey"],
@@ -65,7 +67,7 @@ export function TechStackSection() {
 
   return (
     <section
-      id="stack"
+      id={SECTION_ID.STACK}
       className="bg-slate-900/45 px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
     >
       <div className="mx-auto max-w-7xl">
@@ -114,7 +116,7 @@ export function TechStackSection() {
                         className="tech-logo-card group animate-fade-up rounded-2xl border border-white/12 bg-gradient-to-b from-slate-900/90 to-slate-950 px-2.5 py-3.5 text-center shadow-[0_8px_32px_rgba(2,6,23,0.35)]"
                       >
                         <TechIcon
-                          className={`tech-logo-icon mx-auto h-7 w-7 ${item.color}`}
+                          className={`tech-logo-icon mx-auto h-7 w-7 ${TECH_ICON_COLORS[item.iconKey]}`}
                         />
 
                         <p className="tech-logo-label mt-2">{item.label}</p>
