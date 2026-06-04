@@ -4,6 +4,7 @@ import { useLanguage } from "../../i18n/useLanguage";
 import { LanguageSwitcher } from "../i18n/LanguageSwitcher";
 import { ROUTES, SECTION_IDS } from "../../shared/constants/routes";
 import { NAV_SCROLL_OBSERVER_OPTIONS } from "../../shared/constants/layout";
+import { NAVBAR_CLASSES } from "../styles/navbar.styles";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export function Navbar() {
 
   useEffect(() => {
     const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
-      (el): el is HTMLElement => Boolean(el)
+      (el): el is HTMLElement => Boolean(el),
     );
 
     const observer = new IntersectionObserver(
@@ -24,7 +25,7 @@ export function Navbar() {
           }
         });
       },
-      NAV_SCROLL_OBSERVER_OPTIONS
+      NAV_SCROLL_OBSERVER_OPTIONS,
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -36,26 +37,26 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-2xl">
-      <nav className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between sm:h-20">
+    <header className={NAVBAR_CLASSES.header}>
+      <nav className={NAVBAR_CLASSES.nav}>
+        <div className={NAVBAR_CLASSES.row}>
           <a
             href={ROUTES.HOME}
             onClick={closeMenu}
-            className="text-sm font-semibold tracking-[0.15em] text-slate-100 max-[430px]:tracking-[0.12em] sm:text-lg sm:tracking-[0.2em]"
+            className={NAVBAR_CLASSES.brand}
           >
             {content.agency.name}
           </a>
 
-          <div className="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex lg:gap-8">
+          <div className={NAVBAR_CLASSES.desktopLinks}>
             {navigationItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={`relative transition duration-300 after:absolute after:-bottom-1 after:left-0 after:h-px after:bg-cyan-300 after:transition-all after:duration-300 ${
+                className={`${NAVBAR_CLASSES.desktopLinkBase} ${
                   activeHref === item.href
-                    ? "text-cyan-200 after:w-full"
-                    : "hover:text-white after:w-0 hover:after:w-full"
+                    ? NAVBAR_CLASSES.desktopLinkActive
+                    : NAVBAR_CLASSES.desktopLinkInactive
                 }`}
               >
                 {item.label}
@@ -65,46 +66,52 @@ export function Navbar() {
             <LanguageSwitcher />
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className={NAVBAR_CLASSES.actions}>
             <a
               href={ROUTES.CONTACT}
               onClick={closeMenu}
-              className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100 transition duration-300 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950 sm:px-5 sm:text-sm"
+              className={NAVBAR_CLASSES.cta}
             >
               {content.nav.callToAction}
             </a>
 
             <button
               type="button"
-              aria-label={isOpen ? content.nav.closeMenuLabel : content.nav.openMenuLabel}
+              aria-label={
+                isOpen ? content.nav.closeMenuLabel : content.nav.openMenuLabel
+              }
               aria-expanded={isOpen}
               onClick={() => setIsOpen((v) => !v)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 md:hidden"
+              className={NAVBAR_CLASSES.menuButton}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className={NAVBAR_CLASSES.menuIcon} />
+              ) : (
+                <Menu className={NAVBAR_CLASSES.menuIcon} />
+              )}
             </button>
           </div>
         </div>
 
         {isOpen && (
-          <div className="border-t border-white/10 py-3 md:hidden">
-            <div className="flex flex-col gap-2">
+          <div className={NAVBAR_CLASSES.mobilePanel}>
+            <div className={NAVBAR_CLASSES.mobileLinks}>
               {navigationItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
-                  className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+                  className={`${NAVBAR_CLASSES.mobileLinkBase} ${
                     activeHref === item.href
-                      ? "bg-cyan-300/10 text-cyan-100"
-                      : "text-slate-200 hover:bg-white/5"
+                      ? NAVBAR_CLASSES.mobileLinkActive
+                      : NAVBAR_CLASSES.mobileLinkInactive
                   }`}
                 >
                   {item.label}
                 </a>
               ))}
 
-              <div className="px-3 pt-2">
+              <div className={NAVBAR_CLASSES.mobileSwitcher}>
                 <LanguageSwitcher />
               </div>
             </div>

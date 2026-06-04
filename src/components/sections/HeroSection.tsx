@@ -5,7 +5,7 @@ import {
   HERO_CLASSES,
   HERO_DESCRIPTION_CLASSES,
   HERO_TITLE_CLASSES,
-} from "./heroSection.styles";
+} from "../styles/heroSection.styles";
 
 export function HeroSection() {
   const { content } = useLanguage();

@@ -37,7 +37,7 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "تصميم قواعد البيانات",
-      secondaryTitle: "Database Design",
+      secondaryTitle: "Database Design & Integration",
       description:
         "بنية بيانات قوية مع تصميم جداول واضح، ترحيلات منظمة، واستعلامات عالية الأداء.",
       iconKey: "database",

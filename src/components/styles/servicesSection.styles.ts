@@ -98,3 +98,15 @@ export const SERVICE_LIST_CLASSES = {
 
 export const SERVICE_CTA_CLASSES =
   "hero-cta hero-cta-secondary mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100";
+
+export const SERVICES_SECTION_CLASSES = {
+  container: "mx-auto max-w-7xl",
+  grid: "mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12",
+  primaryContent: "relative z-10 max-w-[27rem]",
+  cardContent: "relative z-10",
+  serviceTitleBase: "text-white",
+  primaryDescriptionBase: "mt-4 text-slate-200",
+  secondaryDescriptionBase: "mt-3 text-slate-200",
+  iconBadgePrimary: "mb-6",
+  iconBadgeSecondary: "mb-5",
+} as const;

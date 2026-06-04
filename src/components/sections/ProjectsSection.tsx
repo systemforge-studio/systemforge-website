@@ -4,6 +4,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { getStaggerDelayClass } from "../../shared/constants/animation";
 import { SECTION_ID } from "../../shared/constants/routes";
 import { SECTION_CLASSES } from "../../shared/constants/layout";
+import { PROJECTS_CLASSES } from "../styles/projectsSection.styles";
 
 export function ProjectsSection() {
   const { content } = useLanguage();
@@ -12,22 +13,21 @@ export function ProjectsSection() {
   const projects = section.items;
 
   return (
-    <section
-      id={SECTION_ID.PROJECTS}
-      className={SECTION_CLASSES.default}
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id={SECTION_ID.PROJECTS} className={SECTION_CLASSES.default}>
+      <div className={PROJECTS_CLASSES.container}>
         <SectionHeader
           eyebrow={section.eyebrow}
           title={section.title}
           description={section.description}
         />
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-3">
+        <div className={PROJECTS_CLASSES.grid}>
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className={`animate-fade-up ${getStaggerDelayClass(index)}`}
+              className={`${PROJECTS_CLASSES.item} ${getStaggerDelayClass(
+                index,
+              )}`}
             >
               <ProjectCard
                 project={project}

@@ -1,5 +1,6 @@
 import { useLanguage } from "../../i18n/useLanguage";
 import { getExternalLinkProps } from "../../shared/utils/links";
+import { FOOTER_CLASSES } from "../styles/footer.styles";
 
 export function Footer() {
   const { content } = useLanguage();
@@ -8,25 +9,23 @@ export function Footer() {
   const footer = content.footer;
 
   return (
-    <footer className="border-t border-white/10 bg-slate-950/80 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 text-center">
-        <h3 className="text-xl font-semibold tracking-[0.2em] text-slate-100 sm:text-2xl">
+    <footer className={FOOTER_CLASSES.footer}>
+      <div className={FOOTER_CLASSES.container}>
+        <h3 className={FOOTER_CLASSES.title}>
           © {new Date().getFullYear()} {agency.name}. {footer.copyrightPrefix}
         </h3>
 
-        <p className="text-xs uppercase tracking-[0.28em] text-cyan-200 sm:text-sm">
-          {agency.tagline}
-        </p>
+        <p className={FOOTER_CLASSES.tagline}>{agency.tagline}</p>
 
-        <p className="max-w-xl text-slate-400">
+        <p className={FOOTER_CLASSES.description}>
           {agency.footerDescription}
         </p>
 
-        <div className="mt-3 flex flex-wrap justify-center gap-6 text-sm text-slate-300">
+        <div className={FOOTER_CLASSES.links}>
           {footer.links.map((link) => (
             <a
               key={link.label}
-              className="transition hover:text-cyan-200"
+              className={FOOTER_CLASSES.link}
               href={link.href}
               {...getExternalLinkProps(link.href)}
             >

@@ -3,6 +3,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { TeamMemberCard } from "../ui/TeamMemberCard";
 import { getStaggerDelayClass } from "../../shared/constants/animation";
 import { SECTION_ID } from "../../shared/constants/routes";
+import { TEAM_SECTION_CLASSES } from "../styles/teamSection.styles";
 
 export function TeamSection() {
   const { content } = useLanguage();
@@ -11,22 +12,21 @@ export function TeamSection() {
   const teamMembers = section.members;
 
   return (
-    <section
-      id={SECTION_ID.TEAM}
-      className="bg-slate-900/45 px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20"
-    >
-      <div className="mx-auto max-w-7xl">
+    <section id={SECTION_ID.TEAM} className={TEAM_SECTION_CLASSES.section}>
+      <div className={TEAM_SECTION_CLASSES.container}>
         <SectionHeader
           eyebrow={section.eyebrow}
           title={section.title}
           description={section.description}
         />
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className={TEAM_SECTION_CLASSES.grid}>
           {teamMembers.map((member, index) => (
             <div
               key={`${member.name}-${member.role}`}
-              className={`animate-fade-up ${getStaggerDelayClass(index)}`}
+              className={`${TEAM_SECTION_CLASSES.item} ${getStaggerDelayClass(
+                index,
+              )}`}
             >
               <TeamMemberCard member={member} />
             </div>

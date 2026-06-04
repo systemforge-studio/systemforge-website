@@ -8,6 +8,7 @@ export type NavigationItem = {
 
 export type Service = {
   title: string;
+  secondaryTitle?: string;
   description: string;
   icon: LucideIcon;
   highlights?: string[];
@@ -17,6 +18,7 @@ export type Service = {
 
 export type Project = {
   title: string;
+  secondaryTitle?: string;
   description: string;
   tags: string[];
   imageUrl?: string;
@@ -25,6 +27,7 @@ export type Project = {
 export type TeamMember = {
   name: string;
   role: string;
+  secondaryRole?: string;
   summary: string;
   skills: string[];
   imageUrl?: string;

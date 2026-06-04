@@ -26,6 +26,7 @@ export type LocalizedService = {
 
 export type LocalizedProject = {
   title: string;
+  secondaryTitle?: string;
   description: string;
   tags: string[];
   imageUrl?: string;
@@ -34,6 +35,7 @@ export type LocalizedProject = {
 export type LocalizedTeamMember = {
   name: string;
   role: string;
+  secondaryRole?: string;
   summary: string;
   skills: string[];
   imageUrl?: string;
@@ -49,7 +51,7 @@ export type ArchitectureIconKey =
 
 export type LocalizedArchitectureItem = {
   title: string;
-  subtitle?: string;
+  secondaryTitle?: string;
   description: string;
   iconKey: ArchitectureIconKey;
   appliedIn: string;

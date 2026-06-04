@@ -25,7 +25,8 @@ import {
   SERVICE_SUBTITLE_CLASSES,
   SERVICE_TITLE_CLASSES,
   SERVICES_LAYOUT_CONFIG,
-} from "./servicesSection.styles";
+  SERVICES_SECTION_CLASSES,
+} from "../styles/servicesSection.styles";
 
 const ICON_BY_KEY: Record<LocalizedService["iconKey"], typeof Rocket> = {
   rocket: Rocket,
@@ -58,7 +59,9 @@ function ServiceTitle({
   variant: "primary" | "secondary";
 }) {
   return (
-    <h3 className={`text-white ${SERVICE_TITLE_CLASSES[variant][direction]}`}>
+    <h3
+      className={`${SERVICES_SECTION_CLASSES.serviceTitleBase} ${SERVICE_TITLE_CLASSES[variant][direction]}`}
+    >
       {service.title}
       {service.secondaryTitle ? (
         <span className={SERVICE_SUBTITLE_CLASSES[variant]}>
@@ -82,14 +85,14 @@ export function ServicesSection() {
 
   return (
     <section id={SECTION_ID.SERVICES} className={SECTION_CLASSES.default}>
-      <div className="mx-auto max-w-7xl">
+      <div className={SERVICES_SECTION_CLASSES.container}>
         <SectionHeader
           eyebrow={section.eyebrow}
           title={section.title}
           description={section.description}
         />
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12">
+        <div className={SERVICES_SECTION_CLASSES.grid}>
           <article className={SERVICE_LAYOUT_CLASSES.primaryArticle}>
             <div className={SERVICE_DECORATION_CLASSES.primaryGlow} />
             <div className={SERVICE_DECORATION_CLASSES.primaryOrb} />
@@ -106,9 +109,9 @@ export function ServicesSection() {
               </>
             ) : null}
 
-            <div className="relative z-10 max-w-[27rem]">
+            <div className={SERVICES_SECTION_CLASSES.primaryContent}>
               <div
-                className={`mb-6 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[0]}`}
+                className={`${SERVICES_SECTION_CLASSES.iconBadgePrimary} ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[0]}`}
               >
                 <ServiceIcon
                   service={primary}
@@ -123,7 +126,7 @@ export function ServicesSection() {
               />
 
               <p
-                className={`mt-4 text-slate-200 ${SERVICE_DESCRIPTION_CLASSES.primary[direction]}`}
+                className={`${SERVICES_SECTION_CLASSES.primaryDescriptionBase} ${SERVICE_DESCRIPTION_CLASSES.primary[direction]}`}
               >
                 {primary.description}
               </p>
@@ -178,7 +181,7 @@ export function ServicesSection() {
                 </div>
               ) : null}
 
-              <div className="relative z-10">
+              <div className={SERVICES_SECTION_CLASSES.cardContent}>
                 <div
                   className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[index + SERVICES_LAYOUT_CONFIG.firstCardStyleOffset]
                     }`}
@@ -220,9 +223,9 @@ export function ServicesSection() {
                 />
               ) : null}
 
-              <div className="relative z-10">
+              <div className={SERVICES_SECTION_CLASSES.cardContent}>
                 <div
-                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[index + SERVICES_LAYOUT_CONFIG.bottomIconStyleOffset]
+                  className={`${SERVICES_SECTION_CLASSES.iconBadgeSecondary} ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[index + SERVICES_LAYOUT_CONFIG.bottomIconStyleOffset]
                     }`}
                 >
                   <ServiceIcon
@@ -238,7 +241,7 @@ export function ServicesSection() {
                 />
 
                 <p
-                  className={`mt-3 text-slate-200 ${SERVICE_DESCRIPTION_CLASSES.secondary[direction]}`}
+                  className={`${SERVICES_SECTION_CLASSES.secondaryDescriptionBase} ${SERVICE_DESCRIPTION_CLASSES.secondary[direction]}`}
                 >
                   {service.description}
                 </p>

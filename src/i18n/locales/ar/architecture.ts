@@ -9,7 +9,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
   items: [
     {
       title: "الخدمات المصغّرة",
-      subtitle: "Microservices",
+      secondaryTitle: "Microservices",
       description:
         "حدود خدمات واضحة حسب المجال تسمح بالتوسع والتغيير المستقل.",
       iconKey: "microservices",
@@ -17,6 +17,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
     },
     {
       title: "بوابة API",
+      secondaryTitle: "API Gateway",
       description:
         "تحكم مركزي بالترافيك مع سياسات أمان ومراقبة وتعريض آمن للخدمات.",
       iconKey: "gateway",
@@ -24,6 +25,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
     },
     {
       title: "الهوية والمصادقة",
+      secondaryTitle: "Identity and Authentication",
       description:
         "تحكم مؤسسي بالوصول باستخدام JWT و RBAC وحدود صلاحيات واضحة.",
       iconKey: "identity",
@@ -31,6 +33,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
     },
     {
       title: "خدمات آمنة",
+      secondaryTitle: "Secure Services",
       description:
         "دفاع متعدد الطبقات مع تحقق من البيانات وتقوية الإعدادات الافتراضية.",
       iconKey: "security",
@@ -38,6 +41,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
     },
     {
       title: "نشر حديث",
+      secondaryTitle: "Modern Deployment",
       description:
         "مسارات نشر جاهزة للإنتاج باستخدام GitHub و Docker و Railway و AWS و Azure.",
       iconKey: "deployment",
@@ -45,6 +49,7 @@ export const arabicArchitectureSection: SiteContent["architectureSection"] = {
     },
     {
       title: "منهجية تسليم",
+      secondaryTitle: "Delivery Methodology",
       description:
         "إطار عمل يحافظ على توافق النطاق والجودة والوقت مع أهداف العمل.",
       iconKey: "workflow",

@@ -14,6 +14,7 @@ import type {
 import { getStaggerDelayClass } from "../../shared/constants/animation";
 import { SECTION_ID } from "../../shared/constants/routes";
 import { SECTION_CLASSES } from "../../shared/constants/layout";
+import { ARCHITECTURE_CLASSES } from "../styles/architectureSection.styles";
 
 const ICON_BY_KEY: Record<ArchitectureIconKey, typeof Blocks> = {
   microservices: Blocks,
@@ -27,7 +28,7 @@ const ICON_BY_KEY: Record<ArchitectureIconKey, typeof Blocks> = {
 function ArchitectureIcon({ item }: { item: LocalizedArchitectureItem }) {
   const Icon = ICON_BY_KEY[item.iconKey];
 
-  return <Icon className="h-5 w-5 text-cyan-200 sm:h-6 sm:w-6" />;
+  return <Icon className={ARCHITECTURE_CLASSES.icon} />;
 }
 
 export function ArchitectureSection() {
@@ -37,43 +38,53 @@ export function ArchitectureSection() {
 
   return (
     <section id={SECTION_ID.ARCHITECTURE} className={SECTION_CLASSES.default}>
-      <div className="mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300 sm:text-sm sm:tracking-[0.3em]">
+      <div className={ARCHITECTURE_CLASSES.container}>
+        <div className={ARCHITECTURE_CLASSES.header}>
+          <p className={ARCHITECTURE_CLASSES.eyebrow}>
             {section.eyebrow}
           </p>
 
-          <h2 className="section-title mt-3 text-balance text-2xl font-semibold text-white sm:mt-4 sm:text-5xl">
+          <h2 className={ARCHITECTURE_CLASSES.title}>
             {section.title}
           </h2>
 
-          <p className="mt-4 text-base leading-7 text-slate-300 sm:mt-5 sm:text-lg sm:leading-8">
+          <p className={ARCHITECTURE_CLASSES.description}>
             {section.description}
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className={ARCHITECTURE_CLASSES.grid}>
           {section.items.map((item, index) => (
             <article
               key={`${item.title}-${item.iconKey}`}
-              className={`glow-hover animate-fade-up ${getStaggerDelayClass(index)} rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/85 to-slate-950/95 p-5 sm:p-6`}
+              className={`${ARCHITECTURE_CLASSES.card} ${getStaggerDelayClass(
+                index,
+              )}`}
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/25 bg-cyan-300/10 sm:h-12 sm:w-12">
+              <div className={ARCHITECTURE_CLASSES.iconBox}>
                 <ArchitectureIcon item={item} />
               </div>
 
-              <h3 className="mt-5 text-lg font-semibold text-white sm:text-xl">
+              <h3 className={ARCHITECTURE_CLASSES.itemTitle}>
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+              {item.secondaryTitle ? (
+                <p className={ARCHITECTURE_CLASSES.itemSecondaryTitle}>
+                  {item.secondaryTitle}
+                </p>
+              ) : null}
+
+              <p className={ARCHITECTURE_CLASSES.itemDescription}>
                 {item.description}
               </p>
 
-              <div className="mt-5 border-t border-white/10 pt-4">
-                <p className="text-sm text-slate-200">
+              <div className={ARCHITECTURE_CLASSES.appliedInWrapper}>
+                <p className={ARCHITECTURE_CLASSES.appliedInText}>
                   {section.appliedInLabel}:{" "}
-                  <span className="text-cyan-200">{item.appliedIn}</span>
+                  <span className={ARCHITECTURE_CLASSES.appliedInValue}>
+                    {item.appliedIn}
+                  </span>
                 </p>
               </div>
             </article>

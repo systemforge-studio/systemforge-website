@@ -10,6 +10,7 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
   items: [
     {
       title: "تحديث منصة EquiTip",
+      secondaryTitle: "EquiTip Modernization",
       description:
         "إعادة بناء نظام موبايل قديم إلى منصة حديثة بخدمات مستقلة، تكامل بيانات أقوى، وقدرة أسرع على الإطلاق.",
       tags: ["React Native", "Node.js", "PostgreSQL", "Microservices", "API Gateway"],
@@ -17,6 +18,7 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
     },
     {
       title: "منصة السلامة المدعومة بالذكاء الاصطناعي",
+      secondaryTitle: "AI Fall Protection Platform",
       description:
         "منصة ميدانية تدعم العمل بدون إنترنت، سير عمل ذكي، وتقارير موحدة للفرق التشغيلية.",
       tags: ["React Native", "AI Integration", "MongoDB", "Offline Sync", "PDF Export"],
@@ -24,6 +26,7 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
     },
     {
       title: "منصة PathPal للملاحة المجتمعية",
+      secondaryTitle: "PathPal Community Navigation",
       description:
         "تطبيق مجتمعي يركز على الوصول، تخطيط المسارات، النقاط المحلية، والتحديثات المدعومة بالصور.",
       tags: ["HTML", "JavaScript", "Node.js", "Express", "MongoDB", "Cloudinary"],
