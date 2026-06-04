@@ -1,5 +1,6 @@
 import type { SiteContent } from "../i18n.types";
 import { ROUTES } from "../../shared/constants/routes";
+import { CONTACT_LINKS } from "../../shared/constants/contact";
 
 export const arContent: SiteContent = {
   language: "ar",
@@ -18,6 +19,8 @@ export const arContent: SiteContent = {
 
   nav: {
     callToAction: "تواصل معنا",
+    openMenuLabel: "فتح القائمة",
+    closeMenuLabel: "إغلاق القائمة",
     items: [
       { label: "المشاريع", href: ROUTES.PROJECTS },
       { label: "الخدمات", href: ROUTES.SERVICES },
@@ -386,18 +389,18 @@ export const arContent: SiteContent = {
       {
         label: "واتساب",
         value: "WhatsApp",
-        href: "https://wa.me/10000000000",
+        href: CONTACT_LINKS.whatsapp,
         isPrimary: true,
       },
       {
         label: "إنستغرام",
         value: "Instagram",
-        href: "https://www.instagram.com/systemforge.studio",
+        href: CONTACT_LINKS.instagram,
       },
       {
         label: "البريد الإلكتروني",
         value: "haider.alsudani.dev@gmail.com",
-        href: "mailto:haider.alsudani.dev@gmail.com",
+        href: CONTACT_LINKS.email,
       },
     ],
   },
@@ -408,17 +411,17 @@ export const arContent: SiteContent = {
       {
         label: "واتساب",
         value: "WhatsApp",
-        href: "https://wa.me/10000000000",
+        href: CONTACT_LINKS.whatsapp,
       },
       {
         label: "إنستغرام",
         value: "Instagram",
-        href: "https://www.instagram.com/systemforge.studio",
+        href: CONTACT_LINKS.instagram,
       },
       {
         label: "البريد الإلكتروني",
         value: "haider.alsudani.dev@gmail.com",
-        href: "mailto:haider.alsudani.dev@gmail.com",
+        href: CONTACT_LINKS.email,
       },
     ],
   },

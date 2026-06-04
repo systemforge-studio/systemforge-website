@@ -1,7 +1,7 @@
 import { LANGUAGE_LABELS, SUPPORTED_LANGUAGES } from "../../i18n/i18n.constants";
 import { buildLocalizedPath } from "../../i18n/languageResolver";
 import type { LanguageCode } from "../../i18n/i18n.types";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function LanguageSwitcher() {
   const { language, setLanguage, content } = useLanguage();

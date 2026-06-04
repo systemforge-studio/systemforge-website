@@ -1,5 +1,6 @@
 import type { SiteContent } from "../i18n.types";
 import { ROUTES } from "../../shared/constants/routes";
+import { CONTACT_LINKS } from "../../shared/constants/contact";
 
 export const enContent: SiteContent = {
   language: "en",
@@ -18,6 +19,8 @@ export const enContent: SiteContent = {
 
   nav: {
     callToAction: "Book Call",
+    openMenuLabel: "Open menu",
+    closeMenuLabel: "Close menu",
     items: [
       { label: "Projects", href: ROUTES.PROJECTS },
       { label: "Services", href: ROUTES.SERVICES },
@@ -25,6 +28,7 @@ export const enContent: SiteContent = {
       { label: "Principles", href: ROUTES.ARCHITECTURE },
       { label: "Team", href: ROUTES.TEAM },
       { label: "Contact", href: ROUTES.CONTACT },
+
     ],
   },
 
@@ -386,13 +390,13 @@ export const enContent: SiteContent = {
       {
         label: "Email",
         value: "haider.alsudani.dev@gmail.com",
-        href: "mailto:haider.alsudani.dev@gmail.com",
+        href: CONTACT_LINKS.email,
         isPrimary: true,
       },
       {
         label: "GitHub",
         value: "systemforge-studio",
-        href: "https://github.com/systemforge-studio",
+        href: CONTACT_LINKS.github,
       },
     ],
   },
@@ -403,12 +407,12 @@ export const enContent: SiteContent = {
       {
         label: "GitHub",
         value: "systemforge-studio",
-        href: "https://github.com/systemforge-studio",
+        href: CONTACT_LINKS.github,
       },
       {
         label: "Email",
         value: "haider.alsudani.dev@gmail.com",
-        href: "mailto:haider.alsudani.dev@gmail.com",
+        href: CONTACT_LINKS.email,
       },
     ],
   },

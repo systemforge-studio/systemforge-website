@@ -1,21 +1,12 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { LanguageSwitcher } from "../i18n/LanguageSwitcher";
-
-const SECTION_IDS = [
-  "home",
-  "projects",
-  "services",
-  "stack",
-  "architecture",
-  "team",
-  "contact",
-] as const;
+import { ROUTES, SECTION_IDS } from "../../shared/constants/routes";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeHref, setActiveHref] = useState("#home");
+  const [activeHref, setActiveHref] = useState<string>(ROUTES.HOME);
   const { content } = useLanguage();
   const navigationItems = content.nav.items;
 
@@ -48,11 +39,11 @@ export function Navbar() {
       <nav className="mx-auto w-full max-w-7xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between sm:h-20">
           <a
-            href="#home"
+            href={ROUTES.HOME}
             onClick={closeMenu}
             className="text-sm font-semibold tracking-[0.15em] text-slate-100 max-[430px]:tracking-[0.12em] sm:text-lg sm:tracking-[0.2em]"
           >
-            <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
+            {content.agency.name}
           </a>
 
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-300 md:flex lg:gap-8">
@@ -75,7 +66,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <a
-              href="#contact"
+              href={ROUTES.CONTACT}
               onClick={closeMenu}
               className="rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-2 text-xs font-semibold text-cyan-100 transition duration-300 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950 sm:px-5 sm:text-sm"
             >
@@ -84,7 +75,7 @@ export function Navbar() {
 
             <button
               type="button"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-label={isOpen ? content.nav.closeMenuLabel : content.nav.openMenuLabel}
               aria-expanded={isOpen}
               onClick={() => setIsOpen((v) => !v)}
               className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 md:hidden"

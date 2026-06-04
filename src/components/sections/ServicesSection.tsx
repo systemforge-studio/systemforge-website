@@ -8,9 +8,10 @@ import {
   Shield,
   Smartphone,
 } from "lucide-react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import type { LocalizedService } from "../../i18n/i18n.types";
 import { SectionHeader } from "../ui/SectionHeader";
+import { ROUTES } from "../../shared/constants/routes";
 
 const ICON_BY_KEY: Record<LocalizedService["iconKey"], typeof Rocket> = {
   rocket: Rocket,
@@ -75,13 +76,7 @@ export function ServicesSection() {
                 <img
                   src={primary.imageUrl}
                   alt={primary.title}
-                  className="pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.72] sm:bottom-[0.5rem] sm:h-[33%]"
-                  style={{
-                    WebkitMaskImage:
-                      "radial-gradient(92% 82% at 58% 68%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 42%, rgba(0,0,0,0.38) 70%, rgba(0,0,0,0.08) 88%, rgba(0,0,0,0) 100%)",
-                    maskImage:
-                      "radial-gradient(92% 82% at 58% 68%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 42%, rgba(0,0,0,0.38) 70%, rgba(0,0,0,0.08) 88%, rgba(0,0,0,0) 100%)",
-                  }}
+                  className="service-primary-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.72] sm:bottom-[0.5rem] sm:h-[33%]"
                 />
 
                 <div className="absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent" />
@@ -129,7 +124,7 @@ export function ServicesSection() {
 
               {primary.cta ? (
                 <a
-                  href="#contact"
+                  href={ROUTES.CONTACT}
                   className="hero-cta hero-cta-secondary mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100"
                 >
                   {primary.cta}
@@ -160,13 +155,7 @@ export function ServicesSection() {
                   <img
                     src={service.imageUrl}
                     alt={service.title}
-                    className="relative h-full w-full object-contain opacity-[0.93]"
-                    style={{
-                      WebkitMaskImage:
-                        "radial-gradient(98% 96% at 50% 50%, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.96) 16%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.92) 78%, rgba(0,0,0,0.52) 92%, rgba(0,0,0,0.12) 98%, rgba(0,0,0,0) 100%)",
-                      maskImage:
-                        "radial-gradient(98% 96% at 50% 50%, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.96) 16%, rgba(0,0,0,1) 58%, rgba(0,0,0,0.92) 78%, rgba(0,0,0,0.52) 92%, rgba(0,0,0,0.12) 98%, rgba(0,0,0,0) 100%)",
-                    }}
+                    className="service-center-image-mask relative h-full w-full object-contain opacity-[0.93]"
                   />
                   <div className="absolute inset-[-14%] bg-[radial-gradient(96%_96%_at_50%_50%,rgba(56,189,248,0.15)_0%,rgba(14,116,144,0.12)_34%,rgba(8,47,73,0.10)_62%,rgba(2,6,23,0)_86%)] blur-xl" />
                 </div>
@@ -217,13 +206,7 @@ export function ServicesSection() {
                 <img
                   src={service.imageUrl}
                   alt={service.title}
-                  className="pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-78 sm:bottom-[0.5rem] sm:h-[33%]"
-                  style={{
-                    WebkitMaskImage:
-                      "linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.95) 46%, rgba(0,0,0,0.58) 74%, rgba(0,0,0,0.1) 92%, rgba(0,0,0,0) 100%)",
-                    maskImage:
-                      "linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.95) 46%, rgba(0,0,0,0.58) 74%, rgba(0,0,0,0.1) 92%, rgba(0,0,0,0) 100%)",
-                  }}
+                  className="service-bottom-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.78] sm:bottom-[0.5rem] sm:h-[33%]"
                 />
               ) : null}
 

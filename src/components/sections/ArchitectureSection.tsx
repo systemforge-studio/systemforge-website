@@ -6,11 +6,12 @@ import {
   Shield,
   Workflow,
 } from "lucide-react";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import type {
   ArchitectureIconKey,
   LocalizedArchitectureItem,
 } from "../../i18n/i18n.types";
+import { getStaggerDelayClass } from "../../shared/constants/animation";
 
 const ICON_BY_KEY: Record<ArchitectureIconKey, typeof Blocks> = {
   microservices: Blocks,
@@ -56,8 +57,7 @@ export function ArchitectureSection() {
           {section.items.map((item, index) => (
             <article
               key={`${item.title}-${item.iconKey}`}
-              className="glow-hover animate-fade-up rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/85 to-slate-950/95 p-5 sm:p-6"
-              style={{ animationDelay: `${index * 70}ms` }}
+              className={`glow-hover animate-fade-up ${getStaggerDelayClass(index)} rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/85 to-slate-950/95 p-5 sm:p-6`}
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-300/25 bg-cyan-300/10 sm:h-12 sm:w-12">
                 <ArchitectureIcon item={item} />

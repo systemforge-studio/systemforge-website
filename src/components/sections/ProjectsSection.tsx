@@ -1,6 +1,7 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { ProjectCard } from "../ui/ProjectCard";
 import { SectionHeader } from "../ui/SectionHeader";
+import { getStaggerDelayClass } from "../../shared/constants/animation";
 
 export function ProjectsSection() {
   const { content } = useLanguage();
@@ -24,8 +25,7 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 70}ms` }}
+              className={`animate-fade-up ${getStaggerDelayClass(index)}`}
             >
               <ProjectCard project={project} />
             </div>

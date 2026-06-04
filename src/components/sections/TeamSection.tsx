@@ -1,6 +1,7 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 import { SectionHeader } from "../ui/SectionHeader";
 import { TeamMemberCard } from "../ui/TeamMemberCard";
+import { getStaggerDelayClass } from "../../shared/constants/animation";
 
 export function TeamSection() {
   const { content } = useLanguage();
@@ -24,8 +25,7 @@ export function TeamSection() {
           {teamMembers.map((member, index) => (
             <div
               key={`${member.name}-${member.role}`}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 70}ms` }}
+              className={`animate-fade-up ${getStaggerDelayClass(index)}`}
             >
               <TeamMemberCard member={member} />
             </div>

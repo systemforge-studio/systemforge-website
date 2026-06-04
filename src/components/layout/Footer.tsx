@@ -1,4 +1,4 @@
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
 
 export function Footer() {
   const { content } = useLanguage();
@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-slate-950/80 py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 text-center">
         <h3 className="text-xl font-semibold tracking-[0.2em] text-slate-100 sm:text-2xl">
-          <span className="text-cyan-300">SYSTEMFORGE</span> STUDIO
+          © {new Date().getFullYear()} {agency.name}. {footer.copyrightPrefix}
         </h3>
 
         <p className="text-xs uppercase tracking-[0.28em] text-cyan-200 sm:text-sm">
@@ -34,10 +34,6 @@ export function Footer() {
             </a>
           ))}
         </div>
-
-        <p className="mt-4 text-xs text-slate-500">
-          © 2026 {agency.name}. {footer.copyrightPrefix}
-        </p>
       </div>
     </footer>
   );

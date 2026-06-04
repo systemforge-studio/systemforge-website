@@ -114,6 +114,8 @@ export type SiteContent = {
   nav: {
     items: LocalizedNavigationItem[];
     callToAction: string;
+    openMenuLabel: string;
+    closeMenuLabel: string;
   };
 
   languageSwitcher: {

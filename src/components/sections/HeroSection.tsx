@@ -1,5 +1,6 @@
 import sfsLogo from "../../assets/sfs-logo.png";
-import { useLanguage } from "../../i18n/LanguageProvider";
+import { useLanguage } from "../../i18n/useLanguage";
+import { ROUTES } from "../../shared/constants/routes";
 
 export function HeroSection() {
   const { content } = useLanguage();
@@ -42,14 +43,14 @@ export function HeroSection() {
 
           <div className="mt-6 grid gap-2.5 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10">
             <a
-              href="#contact"
+              href={ROUTES.CONTACT}
               className="hero-cta hero-cta-primary inline-flex min-h-11 w-full items-center justify-center rounded-2xl bg-cyan-300 px-6 py-3 font-semibold text-slate-950 transition duration-300 sm:w-auto sm:px-7"
             >
               {hero.primaryCta}
             </a>
 
             <a
-              href="#projects"
+              href={ROUTES.PROJECTS}
               className="hero-cta hero-cta-secondary inline-flex min-h-11 w-full items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 sm:w-auto sm:px-7"
             >
               {hero.secondaryCta}

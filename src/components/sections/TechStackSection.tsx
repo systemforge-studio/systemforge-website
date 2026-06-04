@@ -18,8 +18,7 @@ import {
 import { FaAws, FaDatabase, FaMicrosoft, FaServer } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
-import { useLanguage } from "../../i18n/LanguageProvider";
-import type {
+import { useLanguage } from "../../i18n/useLanguage";import type {
   LocalizedTechCategory,
   LocalizedTechItem,
 } from "../../i18n/i18n.types";
