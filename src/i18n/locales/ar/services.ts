@@ -37,7 +37,7 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "تصميم قواعد البيانات",
-      subtitle: "Database Design",
+      secondaryTitle: "Database Design",
       description:
         "بنية بيانات قوية مع تصميم جداول واضح، ترحيلات منظمة، واستعلامات عالية الأداء.",
       iconKey: "database",
@@ -45,7 +45,7 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "المصادقة والأمان",
-      subtitle: "Authentication & Security",
+      secondaryTitle: "Authentication & Security",
       description:
         "تنفيذ يركز على الأمان باستخدام الصلاحيات، تقوية واجهات API، وضوابط الهوية وأفضل الممارسات.",
       iconKey: "shield",
@@ -53,7 +53,7 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "السحابة والنشر",
-      subtitle: "Cloud & Deployment",
+      secondaryTitle: "Cloud & Deployment",
       description:
         "مسارات CI/CD، أتمتة البنية، ومراقبة تساعد على نشر موثوق وسريع.",
       iconKey: "cloud",

@@ -15,11 +15,16 @@ import { ROUTES, SECTION_ID } from "../../shared/constants/routes";
 import { SectionHeader } from "../ui/SectionHeader";
 import {
   SERVICE_CARD_STYLES,
+  SERVICE_CTA_CLASSES,
+  SERVICE_DECORATION_CLASSES,
   SERVICE_DESCRIPTION_CLASSES,
   SERVICE_ICON_BADGE_STYLES,
+  SERVICE_ICON_CLASSES,
   SERVICE_LAYOUT_CLASSES,
+  SERVICE_LIST_CLASSES,
   SERVICE_SUBTITLE_CLASSES,
   SERVICE_TITLE_CLASSES,
+  SERVICES_LAYOUT_CONFIG,
 } from "./servicesSection.styles";
 
 const ICON_BY_KEY: Record<LocalizedService["iconKey"], typeof Rocket> = {
@@ -55,9 +60,9 @@ function ServiceTitle({
   return (
     <h3 className={`text-white ${SERVICE_TITLE_CLASSES[variant][direction]}`}>
       {service.title}
-      {service.subtitle ? (
+      {service.secondaryTitle ? (
         <span className={SERVICE_SUBTITLE_CLASSES[variant]}>
-          {service.subtitle}
+          {service.secondaryTitle}
         </span>
       ) : null}
     </h3>
@@ -86,8 +91,8 @@ export function ServicesSection() {
 
         <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12">
           <article className={SERVICE_LAYOUT_CLASSES.primaryArticle}>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_26%,rgba(59,130,246,0.25),transparent_48%)]" />
-            <div className="absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+            <div className={SERVICE_DECORATION_CLASSES.primaryGlow} />
+            <div className={SERVICE_DECORATION_CLASSES.primaryOrb} />
 
             {primary.imageUrl ? (
               <>
@@ -97,7 +102,7 @@ export function ServicesSection() {
                   className={SERVICE_LAYOUT_CLASSES.primaryImage}
                 />
 
-                <div className="absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent" />
+                <div className={SERVICE_DECORATION_CLASSES.imageFade} />
               </>
             ) : null}
 
@@ -107,7 +112,7 @@ export function ServicesSection() {
               >
                 <ServiceIcon
                   service={primary}
-                  className="h-6 w-6 stroke-[2.35]"
+                  className={SERVICE_ICON_CLASSES.default}
                 />
               </div>
 
@@ -124,13 +129,13 @@ export function ServicesSection() {
               </p>
 
               {primary.highlights?.length ? (
-                <ul className="mt-6 space-y-2.5">
+                <ul className={SERVICE_LIST_CLASSES.highlights}>
                   {primary.highlights.map((point) => (
                     <li
                       key={point}
-                      className="flex items-center gap-2.5 text-base text-cyan-100 sm:text-lg"
+                      className={SERVICE_LIST_CLASSES.highlightItem}
                     >
-                      <CheckCircle2 className="h-5 w-5 text-cyan-300" />
+                      <CheckCircle2 className={SERVICE_ICON_CLASSES.check} />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -140,21 +145,21 @@ export function ServicesSection() {
               {primary.cta ? (
                 <a
                   href={ROUTES.CONTACT}
-                  className="hero-cta hero-cta-secondary mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100"
+                  className={SERVICE_CTA_CLASSES}
                 >
                   {primary.cta}
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className={SERVICE_ICON_CLASSES.arrow} />
                 </a>
               ) : null}
             </div>
           </article>
 
-          {others.slice(0, 2).map((service, index) => (
+          {others.slice(0, SERVICES_LAYOUT_CONFIG.topServiceCount).map((service, index) => (
             <article
               key={service.title}
               className={`${SERVICE_LAYOUT_CLASSES.topArticle} ${SERVICE_CARD_STYLES[index]}`}
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.16),transparent_52%)]" />
+              <div className={SERVICE_DECORATION_CLASSES.topGlow} />
 
               {service.imageUrl ? (
                 <div className={SERVICE_LAYOUT_CLASSES.centerImageWrapper}>
@@ -169,19 +174,18 @@ export function ServicesSection() {
                     alt={service.title}
                     className={SERVICE_LAYOUT_CLASSES.centerImage}
                   />
-                  <div className="absolute inset-[-14%] bg-[radial-gradient(96%_96%_at_50%_50%,rgba(56,189,248,0.15)_0%,rgba(14,116,144,0.12)_34%,rgba(8,47,73,0.10)_62%,rgba(2,6,23,0)_86%)] blur-xl" />
+                  <div className={SERVICE_DECORATION_CLASSES.centerGlow} />
                 </div>
               ) : null}
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${
-                    SERVICE_ICON_BADGE_STYLES[index + 1]
-                  }`}
+                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[index + SERVICES_LAYOUT_CONFIG.firstCardStyleOffset]
+                    }`}
                 >
                   <ServiceIcon
                     service={service}
-                    className="h-6 w-6 stroke-[2.35]"
+                    className={SERVICE_ICON_CLASSES.default}
                   />
                 </div>
 
@@ -200,14 +204,13 @@ export function ServicesSection() {
             </article>
           ))}
 
-          {others.slice(2).map((service, index) => (
+          {others.slice(SERVICES_LAYOUT_CONFIG.topServiceCount).map((service, index) => (
             <article
               key={service.title}
-              className={`${SERVICE_LAYOUT_CLASSES.bottomArticle} ${
-                SERVICE_CARD_STYLES[index + 2]
-              }`}
+              className={`${SERVICE_LAYOUT_CLASSES.bottomArticle} ${SERVICE_CARD_STYLES[index + SERVICES_LAYOUT_CONFIG.bottomCardStyleOffset]
+                }`}
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_88%,rgba(56,189,248,0.14),transparent_48%)]" />
+              <div className={SERVICE_DECORATION_CLASSES.bottomGlow} />
 
               {service.imageUrl ? (
                 <img
@@ -219,13 +222,12 @@ export function ServicesSection() {
 
               <div className="relative z-10">
                 <div
-                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${
-                    SERVICE_ICON_BADGE_STYLES[index + 3]
-                  }`}
+                  className={`mb-5 ${SERVICE_LAYOUT_CLASSES.iconBadge} ${SERVICE_ICON_BADGE_STYLES[index + SERVICES_LAYOUT_CONFIG.bottomIconStyleOffset]
+                    }`}
                 >
                   <ServiceIcon
                     service={service}
-                    className="h-6 w-6 stroke-[2.35]"
+                    className={SERVICE_ICON_CLASSES.default}
                   />
                 </div>
 

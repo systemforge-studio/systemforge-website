@@ -62,3 +62,39 @@ export const SERVICE_LAYOUT_CLASSES = {
   centerImage:
     "service-center-image-mask relative h-full w-full object-contain opacity-[0.93]",
 } as const;
+
+export const SERVICES_LAYOUT_CONFIG = {
+  topServiceCount: 2,
+  firstCardStyleOffset: 1,
+  bottomCardStyleOffset: 2,
+  bottomIconStyleOffset: 3,
+} as const;
+
+export const SERVICE_DECORATION_CLASSES = {
+  primaryGlow:
+    "absolute inset-0 bg-[radial-gradient(circle_at_78%_26%,rgba(59,130,246,0.25),transparent_48%)]",
+  primaryOrb:
+    "absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl",
+  imageFade:
+    "absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent",
+  topGlow:
+    "absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.16),transparent_52%)]",
+  centerGlow:
+    "absolute inset-[-14%] bg-[radial-gradient(96%_96%_at_50%_50%,rgba(56,189,248,0.15)_0%,rgba(14,116,144,0.12)_34%,rgba(8,47,73,0.10)_62%,rgba(2,6,23,0)_86%)] blur-xl",
+  bottomGlow:
+    "absolute inset-0 bg-[radial-gradient(circle_at_82%_88%,rgba(56,189,248,0.14),transparent_48%)]",
+} as const;
+
+export const SERVICE_ICON_CLASSES = {
+  default: "h-6 w-6 stroke-[2.35]",
+  check: "h-5 w-5 text-cyan-300",
+  arrow: "h-4 w-4",
+} as const;
+
+export const SERVICE_LIST_CLASSES = {
+  highlights: "mt-6 space-y-2.5",
+  highlightItem: "flex items-center gap-2.5 text-base text-cyan-100 sm:text-lg",
+} as const;
+
+export const SERVICE_CTA_CLASSES =
+  "hero-cta hero-cta-secondary mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100";

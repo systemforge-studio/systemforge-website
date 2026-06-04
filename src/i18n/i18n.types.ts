@@ -16,7 +16,7 @@ export type ServiceIconKey =
 
 export type LocalizedService = {
   title: string;
-  subtitle?: string;
+  secondaryTitle?: string;
   description: string;
   iconKey: ServiceIconKey;
   highlights?: string[];
