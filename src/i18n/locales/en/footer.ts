@@ -3,7 +3,7 @@ import { CONTACT_LINKS } from "../../../shared/constants/contact";
 import { BUSINESS_CONTACT } from "../../../shared/constants/business";
 
 export const englishFooter: SiteContent["footer"] = {
-  copyrightPrefix: "All rights reserved.",
+  copyrightNotice: "All rights reserved",
   links: [
     {
       label: "GitHub",

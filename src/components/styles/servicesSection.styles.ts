@@ -44,9 +44,9 @@ export const SERVICE_DESCRIPTION_CLASSES = {
 
 export const SERVICE_LAYOUT_CLASSES = {
   primaryArticle:
-    "service-premium-card group relative overflow-hidden rounded-3xl border border-cyan-300/35 bg-gradient-to-br from-blue-900/45 via-slate-950 to-blue-950/75 p-6 shadow-[0_18px_50px_rgba(6,14,45,0.55)] sm:p-8 lg:col-span-6",
+     "service-premium-card group relative overflow-hidden rounded-3xl border border-cyan-300/35 bg-gradient-to-br from-blue-900/45 via-slate-950 to-blue-950/75 p-6 shadow-[0_18px_50px_rgba(6,14,45,0.55)] sm:p-8 lg:col-span-6",
   topArticle:
-    "service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3",
+     "service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3",
   bottomArticle:
     "service-premium-card group relative min-h-[25rem] overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:min-h-[26rem] sm:p-7 lg:col-span-4",
   iconBadge:

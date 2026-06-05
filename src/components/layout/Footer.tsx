@@ -11,9 +11,18 @@ export function Footer() {
   return (
     <footer className={FOOTER_CLASSES.footer}>
       <div className={FOOTER_CLASSES.container}>
-        <h3 className={FOOTER_CLASSES.title}>
-          © {new Date().getFullYear()} {agency.name}. {footer.copyrightPrefix}
-        </h3>
+        <div>
+          <h3
+            className={FOOTER_CLASSES.title}
+            dir="ltr"
+          >
+            {`© ${new Date().getFullYear()} ${agency.name}`}
+          </h3>
+
+          <p className={FOOTER_CLASSES.copyrightNotice}>
+            {footer.copyrightNotice}
+          </p>
+        </div>
 
         <p className={FOOTER_CLASSES.tagline}>{agency.tagline}</p>
 

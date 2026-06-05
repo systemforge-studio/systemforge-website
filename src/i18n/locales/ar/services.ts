@@ -9,6 +9,8 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
   items: [
     {
       title: "تطوير منتجات ويب وموبايل متكاملة",
+      secondaryTitle: "Web & Mobile Products",
+
       description:
         "حلول ويب وموبايل من الفكرة إلى الإنتاج، مبنية للأداء والنمو طويل المدى.",
       iconKey: "rocket",
@@ -23,6 +25,8 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "تطوير تطبيقات الموبايل",
+      secondaryTitle: "Mobile Applications",
+
       description:
         "تطبيقات متعددة المنصات بأداء موثوق وتجربة استخدام واضحة وقابلة للصيانة.",
       iconKey: "smartphone",
@@ -30,6 +34,7 @@ export const arabicServicesSection: SiteContent["servicesSection"] = {
     },
     {
       title: "هندسة الأنظمة الخلفية وواجهات API",
+      secondaryTitle: "Backend Architecture & APIs",
       description:
         "أنظمة خلفية وواجهات API آمنة وقابلة للتوسع ومصممة للتكامل والاعتمادية.",
       iconKey: "code",

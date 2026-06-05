@@ -12,8 +12,8 @@ export const TECH_STACK_CLASSES = {
     "mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl border border-indigo-300/30 bg-indigo-300/10",
   categoryIcon: "h-5 w-5 text-indigo-300",
   categoryTitle: "text-3xl font-semibold text-white",
-  categoryDescription: "mt-2 max-w-xs text-sm leading-7 text-slate-300",
-  logoGrid: "grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5",
+  categorySecondaryTitle: "mt-1 text-base font-semibold text-cyan-200",
+  categoryDescription: "mt-2 max-w-xs text-sm leading-7 text-slate-300", logoGrid: "grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5",
   logoCard:
     "tech-logo-card group animate-fade-up rounded-2xl border border-white/12 bg-gradient-to-b from-slate-900/90 to-slate-950 px-2.5 py-3.5 text-center shadow-[0_8px_32px_rgba(2,6,23,0.35)]",
   logoIconBase: "tech-logo-icon mx-auto h-7 w-7",

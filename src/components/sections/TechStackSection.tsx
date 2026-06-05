@@ -103,6 +103,12 @@ export function TechStackSection() {
                       {category.shortTitle}
                     </h3>
 
+                    {category.secondaryTitle ? (
+                      <p className={TECH_STACK_CLASSES.categorySecondaryTitle}>
+                        {category.secondaryTitle}
+                      </p>
+                    ) : null}
+
                     <p className={TECH_STACK_CLASSES.categoryDescription}>
                       {category.description}
                     </p>

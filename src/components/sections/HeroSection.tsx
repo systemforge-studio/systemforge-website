@@ -21,20 +21,33 @@ export function HeroSection() {
           <p className={HERO_CLASSES.tagline}>{content.agency.tagline}</p>
 
           <h1
-            className={`${HERO_CLASSES.titleBase} ${
-              HERO_TITLE_CLASSES[content.direction]
-            }`}
+            className={`${HERO_CLASSES.titleBase} ${HERO_TITLE_CLASSES[content.direction]
+              }`}
           >
             {hero.title}
           </h1>
 
           <p
-            className={`${HERO_CLASSES.descriptionBase} ${
-              HERO_DESCRIPTION_CLASSES[content.direction]
-            }`}
+            className={`${HERO_CLASSES.descriptionBase} ${HERO_DESCRIPTION_CLASSES[content.direction]
+              }`}
           >
             {hero.description}
           </p>
+
+          <div className={HERO_CLASSES.marketsWrapper}>
+            <span className={HERO_CLASSES.marketsLabel}>
+              {hero.marketsLabel}
+            </span>
+
+            {hero.markets.map((market) => (
+              <span
+                key={market}
+                className={HERO_CLASSES.marketBadge}
+              >
+                {market}
+              </span>
+            ))}
+          </div>
 
           <div className={HERO_CLASSES.actions}>
             <a href={ROUTES.CONTACT} className={HERO_CLASSES.primaryCta}>

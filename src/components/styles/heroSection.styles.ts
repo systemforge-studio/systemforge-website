@@ -13,6 +13,14 @@ export const HERO_CLASSES = {
   titleBase: "text-balance text-white",
   descriptionBase:
     "mt-4 max-w-2xl text-slate-300 max-[430px]:text-[0.95rem] md:mt-5 lg:mt-7",
+  marketsWrapper:
+    "mt-5 flex flex-wrap items-center gap-2.5",
+
+  marketsLabel:
+    "text-sm font-medium text-slate-300",
+
+  marketBadge:
+    "rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-sm text-cyan-100",
   actions:
     "mt-6 grid gap-2.5 sm:mt-8 sm:flex sm:flex-wrap sm:gap-4 lg:mt-10",
   primaryCta:

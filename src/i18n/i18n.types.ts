@@ -88,6 +88,7 @@ export type LocalizedTechItem = {
 
 export type LocalizedTechCategory = {
   title: string;
+  secondaryTitle?: string;
   shortTitle: string;
   description: string;
   iconKey: TechCategoryIconKey;
@@ -129,6 +130,8 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     description: string;
+    marketsLabel: string;
+    markets: string[];
     primaryCta: string;
     secondaryCta: string;
     logoAlt: string;
@@ -183,6 +186,6 @@ export type SiteContent = {
 
   footer: {
     links: ContactChannel[];
-    copyrightPrefix: string;
+    copyrightNotice: string;
   };
 };

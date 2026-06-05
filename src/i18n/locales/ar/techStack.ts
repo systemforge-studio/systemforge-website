@@ -10,8 +10,9 @@ export const arabicTechStackSection: SiteContent["techStackSection"] = {
   categories: [
     {
       title: "الواجهات وتطبيقات الموبايل",
+      secondaryTitle: "Frontend & Mobile",
       shortTitle: "الواجهات",
-      description: "بناء واجهات سريعة، متجاوبة، وسهلة الاستخدام.",
+      description: "واجهات حديثة ومتجاوبة توفر تجربة استخدام احترافية على جميع الأجهزة.",
       iconKey: "frontend",
       items: [
         { label: "React", iconKey: "react" },
@@ -22,9 +23,10 @@ export const arabicTechStackSection: SiteContent["techStackSection"] = {
       ],
     },
     {
-      title: "الأنظمة الخلفية وواجهات API",
-      shortTitle: "Backend",
-      description: "منطق خادمي قوي وواجهات API موثوقة.",
+      title: "الأنظمة الخلفية والتكامل",
+      secondaryTitle: "Backend & Integration",
+      shortTitle: "الأنظمة الخلفية",
+      description: "أنظمة خلفية موثوقة وتكاملات آمنة تدعم نمو الأعمال وقابلية التوسع.",
       iconKey: "backend",
       items: [
         { label: "Node.js", iconKey: "node" },
@@ -35,9 +37,10 @@ export const arabicTechStackSection: SiteContent["techStackSection"] = {
       ],
     },
     {
-      title: "قواعد البيانات والأنظمة",
+      title: "قواعد البيانات وإدارة البيانات",
+      secondaryTitle: "Data Platforms",
       shortTitle: "قواعد البيانات",
-      description: "بيانات آمنة، قابلة للتوسع، وعالية الأداء.",
+      description: "إدارة بيانات آمنة وعالية الأداء تدعم التحليلات والتوسع المستقبلي.",
       iconKey: "database",
       items: [
         { label: "PostgreSQL", iconKey: "postgresql" },
@@ -48,9 +51,10 @@ export const arabicTechStackSection: SiteContent["techStackSection"] = {
       ],
     },
     {
-      title: "السحابة و DevOps",
-      shortTitle: "Cloud & DevOps",
-      description: "بنية تحتية، نشر، وأتمتة للتشغيل الاحترافي.",
+      title: "السحابة والتشغيل",
+      secondaryTitle: "Cloud & DevOps",
+      shortTitle: "السحابة",
+      description: "بنية سحابية حديثة ونشر احترافي يضمن الاستقرار والجاهزية للإنتاج.",
       iconKey: "cloud",
       items: [
         { label: "Docker", iconKey: "docker" },
