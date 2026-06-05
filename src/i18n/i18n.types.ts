@@ -132,6 +132,8 @@ export type SiteContent = {
     description: string;
     marketsLabel: string;
     markets: string[];
+    servicesTitle?: string;
+    serviceAudiences?: string[];
     primaryCta: string;
     secondaryCta: string;
     logoAlt: string;

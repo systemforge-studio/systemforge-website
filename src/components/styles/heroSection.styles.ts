@@ -33,6 +33,20 @@ export const HERO_CLASSES = {
     "absolute h-44 w-44 rounded-full bg-cyan-400/20 blur-3xl max-[430px]:h-40 max-[430px]:w-40 md:h-72 md:w-72 lg:h-96 lg:w-96",
   logo:
     "animate-logo-enter relative z-10 w-full max-w-[11.5rem] object-contain drop-shadow-[0_0_80px_rgba(34,211,238,0.35)] max-[430px]:max-w-[10.8rem] md:max-w-[15rem] lg:max-w-md",
+  logoContent:
+    "relative z-10 flex flex-col items-center gap-1",
+
+  servicesBlock:
+    "text-center -translate-y-16 sm:-translate-y-20 md:-translate-y-28 lg:-translate-y-36",
+
+  servicesTitle:
+    "text-lg font-bold text-cyan-200 sm:text-xl lg:text-2xl",
+
+  serviceAudiences:
+    "mt-4 flex flex-wrap justify-center gap-2 sm:gap-3",
+
+  serviceAudienceBadge:
+    "rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[0.7rem] font-medium text-cyan-100 sm:px-4 sm:py-1.5 sm:text-sm",
 } as const;
 
 export const HERO_TITLE_CLASSES = {

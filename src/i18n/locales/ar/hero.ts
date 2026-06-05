@@ -13,6 +13,13 @@ export const arabicHero: SiteContent["hero"] = {
     "الإمارات",
     "قطر",
   ],
+  servicesTitle: "خدمات هندسة البرمجيات",
+  serviceAudiences: [
+    "🏢 الشركات",
+    "🏛️ المؤسسات",
+    "🏦 القطاع المالي",
+    "🏛️ الجهات الحكومية",
+  ],
   primaryCta: "راسلنا عبر واتساب",
   secondaryCta: "شاهد نماذج العمل",
   logoAlt: "SystemForge Studio",

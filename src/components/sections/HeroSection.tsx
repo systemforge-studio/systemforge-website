@@ -63,11 +63,32 @@ export function HeroSection() {
         <div className={HERO_CLASSES.logoWrapper}>
           <div className={HERO_CLASSES.logoGlow} />
 
-          <img
-            src={sfsLogo}
-            alt={hero.logoAlt}
-            className={HERO_CLASSES.logo}
-          />
+          <div className={HERO_CLASSES.logoContent}>
+            <img
+              src={sfsLogo}
+              alt={hero.logoAlt}
+              className={HERO_CLASSES.logo}
+            />
+
+            {hero.servicesTitle && hero.serviceAudiences && (
+              <div className={HERO_CLASSES.servicesBlock}>
+                <p className={HERO_CLASSES.servicesTitle}>
+                  {hero.servicesTitle}
+                </p>
+
+                <div className={HERO_CLASSES.serviceAudiences}>
+                  {hero.serviceAudiences.map((audience) => (
+                    <span
+                      key={audience}
+                      className={HERO_CLASSES.serviceAudienceBadge}
+                    >
+                      {audience}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
