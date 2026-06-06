@@ -95,10 +95,26 @@ export type LocalizedTechCategory = {
   items: LocalizedTechItem[];
 };
 
+export type ContactIconKey =
+  | "mail"
+  | "phone"
+  | "whatsapp"
+  | "quote"
+  | "website"
+  | "linkedin"
+  | "instagram"
+  | "facebook"
+  | "github"
+  | "tiktok";
+
+export type ContactChannelGroupKey = "contact" | "follow";
+
 export type ContactChannel = {
   label: string;
   value: string;
   href: string;
+  iconKey: ContactIconKey;
+  group: ContactChannelGroupKey;
   isPrimary?: boolean;
 };
 
@@ -183,6 +199,8 @@ export type SiteContent = {
     description: string;
     businessContactLabel: string;
     primaryButtonLabel: string;
+    contactGroupTitle: string;
+    followGroupTitle: string;
     channels: ContactChannel[];
   };
 

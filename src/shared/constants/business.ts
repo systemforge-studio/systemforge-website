@@ -1,8 +1,18 @@
 export const BUSINESS_CONTACT = {
-  email: "haider.alsudani.dev@gmail.com",
+  email: "info@sysforge.ca",
+
+  phoneDisplay: "+1 XXX XXX XXXX",
+  phoneHref: "tel:+1XXXXXXXXXX",
+
+  whatsappDisplay: "WhatsApp",
+  whatsappHref: "https://wa.me/1XXXXXXXXXX",
+
+  websiteDisplay: "sysforge.ca",
+  websiteHref: "https://sysforge.ca",
+
   githubHandle: "systemforge-studio",
+  linkedinCompany: "systemforge-studio",
   instagramHandle: "systemforge.studio",
-  whatsappLabel: "WhatsApp",
-  instagramLabel: "Instagram",
-  githubLabel: "systemforge-studio",
+  facebookHandle: "systemforgestudio",
+  tiktokHandle: "systemforgestudio",
 } as const;
