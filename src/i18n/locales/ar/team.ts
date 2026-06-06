@@ -10,15 +10,19 @@ export const arabicTeamSection: SiteContent["teamSection"] = {
     {
       name: "Haider Al-Sudani",
       imageUrl: TEAM_IMAGES.haider,
-      role: "المؤسس | مطور Full-Stack | هندسة الخلفية",
+      role: "المؤسس | مهندس برمجيات | مهندس أنظمة خلفية",
+      secondaryRole:
+        "Founder | Software Engineer | Backend Engineer",
       summary:
-        "مؤسس SystemForge Studio. يقود بنية الحلول، استراتيجية الخلفية، تخطيط التسليم، والتواصل مع أصحاب المصلحة.",
+        "مؤسس SystemForge Studio ويتمتع بخبرة تزيد عن 15 عاماً في هندسة البرمجيات وتطوير الأنظمة. يقود هندسة الحلول وتصميم الأنظمة الخلفية واستراتيجية التطوير والتواصل مع أصحاب المصلحة.",
       skills: ["Founder", "Backend", "Architecture", "React Native", "Node.js", "PostgreSQL"],
     },
     {
       name: "Haven Zhang",
       imageUrl: TEAM_IMAGES.haven,
       role: "مطورة Full-Stack | تطبيقات مؤسسية",
+      secondaryRole:
+        "Full-Stack Developer | Enterprise Applications",
       summary:
         "مطورة برمجيات مؤسسية بخبرة 7 سنوات في مشاريع NEC وتطبيقات Full-Stack حديثة.",
       skills: ["System Design", "Enterprise", ".NET", "React", "Node.js", "Oracle"],
@@ -27,6 +31,8 @@ export const arabicTeamSection: SiteContent["teamSection"] = {
       name: "Jimmy Kong",
       imageUrl: TEAM_IMAGES.jimmy,
       role: "مطور موبايل",
+      secondaryRole:
+        "Mobile Developer",
       summary:
         "مطور مستقل لتطبيق Rentamin وحاصل على AWS Certified Solutions Architect مع معرفة قوية بمنظومة السحابة.",
       skills: ["Go", "TypeScript", "AWS", "React Native", "Next.js", "Web Animations", "CSS"],
@@ -35,6 +41,8 @@ export const arabicTeamSection: SiteContent["teamSection"] = {
       name: "Lin Pan",
       imageUrl: TEAM_IMAGES.lin,
       role: "مطورة Full-Stack | أنظمة أعمال",
+      secondaryRole:
+        "Full-Stack Developer | Business Systems",
       summary:
         "مطورة Full-Stack تبني أنظمة ويب وموبايل وخلفية، وتجمع بين الاستشارات المؤسسية والهندسة البرمجية.",
       skills: [
@@ -53,6 +61,8 @@ export const arabicTeamSection: SiteContent["teamSection"] = {
       name: "Jerry Xing",
       imageUrl: TEAM_IMAGES.jerry,
       role: "مطور Full-Stack",
+      secondaryRole:
+        "Full-Stack Developer",
       summary:
         "مطور Full-Stack يركز على تنفيذ الخلفية وتكامل API، قواعد البيانات، المصادقة، والتوثيق.",
       skills: ["Vue.js", "React", "Node.js", "C#", "Java", "Oracle", "MongoDB", "PostgreSQL", "Git Workflow"],
