@@ -44,23 +44,23 @@ export const SERVICE_DESCRIPTION_CLASSES = {
 
 export const SERVICE_LAYOUT_CLASSES = {
   primaryArticle:
-     "service-premium-card group relative overflow-hidden rounded-3xl border border-cyan-300/35 bg-gradient-to-br from-blue-900/45 via-slate-950 to-blue-950/75 p-6 shadow-[0_18px_50px_rgba(6,14,45,0.55)] sm:p-8 lg:col-span-6",
+    "service-premium-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-cyan-300/35 bg-gradient-to-br from-blue-900/45 via-slate-950 to-blue-950/75 p-6 shadow-[0_18px_50px_rgba(6,14,45,0.55)] sm:p-8 lg:col-span-6",
   topArticle:
-     "service-premium-card group relative overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3",
+    "service-premium-card group relative flex h-full flex-col overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.5)] sm:p-7 lg:col-span-3",
   bottomArticle:
-    "service-premium-card group relative min-h-[25rem] overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:min-h-[26rem] sm:p-7 lg:col-span-4",
+    "service-premium-card group relative flex h-full flex-col overflow-hidden rounded-3xl border p-6 shadow-[0_14px_40px_rgba(2,8,32,0.45)] sm:p-7 lg:col-span-4",
   iconBadge:
     "flex h-[3.3rem] w-[3.3rem] items-center justify-center rounded-[1.05rem] border backdrop-blur-[2.5px]",
   primaryImage:
-    "service-primary-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.72] sm:bottom-[0.5rem] sm:h-[33%]",
+    "pointer-events-none absolute inset-0 z-[1] h-full w-full object-cover opacity-[0.10] scale-110 blur-[1px]",
   bottomImage:
-    "service-bottom-image-mask pointer-events-none absolute bottom-[0.35rem] right-[-1rem] z-[1] h-[31%] w-[62%] object-contain opacity-[0.78] sm:bottom-[0.5rem] sm:h-[33%]",
+    "pointer-events-none absolute inset-0 z-[1] h-full w-full object-cover opacity-[0.10] scale-110 blur-[1px]",
   centerImageWrapper:
-    "pointer-events-none absolute bottom-[-0.32rem] left-1/2 z-[1] h-[35%] w-[74%] -translate-x-1/2 sm:h-[37%]",
+    "pointer-events-none absolute inset-0 z-[1]",
   centerImageGlow:
-    "absolute inset-[-10%] h-[120%] w-[120%] max-w-none object-contain opacity-[0.38] blur-2xl",
+    "absolute inset-0 h-full w-full object-cover opacity-[0.08] blur-xl",
   centerImage:
-    "service-center-image-mask relative h-full w-full object-contain opacity-[0.93]",
+    "relative h-full w-full object-cover opacity-[0.10] scale-110 blur-[1px]",
 } as const;
 
 export const SERVICES_LAYOUT_CONFIG = {
@@ -76,7 +76,7 @@ export const SERVICE_DECORATION_CLASSES = {
   primaryOrb:
     "absolute -bottom-24 -right-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl",
   imageFade:
-    "absolute bottom-0 right-0 z-[2] h-[60%] w-[60%] bg-gradient-to-l from-slate-950/80 via-slate-950/40 to-transparent",
+    "absolute inset-0 z-[2] bg-gradient-to-b from-slate-950/88 via-slate-950/82 to-slate-950/92",
   topGlow:
     "absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(56,189,248,0.16),transparent_52%)]",
   centerGlow:
@@ -92,18 +92,18 @@ export const SERVICE_ICON_CLASSES = {
 } as const;
 
 export const SERVICE_LIST_CLASSES = {
-  highlights: "mt-6 space-y-2.5",
+  highlights: "mt-6 space-y-2.5 pb-6",
   highlightItem: "flex items-center gap-2.5 text-base text-cyan-100 sm:text-lg",
 } as const;
 
 export const SERVICE_CTA_CLASSES =
-  "hero-cta hero-cta-secondary mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100";
+  "hero-cta hero-cta-secondary mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-cyan-300/45 bg-cyan-300/8 px-5 py-2.5 text-base font-semibold text-cyan-100";
 
 export const SERVICES_SECTION_CLASSES = {
   container: "mx-auto max-w-7xl",
-  grid: "mt-10 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12",
-  primaryContent: "relative z-10 max-w-[27rem]",
-  cardContent: "relative z-10",
+  grid: "mt-10 grid items-stretch gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12",
+  primaryContent: "relative z-10 flex h-full max-w-[27rem] flex-col",
+  cardContent: "relative z-10 flex h-full flex-col",
   serviceTitleBase: "text-white",
   primaryDescriptionBase: "mt-4 text-slate-200",
   secondaryDescriptionBase: "mt-3 text-slate-200",
