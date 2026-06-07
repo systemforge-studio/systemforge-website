@@ -28,7 +28,7 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
       title: "منصة PathPal للملاحة المجتمعية",
       secondaryTitle: "PathPal Community Navigation",
       description:
-        "تطبيق مجتمعي يركز على الوصول، تخطيط المسارات، النقاط المحلية، والتحديثات المدعومة بالصور.",
+        "تطبيق مجتمعي يركز على دعم ذوي الاحتياجات الخاصة، تخطيط المسارات، النقاط المحلية، والتحديثات المدعومة بالصور.",
       tags: ["HTML", "JavaScript", "Node.js", "Express", "MongoDB", "Cloudinary"],
       imageUrl: PROJECT_IMAGES.pathPal,
     },
