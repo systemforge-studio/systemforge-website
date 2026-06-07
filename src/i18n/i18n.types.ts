@@ -168,6 +168,7 @@ export type SiteContent = {
     title: string;
     description: string;
     imageAltSuffix: string;
+    viewAllLabel: string;
     items: LocalizedProject[];
   };
 

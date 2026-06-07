@@ -2,6 +2,7 @@ export const PROJECT_IMAGES = {
   equitip: "/project/EquiTip.png",
   fallProtection: "/project/fpp.png",
   pathPal: "/project/pathPal.png",
+  accessibilityIntelligence: "/project/accessibility-intelligence.png",
 } as const;
 
 export const SERVICE_IMAGES = {

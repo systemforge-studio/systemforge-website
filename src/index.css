@@ -28,8 +28,8 @@ html[lang="ar"] body {
 
 html[lang="ar"] h1 {
   font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  line-height: 1.35;
+  letter-spacing: 0;
 }
 
 html[lang="ar"] h2,

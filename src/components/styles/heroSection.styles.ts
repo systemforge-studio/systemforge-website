@@ -50,7 +50,7 @@ export const HERO_CLASSES = {
 } as const;
 
 export const HERO_TITLE_CLASSES = {
-  ltr: "max-w-[13ch] text-[length:var(--text-display)] font-semibold leading-[1.1] max-[430px]:text-[2.05rem] md:max-w-[10.8ch] md:text-[2.75rem] lg:max-w-none lg:text-7xl",
+  ltr: "max-w-[15ch] text-[length:var(--text-display)] font-semibold leading-[1.1] max-[430px]:text-[2.05rem] md:max-w-[12ch] md:text-[2.75rem] lg:max-w-none lg:text-6xl",
   rtl: "max-w-[13ch] text-[2.35rem] font-medium leading-[1.2] max-[430px]:text-[1.9rem] md:text-[2.85rem] lg:text-[3.35rem]",
 } as const;
 
