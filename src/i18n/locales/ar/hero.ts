@@ -20,7 +20,7 @@ export const arabicHero: SiteContent["hero"] = {
     "🏦 القطاع المالي",
     "🏛️ الجهات الحكومية",
   ],
-  primaryCta: "راسلنا عبر واتساب",
+  primaryCta: "راسلنا الآن",
   secondaryCta: "شاهد نماذج العمل",
   logoAlt: "SystemForge Studio",
 };
