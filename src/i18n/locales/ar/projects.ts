@@ -7,6 +7,7 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
   description:
     "نماذج توضّح كيف نساعد الشركات على تقليل المخاطر التقنية وتسريع الإطلاق وتقوية أساس المنصة.",
   imageAltSuffix: "عرض توضيحي",
+  viewAllLabel: "عرض جميع المشاريع",
   items: [
     {
       title: "تحديث منصة EquiTip",
@@ -31,6 +32,22 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
         "تطبيق مجتمعي يركز على دعم ذوي الاحتياجات الخاصة، تخطيط المسارات، النقاط المحلية، والتحديثات المدعومة بالصور.",
       tags: ["HTML", "JavaScript", "Node.js", "Express", "MongoDB", "Cloudinary"],
       imageUrl: PROJECT_IMAGES.pathPal,
+    },
+    {
+      title: "منصة الذكاء الاصطناعي لإمكانية الوصول",
+      secondaryTitle: "Accessibility Intelligence System",
+      description:
+        "منصة بحثية مدعومة بالذكاء الاصطناعي لتحليل إمكانية الوصول لمستخدمي الكراسي المتحركة، مع جمع بيانات الحساسات من الموبايل، تتبع GPS، تحليل المخاطر، الخرائط التفاعلية، وتوليد رؤى ذكية حول سهولة التنقل.",
+      tags: [
+        "React Native",
+        "Expo",
+        "ASP.NET Core",
+        "MongoDB",
+        "PostgreSQL",
+        "GPS Tracking",
+        "AI Analysis",
+      ],
+      imageUrl: PROJECT_IMAGES.accessibilityIntelligence,
     },
   ],
 };

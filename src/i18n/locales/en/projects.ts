@@ -7,6 +7,7 @@ export const englishProjectsSection: SiteContent["projectsSection"] = {
   description:
     "Examples of how we help organizations reduce technical risk, improve release velocity, and strengthen platform foundations.",
   imageAltSuffix: "demo",
+  viewAllLabel: "See all projects",
   items: [
     {
       title: "EquiTip Modernization",
@@ -28,6 +29,21 @@ export const englishProjectsSection: SiteContent["projectsSection"] = {
         "Built an accessibility-focused community navigation app with route planning, community feed, user-submitted POIs, and media-supported local updates.",
       tags: ["HTML", "JavaScript", "Node.js", "Express", "MongoDB", "Cloudinary"],
       imageUrl: PROJECT_IMAGES.pathPal,
+    },
+    {
+      title: "Accessibility Intelligence System",
+      description:
+        "Developed an AI-powered accessibility research platform with mobile sensor collection, GPS route tracking, risk analysis, interactive maps, and AI-generated accessibility insights for wheelchair mobility assessment.",
+      tags: [
+        "React Native",
+        "Expo",
+        "ASP.NET Core",
+        "MongoDB",
+        "PostgreSQL",
+        "GPS Tracking",
+        "AI Analysis",
+      ],
+      imageUrl: PROJECT_IMAGES.accessibilityIntelligence,
     },
   ],
 };
