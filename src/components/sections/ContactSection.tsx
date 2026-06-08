@@ -119,9 +119,16 @@ export function ContactSection() {
                           className={`${CONTACT_SECTION_CLASSES.socialIcon} ${ICON_COLOR_BY_KEY[channel.iconKey]
                             }`}
                         />
-                        <span className={CONTACT_SECTION_CLASSES.secondaryLinkText}>
-                          {channel.label}
-                        </span>
+
+                        <div className="flex flex-col gap-1">
+                          <span className={CONTACT_SECTION_CLASSES.secondaryLinkText}>
+                            {channel.label}
+                          </span>
+
+                          <span className="text-xs text-slate-400" dir="ltr">
+                            {channel.value}
+                          </span>
+                        </div>
                       </a>
                     );
                   })}
