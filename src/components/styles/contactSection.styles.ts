@@ -18,7 +18,7 @@ export const CONTACT_SECTION_CLASSES = {
     "mt-6 grid gap-6 border-t border-white/10 pt-6 sm:grid-cols-2",
   groupTitle:
     "mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100",
-  linksWrapper: "space-y-3",
+  linksWrapper: "space-y-5",
   secondaryLink:
     "flex items-center gap-3 rounded-xl px-2 py-1.5 text-sm font-medium text-slate-200 transition hover:bg-white/5 hover:text-white",
   secondaryLinkText: "whitespace-nowrap", linkIcon: "h-4 w-4",
