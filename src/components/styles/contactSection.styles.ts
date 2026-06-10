@@ -23,4 +23,15 @@ export const CONTACT_SECTION_CLASSES = {
     "flex items-center gap-3 rounded-xl px-2 py-1.5 text-sm font-medium text-slate-200 transition hover:bg-white/5 hover:text-white",
   secondaryLinkText: "whitespace-nowrap", linkIcon: "h-4 w-4",
   socialIcon: "h-4 w-4 shrink-0",
+  quoteFormWrapper: "relative mt-8",
+
+  quoteCloseButton:
+    "absolute top-5 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-slate-950/80 text-xl font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white",
+
+  quoteCloseButtonLtr: "right-5",
+
+  quoteCloseButtonRtl: "left-5",
+  linkTextStack: "flex flex-col gap-1",
+
+  channelValue: "text-xs text-slate-400",
 } as const;
