@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, FileText, Globe, Mail, Phone, X } from "lucide-react";
 import {
   FaFacebook,
@@ -45,6 +45,19 @@ const ICON_COLOR_BY_KEY: Record<ContactIconKey, string> = {
 export function ContactSection() {
   const { content } = useLanguage();
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
+
+  const quoteFormRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!isQuoteFormOpen) {
+      return;
+    }
+
+    quoteFormRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [isQuoteFormOpen]);
 
   const contact = content.contactSection;
   const primaryChannel =
@@ -132,9 +145,8 @@ export function ContactSection() {
                         className={CONTACT_SECTION_CLASSES.secondaryLink}
                       >
                         <Icon
-                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${
-                            ICON_COLOR_BY_KEY[channel.iconKey]
-                          }`}
+                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${ICON_COLOR_BY_KEY[channel.iconKey]
+                            }`}
                         />
 
                         <div className={CONTACT_SECTION_CLASSES.linkTextStack}>
@@ -176,9 +188,8 @@ export function ContactSection() {
                         className={CONTACT_SECTION_CLASSES.secondaryLink}
                       >
                         <Icon
-                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${
-                            ICON_COLOR_BY_KEY[channel.iconKey]
-                          }`}
+                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${ICON_COLOR_BY_KEY[channel.iconKey]
+                            }`}
                         />
 
                         <span
@@ -198,6 +209,7 @@ export function ContactSection() {
         {isQuoteFormOpen && (
           <div
             id="quote-form"
+            ref={quoteFormRef}
             className={CONTACT_SECTION_CLASSES.quoteFormWrapper}
           >
             <button
