@@ -1,3 +1,5 @@
+import type { QuoteFormContent } from "../features/quote-form/quoteForm.types";
+
 export type LanguageCode = "en" | "ar";
 export type TextDirection = "ltr" | "rtl";
 
@@ -203,6 +205,7 @@ export type SiteContent = {
     contactGroupTitle: string;
     followGroupTitle: string;
     channels: ContactChannel[];
+    quoteForm: QuoteFormContent;
   };
 
   footer: {
