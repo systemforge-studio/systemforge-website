@@ -15,7 +15,7 @@ export const englishContactSection: SiteContent["contactSection"] = {
     {
       label: "Quote Form",
       value: "Request a quote",
-      href: CONTACT_LINKS.quote,
+      href: "#quote-form",
       iconKey: "quote",
       group: "contact",
       isPrimary: true,
@@ -77,4 +77,63 @@ export const englishContactSection: SiteContent["contactSection"] = {
       group: "follow",
     },
   ],
+  quoteForm: {
+    title: "Tell us about your project",
+    description:
+      "Share the key details and our team will review your request and contact you with the next step.",
+    submitLabel: "Submit Request",
+    submittingLabel: "Submitting...",
+    successMessage: "Your request has been submitted successfully.",
+    errorMessage: "Something went wrong. Please try again or contact us by email.",
+    selectPlaceholder: "Select an option",
+    closeLabel: "Close quote form",
+    fields: {
+      fullName: "Full Name",
+      company: "Company / Organization",
+      email: "Email",
+      phone: "Phone / WhatsApp",
+      projectType: "Project Type",
+      budgetRange: "Budget Range",
+      timeline: "Timeline",
+      preferredContact: "Preferred Contact",
+      message: "Project Details",
+    },
+    placeholders: {
+      message:
+        "Describe your idea, current system, required features, users, deadline, and any technical details.",
+    },
+    errors: {
+      required: "This field is required.",
+      invalidEmail: "Enter a valid email address.",
+      minMessage: "Please add more project details.",
+    },
+    projectTypes: [
+      { value: "webApp", label: "Web Application" },
+      { value: "mobileApp", label: "Mobile Application" },
+      { value: "businessSystem", label: "Business System" },
+      { value: "aiAutomation", label: "AI / Automation" },
+      { value: "cloudDeployment", label: "Cloud / Deployment" },
+      { value: "securityReview", label: "Security Review" },
+      { value: "other", label: "Other" },
+    ],
+    budgetRanges: [
+      { value: "under5k", label: "Under $5,000" },
+      { value: "5kTo15k", label: "$5,000 - $15,000" },
+      { value: "15kTo50k", label: "$15,000 - $50,000" },
+      { value: "50kPlus", label: "$50,000+" },
+      { value: "notSure", label: "Not sure yet" },
+    ],
+    timelines: [
+      { value: "urgent", label: "Urgent" },
+      { value: "oneToThreeMonths", label: "1 - 3 months" },
+      { value: "threeToSixMonths", label: "3 - 6 months" },
+      { value: "sixMonthsPlus", label: "6+ months" },
+      { value: "notSure", label: "Not sure yet" },
+    ],
+    contactMethods: [
+      { value: "email", label: "Email" },
+      { value: "phone", label: "Phone" },
+      { value: "whatsapp", label: "WhatsApp" },
+    ],
+  },
 };

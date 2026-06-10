@@ -1,4 +1,5 @@
-import { ArrowUpRight, FileText, Globe, Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, FileText, Globe, Mail, Phone, X } from "lucide-react";
 import {
   FaFacebook,
   FaGithub,
@@ -13,6 +14,7 @@ import { SECTION_ID } from "../../shared/constants/routes";
 import { getExternalLinkProps } from "../../shared/utils/links";
 import { SECTION_CLASSES } from "../../shared/constants/layout";
 import { CONTACT_SECTION_CLASSES } from "../styles/contactSection.styles";
+import { QuoteForm } from "../../features/quote-form/QuoteForm";
 
 const ICON_BY_KEY: Record<ContactIconKey, React.ElementType> = {
   mail: Mail,
@@ -42,6 +44,7 @@ const ICON_COLOR_BY_KEY: Record<ContactIconKey, string> = {
 
 export function ContactSection() {
   const { content } = useLanguage();
+  const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
 
   const contact = content.contactSection;
   const primaryChannel =
@@ -61,6 +64,19 @@ export function ContactSection() {
   );
 
   const PrimaryIcon = ICON_BY_KEY[primaryChannel.iconKey];
+
+  const quoteCloseButtonPositionClass =
+    content.direction === "rtl"
+      ? CONTACT_SECTION_CLASSES.quoteCloseButtonRtl
+      : CONTACT_SECTION_CLASSES.quoteCloseButtonLtr;
+
+  function openQuoteForm(): void {
+    setIsQuoteFormOpen(true);
+  }
+
+  function closeQuoteForm(): void {
+    setIsQuoteFormOpen(false);
+  }
 
   return (
     <section id={SECTION_ID.CONTACT} className={SECTION_CLASSES.default}>
@@ -88,15 +104,15 @@ export function ContactSection() {
               {primaryChannel.value}
             </p>
 
-            <a
-              href={primaryChannel.href}
-              {...getExternalLinkProps(primaryChannel.href)}
+            <button
+              type="button"
+              onClick={openQuoteForm}
               className={CONTACT_SECTION_CLASSES.primaryLink}
             >
               <PrimaryIcon className={CONTACT_SECTION_CLASSES.linkIcon} />
               {contact.primaryButtonLabel}
               <ArrowUpRight className={CONTACT_SECTION_CLASSES.linkIcon} />
-            </a>
+            </button>
 
             <div className={CONTACT_SECTION_CLASSES.sections}>
               <div>
@@ -116,16 +132,24 @@ export function ContactSection() {
                         className={CONTACT_SECTION_CLASSES.secondaryLink}
                       >
                         <Icon
-                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${ICON_COLOR_BY_KEY[channel.iconKey]
-                            }`}
+                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${
+                            ICON_COLOR_BY_KEY[channel.iconKey]
+                          }`}
                         />
 
-                        <div className="flex flex-col gap-1">
-                          <span className={CONTACT_SECTION_CLASSES.secondaryLinkText}>
+                        <div className={CONTACT_SECTION_CLASSES.linkTextStack}>
+                          <span
+                            className={
+                              CONTACT_SECTION_CLASSES.secondaryLinkText
+                            }
+                          >
                             {channel.label}
                           </span>
 
-                          <span className="text-xs text-slate-400" dir="ltr">
+                          <span
+                            className={CONTACT_SECTION_CLASSES.channelValue}
+                            dir="ltr"
+                          >
                             {channel.value}
                           </span>
                         </div>
@@ -152,10 +176,14 @@ export function ContactSection() {
                         className={CONTACT_SECTION_CLASSES.secondaryLink}
                       >
                         <Icon
-                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${ICON_COLOR_BY_KEY[channel.iconKey]
-                            }`}
+                          className={`${CONTACT_SECTION_CLASSES.socialIcon} ${
+                            ICON_COLOR_BY_KEY[channel.iconKey]
+                          }`}
                         />
-                        <span className={CONTACT_SECTION_CLASSES.secondaryLinkText}>
+
+                        <span
+                          className={CONTACT_SECTION_CLASSES.secondaryLinkText}
+                        >
                           {channel.label}
                         </span>
                       </a>
@@ -166,6 +194,24 @@ export function ContactSection() {
             </div>
           </div>
         </div>
+
+        {isQuoteFormOpen && (
+          <div
+            id="quote-form"
+            className={CONTACT_SECTION_CLASSES.quoteFormWrapper}
+          >
+            <button
+              type="button"
+              onClick={closeQuoteForm}
+              className={`${CONTACT_SECTION_CLASSES.quoteCloseButton} ${quoteCloseButtonPositionClass}`}
+              aria-label={contact.quoteForm.closeLabel}
+            >
+              <X className={CONTACT_SECTION_CLASSES.linkIcon} />
+            </button>
+
+            <QuoteForm content={contact.quoteForm} language={content.language} />
+          </div>
+        )}
       </div>
     </section>
   );
