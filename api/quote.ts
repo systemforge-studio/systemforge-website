@@ -258,9 +258,7 @@ class QuoteController {
 
     await this.repository.create(this.mapper.toRecord(validPayload));
 
-    void this.emailService.notify(validPayload).catch((error) => {
-      console.error("QUOTE_EMAIL_ERROR:", error);
-    });
+    await this.emailService.notify(validPayload);
 
     res.status(HTTP_STATUS.created).json({
       success: true,
