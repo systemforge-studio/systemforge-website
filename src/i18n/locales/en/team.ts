@@ -49,13 +49,5 @@ export const englishTeamSection: SiteContent["teamSection"] = {
         "Process Automation",
       ],
     },
-    {
-      name: "Jerry Xing",
-      imageUrl: TEAM_IMAGES.jerry,
-      role: "Full-Stack Developer",
-      summary:
-        "Full-stack developer focused on backend implementation and API integration. Contributes to service development, database-related work, authentication flows, and project documentation.",
-      skills: ["Vue.js", "React", "Node.js", "C#", "Java", "Oracle", "MongoDB", "PostgreSQL", "Git Workflow"],
-    },
   ],
 };

@@ -19,5 +19,4 @@ export const TEAM_IMAGES = {
   haven: "/team/haven.png",
   jimmy: "/team/jimmy.png",
   lin: "/team/lin.jpg",
-  jerry: "/team/jerry.png",
 } as const;
