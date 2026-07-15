@@ -57,15 +57,5 @@ export const arabicTeamSection: SiteContent["teamSection"] = {
         "Process Automation",
       ],
     },
-    {
-      name: "Jerry Xing",
-      imageUrl: TEAM_IMAGES.jerry,
-      role: "مطور Full-Stack",
-      secondaryRole:
-        "Full-Stack Developer",
-      summary:
-        "مطور Full-Stack يركز على تنفيذ الخلفية وتكامل API، قواعد البيانات، المصادقة، والتوثيق.",
-      skills: ["Vue.js", "React", "Node.js", "C#", "Java", "Oracle", "MongoDB", "PostgreSQL", "Git Workflow"],
-    },
   ],
 };
