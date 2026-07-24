@@ -45,5 +45,12 @@ export const englishProjectsSection: SiteContent["projectsSection"] = {
       ],
       imageUrl: PROJECT_IMAGES.accessibilityIntelligence,
     },
+    {
+      title: "FinSight AI",
+      description:
+        "Built an AI-powered financial intelligence platform that detects unusual spending patterns, explains financial trends, and turns business data into clear, actionable recommendations.",
+      tags: ["React", ".NET 8", "OpenAI API", "ML.NET", "SQLite"],
+      imageUrl: PROJECT_IMAGES.finSightAi,
+    },
   ],
 };
