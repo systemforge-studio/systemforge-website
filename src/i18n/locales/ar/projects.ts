@@ -49,5 +49,13 @@ export const arabicProjectsSection: SiteContent["projectsSection"] = {
       ],
       imageUrl: PROJECT_IMAGES.accessibilityIntelligence,
     },
+    {
+      title: "منصة FinSight AI للتحليل المالي",
+      secondaryTitle: "FinSight AI",
+      description:
+        "منصة ذكاء مالي مدعومة بالذكاء الاصطناعي تكتشف أنماط الإنفاق غير المعتادة، وتشرح الاتجاهات المالية، وتحول بيانات الأعمال إلى توصيات واضحة وقابلة للتنفيذ.",
+      tags: ["React", ".NET 8", "OpenAI API", "ML.NET", "SQLite"],
+      imageUrl: PROJECT_IMAGES.finSightAi,
+    },
   ],
 };
