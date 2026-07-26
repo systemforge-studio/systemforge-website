@@ -2,7 +2,7 @@ import type { SiteContent } from "../../i18n.types";
 import { ROUTES } from "../../../shared/constants/routes";
 
 export const englishNav: SiteContent["nav"] = {
-  callToAction: "Book Call",
+  callToAction: "Contact us",
   openMenuLabel: "Open menu",
   closeMenuLabel: "Close menu",
   items: [
