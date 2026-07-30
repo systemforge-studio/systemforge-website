@@ -12,7 +12,7 @@ export const BUSINESS_CONTACT = {
 
   githubHandle: "systemforge-studio",
   linkedinCompany: "systemforge-studio",
-  instagramHandle: "systemforge.studio",
+  instagramHandle: "systemforgestudio",
   facebookHandle: "systemforgestudio",
   tiktokHandle: "systemforgestudio",
 } as const;
