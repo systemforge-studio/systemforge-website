@@ -12,6 +12,6 @@ export const CONTACT_LINKS = {
   github: `https://github.com/${BUSINESS_CONTACT.githubHandle}`,
   linkedin: `https://linkedin.com/company/${BUSINESS_CONTACT.linkedinCompany}`,
   instagram: `https://www.instagram.com/${BUSINESS_CONTACT.instagramHandle}/`,
-  facebook: `https://www.facebook.com/${BUSINESS_CONTACT.facebookHandle}/`,
+  facebook: `https://www.facebook.com/${BUSINESS_CONTACT.facebookHandle}`,
   tiktok: `https://tiktok.com/@${BUSINESS_CONTACT.tiktokHandle}`,
 } as const;
